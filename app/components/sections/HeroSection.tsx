@@ -71,7 +71,7 @@ export default function HeroSection() {
                 <img
                   src="/images/or-nuri-professional.jpg"
                   alt="Or Nuri - Tech Leader & AI Expert"
-                  className="w-full h-full object-cover object-[center_35%]"
+                  className="w-full h-full object-cover object-[center_25%]"
                   loading="eager"
                   width="800"
                   height="800"

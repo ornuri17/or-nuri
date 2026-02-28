@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   keywords: [
     'Or Nuri',
-    'AI Product Leader',
+    'AI Tech Leader',
     'Machine Learning Expert',
     'AI Startup Founder',
     'Tech Lead',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'ML Engineering',
     'Artificial Intelligence',
     'AI Advisory',
-    'Product Leadership',
+    'Technical Leadership',
     'Startup Advisor',
     'Zell Entrepreneurship',
   ],
@@ -77,7 +77,7 @@ export const jsonLd = {
   name: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
   image: `${SITE_CONFIG.url}/images/or-nuri-professional.jpg`,
-  jobTitle: 'AI & Product Leader',
+  jobTitle: 'AI & Tech Leader',
   worksFor: {
     '@type': 'Organization',
     name: 'monday.com',

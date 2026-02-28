@@ -5,8 +5,8 @@
 
 export const SITE_CONFIG = {
   name: 'Or Nuri',
-  title: 'Or Nuri | AI & Product Leader, Entrepreneur',
-  description: 'AI & Product Leader at monday.com. MSc in Machine Learning & Data Science. Ex-Founder (acquired). Building AI-powered products that scale to millions.',
+  title: 'Or Nuri | AI & Tech Leader, Entrepreneur',
+  description: 'AI & Tech Leader at monday.com. MSc in Machine Learning & Data Science. Ex-Founder (acquired). Building AI-powered products that scale to millions.',
   url: 'https://or-nuri.ai',
   email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
@@ -14,7 +14,7 @@ export const SITE_CONFIG = {
 
 export const HERO_CONTENT = {
   headline: 'Building Products That Scale, Teams That Thrive',
-  subheadline: 'AI & Product Leader | Founder | Startup Advisor',
+  subheadline: 'AI & Tech Leader | Founder | Startup Advisor',
   cta: {
     primary: "Let's Connect",
     secondary: 'View Experience',
@@ -24,12 +24,12 @@ export const HERO_CONTENT = {
 export const ABOUT_CONTENT = {
   title: 'About',
   paragraphs: [
-    "I'm an AI & Product Leader at monday.com, where I lead WorkForms—a product used by millions of users worldwide. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
+    "I'm an AI & Tech Leader at monday.com, where I lead WorkForms—a product used by millions of users worldwide. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
     "Previously, I co-founded adjusti.co, an AI-powered advertising optimization platform that leveraged machine learning for campaign optimization and was acquired by Teikametrics in 2020. I'm an alumnus of the prestigious Zell Entrepreneurship Program at Reichman University.",
     "Today, I serve on advisory boards and help startups integrate AI into their products, navigate technical architecture challenges, and build high-performing engineering teams. My approach centers on clarity, empathy, and continuous learning.",
   ],
   highlights: [
-    'AI & Product Leader at monday.com, serving millions of users',
+    'AI & Tech Leader at monday.com, serving millions of users',
     'MSc in Machine Learning & Data Science (Reichman University)',
     'Founded and exited AI-powered startup (adjusti.co → Teikametrics)',
     'Zell Entrepreneurship Program alumnus',
@@ -151,9 +151,9 @@ export const EXPERTISE_AREAS = [
   },
   {
     id: 'product',
-    title: 'AI Product Leadership',
-    description: 'Led AI-powered products from 0 to 1 and scaled to millions of users. Expert in integrating ML capabilities into product strategy and user experience.',
-    skills: ['AI Product Strategy', '0-to-1 Development', 'ML Integration', 'Data-Driven Decisions', 'AI/UX Design', 'Roadmap Planning'],
+    title: 'Technical Leadership',
+    description: 'Led AI-powered products from 0 to 1 and scaled to millions of users. Expert in technical strategy, ML integration, and building scalable architectures.',
+    skills: ['Technical Strategy', '0-to-1 Development', 'ML Integration', 'System Design', 'Architecture', 'Engineering Excellence'],
   },
   {
     id: 'fullstack',

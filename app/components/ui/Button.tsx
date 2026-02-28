@@ -31,9 +31,9 @@ export default function Button({
   };
 
   const sizeStyles = {
-    sm: 'px-8 py-3 text-sm min-h-[40px]',
-    md: 'px-10 py-3 text-base min-h-[44px]',
-    lg: 'px-12 py-4 text-lg min-h-[48px]',
+    sm: 'px-10 py-3 text-sm min-h-[40px]',
+    md: 'px-12 py-4 text-base min-h-[44px]',
+    lg: 'px-16 py-5 text-lg min-h-[48px]',
   };
 
   const Component = href ? motion.a : motion.button;
