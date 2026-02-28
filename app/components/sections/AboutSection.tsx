@@ -43,12 +43,12 @@ export default function AboutSection() {
           {/* Company Logos */}
           <motion.div
             variants={fadeInUp}
-            className="pt-4"
+            className="pt-8"
           >
-            <p className="text-sm font-medium text-[var(--color-text-muted)] text-center mb-4 uppercase tracking-wide">
+            <p className="text-sm font-medium text-[var(--color-text-muted)] text-center mb-6 uppercase tracking-wide">
               Organizations I've worked with
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 max-w-4xl mx-auto mt-6">
               {[
                 { src: '/logos/monday.jpeg', alt: 'monday.com', width: 70, height: 24 },
                 { src: '/logos/teikametrics.jpeg', alt: 'Teikametrics', width: 70, height: 24 },
