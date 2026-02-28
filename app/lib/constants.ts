@@ -43,6 +43,7 @@ export const EXPERIENCE_TIMELINE = [
     year: '2024 - Present',
     title: 'Senior Tech Lead',
     company: 'monday.com',
+    logo: '/logos/monday.jpeg',
     description: 'Leading WorkForms product development, serving millions of users. Driving technical strategy, architecture decisions, and team growth.',
     achievements: [
       'Promoted to Senior Tech Lead',
@@ -55,6 +56,7 @@ export const EXPERIENCE_TIMELINE = [
     year: '2021 - 2024',
     title: 'Tech Lead',
     company: 'monday.com',
+    logo: '/logos/monday.jpeg',
     description: 'Led the development of WorkForms from inception to millions of users. Built and scaled engineering teams.',
     achievements: [
       'Scaled WorkForms to millions of users',
@@ -67,6 +69,7 @@ export const EXPERIENCE_TIMELINE = [
     year: '2020 - 2021',
     title: 'Head of Engineering',
     company: 'Teikametrics',
+    logo: '/logos/teikametrics.jpeg',
     description: 'Led engineering post-acquisition, integrating adjusti.co platform and team.',
     achievements: [
       'Successfully integrated acquired company',
@@ -79,6 +82,7 @@ export const EXPERIENCE_TIMELINE = [
     year: '2019 - 2020',
     title: 'Co-Founder & CTO',
     company: 'adjusti.co',
+    logo: '/logos/adjusti.jpeg',
     description: 'Co-founded AI-powered advertising optimization platform. Built product from 0 to 1 and achieved successful acquisition.',
     achievements: [
       'Built AI platform for advertising optimization',
@@ -91,6 +95,7 @@ export const EXPERIENCE_TIMELINE = [
     year: '2017 - 2018',
     title: 'Zell Entrepreneurship Program',
     company: 'Reichman University',
+    logo: '/logos/reichman.jpeg',
     description: 'Elite entrepreneurship program combining academic excellence with real-world startup experience.',
     achievements: [
       'Selected from hundreds of applicants',
@@ -103,6 +108,7 @@ export const EXPERIENCE_TIMELINE = [
     year: '2016 - 2017',
     title: 'R&D Manager',
     company: 'iCast',
+    logo: '/logos/icast.svg',
     description: 'Led R&D team developing innovative broadcasting solutions.',
     achievements: [
       'Managed R&D team',

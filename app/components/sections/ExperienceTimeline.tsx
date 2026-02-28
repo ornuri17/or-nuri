@@ -53,17 +53,36 @@ export default function ExperienceTimeline() {
                       className="bg-white rounded-2xl p-6 border border-[var(--color-border)] shadow-sm hover:shadow-md transition-shadow"
                       whileHover={{ scale: 1.02 }}
                     >
-                      {/* Year */}
-                      <div className="text-sm font-semibold text-[var(--color-accent-secondary)] mb-2">
-                        {item.year}
-                      </div>
+                      {/* Header with Logo */}
+                      <div className="flex items-start gap-4 mb-4">
+                        {/* Company Logo */}
+                        {'logo' in item && item.logo && (
+                          <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg border border-[var(--color-border)] p-2 flex items-center justify-center">
+                            <img
+                              src={item.logo}
+                              alt={`${item.company} logo`}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        )}
 
-                      {/* Title & Company */}
-                      <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-1">
-                        {item.title}
-                      </h3>
-                      <div className="text-base font-medium text-[var(--color-text-secondary)] mb-3">
-                        {item.company}
+                        {/* Title and Company Info */}
+                        <div className="flex-1 min-w-0">
+                          {/* Year */}
+                          <div className="text-sm font-semibold text-[var(--color-accent-secondary)] mb-2">
+                            {item.year}
+                          </div>
+
+                          {/* Title */}
+                          <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-1">
+                            {item.title}
+                          </h3>
+
+                          {/* Company */}
+                          <div className="text-base font-medium text-[var(--color-text-secondary)]">
+                            {item.company}
+                          </div>
+                        </div>
                       </div>
 
                       {/* Description */}
