@@ -55,7 +55,7 @@ export const EXPERIENCE_TIMELINE = [
       'Tech lead WorkForms product (forms by monday.com), scaling from tens of thousands to tens of millions of requests daily',
       'Tech lead WorkDocs product (docs by monday.com), scaling from hundreds of blocks to tens of thousands of blocks',
       'Led project to make WorkForms submission experience 100% accessible and mobile friendly',
-      'Integrated SLOs (Service Level Objectives - measurable reliability targets) in WorkForms: improved availability from 89% to 99.9%, and p99 latency SLO from 84% to 99.9%',
+      'Integrated SLOs in WorkForms: improved availability from 89% to 99.9%, and p99 latency SLO from 84% to 99.9%',
       'Integrated SLOs in WorkDocs: reduced p99 loading latency from 7.5 seconds to 3.5 seconds',
       'Led full refactor of forms experience, rebuilding UI and server-side architecture, deleting 10K+ lines of code from monday\'s platform monolith',
       'Provide knowledge sharing sessions on AI, SLOs, Testing, Observability, and more',
