@@ -34,7 +34,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 64px; /* Offset for fixed navbar */
+  scroll-padding-top: 4rem; /* 64px - exactly matches navbar h-16 */
 }
 
 body {
