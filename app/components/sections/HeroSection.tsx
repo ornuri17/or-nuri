@@ -70,8 +70,8 @@ export default function HeroSection() {
               <div className="relative w-full h-full rounded-full border-4 border-[var(--color-border)] overflow-hidden shadow-2xl">
                 <img
                   src="/images/or-nuri-professional.jpg"
-                  alt="Or Nuri - Senior Tech Lead"
-                  className="w-full h-full object-cover object-[center_20%]"
+                  alt="Or Nuri - Tech Leader & AI Expert"
+                  className="w-full h-full object-cover object-[center_35%]"
                   loading="eager"
                   width="800"
                   height="800"

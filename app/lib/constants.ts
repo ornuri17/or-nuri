@@ -5,8 +5,8 @@
 
 export const SITE_CONFIG = {
   name: 'Or Nuri',
-  title: 'Or Nuri | Senior Tech Lead & Entrepreneur',
-  description: 'Senior Tech Lead at monday.com leading products used by millions. Ex-Founder (acquired), advisor to startups, MSc in Machine Learning.',
+  title: 'Or Nuri | AI & Product Leader, Entrepreneur',
+  description: 'AI & Product Leader at monday.com. MSc in Machine Learning & Data Science. Ex-Founder (acquired). Building AI-powered products that scale to millions.',
   url: 'https://or-nuri.ai',
   email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
@@ -14,7 +14,7 @@ export const SITE_CONFIG = {
 
 export const HERO_CONTENT = {
   headline: 'Building Products That Scale, Teams That Thrive',
-  subheadline: 'Senior Tech Lead @ monday.com | Ex-Founder (Acquired) | Startup Advisor',
+  subheadline: 'AI & Product Leader | Founder | Startup Advisor',
   cta: {
     primary: "Let's Connect",
     secondary: 'View Experience',
@@ -24,16 +24,16 @@ export const HERO_CONTENT = {
 export const ABOUT_CONTENT = {
   title: 'About',
   paragraphs: [
-    "I'm a Senior Tech Lead at monday.com, where I lead WorkForms—a product used by millions of users worldwide. My passion lies in building scalable products and empowering teams to achieve extraordinary results.",
-    "Previously, I co-founded adjusti.co, an AI-powered advertising optimization platform that was acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science and am an alumnus of the prestigious Zell Entrepreneurship Program at Reichman University.",
-    "Today, I serve on advisory boards and help startups navigate the challenges of product development, technical architecture, and team building. My approach centers on clarity, empathy, and continuous learning.",
+    "I'm an AI & Product Leader at monday.com, where I lead WorkForms—a product used by millions of users worldwide. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
+    "Previously, I co-founded adjusti.co, an AI-powered advertising optimization platform that leveraged machine learning for campaign optimization and was acquired by Teikametrics in 2020. I'm an alumnus of the prestigious Zell Entrepreneurship Program at Reichman University.",
+    "Today, I serve on advisory boards and help startups integrate AI into their products, navigate technical architecture challenges, and build high-performing engineering teams. My approach centers on clarity, empathy, and continuous learning.",
   ],
   highlights: [
-    'Leading products used by millions at monday.com',
-    'Successfully exited startup founder (adjusti.co → Teikametrics)',
-    'MSc in Machine Learning & Data Science',
+    'AI & Product Leader at monday.com, serving millions of users',
+    'MSc in Machine Learning & Data Science (Reichman University)',
+    'Founded and exited AI-powered startup (adjusti.co → Teikametrics)',
     'Zell Entrepreneurship Program alumnus',
-    'Advisory board member and startup advisor',
+    'Advisory board member helping startups integrate AI',
   ],
 };
 
@@ -44,12 +44,13 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Senior Tech Lead',
     company: 'monday.com',
     logo: '/logos/monday.jpeg',
-    description: 'Leading WorkForms product development, serving millions of users worldwide. Drove the product from inception to scale, while building and mentoring high-performing engineering teams.',
+    description: 'Leading WorkForms product development with AI-powered features, serving millions of users worldwide. Drove the product from inception to scale, integrating machine learning capabilities while building and mentoring high-performing engineering teams.',
     achievements: [
       'Promoted to Senior Tech Lead in 2024',
-      'Scaled WorkForms to millions of users globally',
+      'Scaled WorkForms to millions of users globally with AI-enhanced features',
+      'Integrated ML models for intelligent form optimization and analytics',
       'Built and led cross-functional engineering teams',
-      'Established technical best practices and architecture standards',
+      'Established technical best practices and AI/ML architecture standards',
     ],
   },
   {
@@ -58,11 +59,12 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Head of Engineering',
     company: 'Teikametrics',
     logo: '/logos/teikametrics.jpeg',
-    description: 'Led engineering post-acquisition, integrating adjusti.co platform and team.',
+    description: 'Led engineering post-acquisition, integrating adjusti.co AI platform and team. Scaled machine learning infrastructure for e-commerce optimization.',
     achievements: [
-      'Successfully integrated acquired company',
-      'Led engineering team of 15+',
-      'Scaled AI platform infrastructure',
+      'Successfully integrated acquired AI startup',
+      'Led engineering team of 15+ building ML systems',
+      'Scaled AI platform infrastructure to handle millions of predictions daily',
+      'Enhanced ML models for advertising optimization',
     ],
   },
   {
@@ -71,11 +73,12 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Co-Founder & CTO',
     company: 'adjusti.co',
     logo: '/logos/adjusti.jpeg',
-    description: 'Co-founded AI-powered advertising optimization platform. Built product from 0 to 1 and achieved successful acquisition.',
+    description: 'Co-founded AI-powered advertising optimization platform leveraging machine learning for automated campaign management. Built product from 0 to 1 and achieved successful acquisition.',
     achievements: [
-      'Built AI platform for advertising optimization',
+      'Built end-to-end AI platform with ML models for bid optimization',
+      'Developed predictive algorithms for ad performance forecasting',
       'Acquired by Teikametrics in 2020',
-      'Raised seed funding',
+      'Raised seed funding from top investors',
     ],
   },
   {
@@ -122,19 +125,19 @@ export const LEADERSHIP_PILLARS = [
   {
     id: 'clarity',
     title: 'Clarity',
-    description: 'Transparent communication and clear goals drive alignment. I believe in making the complex simple and ensuring everyone understands the "why" behind our work.',
+    description: 'Transparent communication and clear goals drive alignment. I believe in making complex AI concepts simple and ensuring everyone understands the "why" behind our technical decisions.',
     icon: '🎯',
   },
   {
     id: 'empathy',
     title: 'Empathy',
-    description: 'Great teams are built on understanding and trust. I invest in people, recognize their strengths, and create environments where everyone can thrive.',
+    description: 'Great teams are built on understanding and trust. I invest in people, recognize their strengths, and create environments where engineers and data scientists can thrive together.',
     icon: '❤️',
   },
   {
     id: 'learning',
-    title: 'Continuous Learning',
-    description: 'Technology evolves rapidly, and so must we. I foster a culture of curiosity, experimentation, and growth—for myself and my teams.',
+    title: 'Innovation & Learning',
+    description: 'AI and technology evolve rapidly. I foster a culture of curiosity, experimentation with new ML techniques, and continuous growth—staying at the forefront of AI innovation.',
     icon: '🚀',
   },
 ];
@@ -143,69 +146,69 @@ export const EXPERTISE_AREAS = [
   {
     id: 'ai-ml',
     title: 'AI & Machine Learning',
-    description: 'MSc in Machine Learning & Data Science. Built AI-powered platforms and integrated ML into production systems.',
-    skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'AI Product Strategy'],
-  },
-  {
-    id: 'fullstack',
-    title: 'Full Stack Development',
-    description: '10+ years building scalable web applications. Expert in modern frameworks and cloud infrastructure.',
-    skills: ['TypeScript', 'React', 'Node.js', 'Python', 'Next.js', 'AWS', 'PostgreSQL', 'MongoDB'],
+    description: 'MSc in Machine Learning & Data Science. Specialized in building production AI systems, ML models, and AI-powered products that scale to millions of users.',
+    skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Predictive Analytics', 'MLOps', 'AI Product Strategy', 'TensorFlow', 'PyTorch'],
   },
   {
     id: 'product',
-    title: 'Product Leadership',
-    description: 'Led products from 0 to 1 and scaled to millions of users. Strategic thinking with hands-on execution.',
-    skills: ['Product Strategy', '0-to-1 Development', 'User Experience', 'Data-Driven Decisions', 'Roadmap Planning'],
+    title: 'AI Product Leadership',
+    description: 'Led AI-powered products from 0 to 1 and scaled to millions of users. Expert in integrating ML capabilities into product strategy and user experience.',
+    skills: ['AI Product Strategy', '0-to-1 Development', 'ML Integration', 'Data-Driven Decisions', 'AI/UX Design', 'Roadmap Planning'],
+  },
+  {
+    id: 'fullstack',
+    title: 'Full Stack & AI Infrastructure',
+    description: '10+ years building scalable systems. Expert in ML infrastructure, cloud platforms, and modern frameworks for AI applications.',
+    skills: ['Python', 'TypeScript', 'React', 'Node.js', 'AWS', 'ML Infrastructure', 'Vector Databases', 'API Design'],
   },
   {
     id: 'management',
-    title: 'Engineering Management',
-    description: 'Built and led high-performing teams. Focus on mentorship, culture, and sustainable growth.',
-    skills: ['Team Building', 'Mentorship', 'Agile/Scrum', 'Hiring', 'Performance Management', 'Technical Strategy'],
+    title: 'Engineering Leadership',
+    description: 'Built and led high-performing teams working on AI/ML products. Focus on technical excellence, mentorship, and innovation culture.',
+    skills: ['Team Building', 'Technical Mentorship', 'AI Strategy', 'Agile/Scrum', 'Hiring', 'ML Team Leadership'],
   },
 ];
 
 export const SUCCESS_STORIES = [
   {
-    id: 'acquisition',
-    title: 'Acquired Startup Founder',
+    id: 'ai-startup',
+    title: 'Built & Exited AI Startup',
     metric: '100%',
-    description: 'Co-founded adjusti.co during the Zell Entrepreneurship Program. Built AI-powered advertising platform and achieved successful acquisition by Teikametrics in 2020.',
-    impact: 'From idea to exit in under 2 years',
+    description: 'Co-founded adjusti.co, an AI-powered advertising platform using ML for campaign optimization. Built predictive models, scaled to production, and achieved acquisition by Teikametrics in 2020.',
+    impact: 'From idea to AI exit in under 2 years',
   },
   {
-    id: 'workforms',
-    title: 'Scaling WorkForms',
+    id: 'ai-scale',
+    title: 'Scaled AI-Powered Product',
     metric: 'Millions',
-    description: 'Led WorkForms from inception to a product serving millions of users globally. Drove technical architecture, team building, and product strategy.',
-    impact: 'Scaled from 0 to millions of users',
+    description: 'Led WorkForms with integrated ML capabilities from inception to millions of users globally. Implemented intelligent analytics, form optimization, and AI-driven insights.',
+    impact: 'AI features serving millions of users daily',
   },
   {
-    id: 'advisory',
-    title: 'Advisory Impact',
+    id: 'ai-advisory',
+    title: 'AI Advisory & Mentorship',
     metric: 'Multiple',
-    description: 'Serving on advisory boards and helping early-stage startups with product strategy, technical decisions, and go-to-market planning.',
-    impact: 'Supporting the next generation of founders',
+    description: 'Advising startups on AI integration, ML architecture, and building AI-powered products. Helping founders navigate technical decisions and AI product strategy.',
+    impact: 'Empowering the next generation of AI startups',
   },
 ];
 
 export const ADVISORY_CONTENT = {
   title: 'Advisory Work',
-  description: "I'm passionate about helping startups navigate the challenging journey from idea to product-market fit. I serve on advisory boards and work closely with founders on:",
+  description: "I'm passionate about helping startups integrate AI and navigate the journey from idea to product-market fit. I serve on advisory boards and work closely with founders on:",
   roles: [
     {
       company: 'Record',
       description: 'Advisory Board Member - AI-powered customer support platform',
-      focus: ['Product Strategy', 'Technical Architecture', 'Go-to-Market'],
+      focus: ['AI Product Strategy', 'ML Architecture', 'Go-to-Market'],
     },
   ],
   focusAreas: [
-    'Product Strategy & Roadmap',
+    'AI Integration & Strategy',
+    'ML Architecture & MLOps',
+    'AI Product Development',
     'Technical Architecture',
     'Team Building & Hiring',
-    'Engineering Culture',
-    'Go-to-Market Strategy',
     'Fundraising & Pitch Deck Review',
   ],
 };
