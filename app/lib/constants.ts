@@ -26,7 +26,7 @@ export const ABOUT_CONTENT = {
   title: 'About',
   paragraphs: [
     "I'm an AI & Tech Leader at monday.com, where I lead the Collaborative Work Management group—an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
-    "Previously, I co-founded adjusti.co, an AI-powered advertising optimization platform that leveraged machine learning for campaign optimization and was acquired by Teikametrics in 2020. I'm an alumnus of the prestigious Zell Entrepreneurship Program at Reichman University.",
+    "Previously, I co-founded adjusti.co, an ecommerce market intelligence platform that provided insights to help customers make better data-driven decisions. We created comprehensive robust datasets for AI algorithms, achieving best results for AI-based bidders and other optimization systems. adjusti.co was acquired by Teikametrics in 2020. I'm an alumnus of the prestigious Zell Entrepreneurship Program at Reichman University.",
     "Today, I serve on advisory boards and help startups integrate AI into their products, navigate technical architecture challenges, and build high-performing engineering teams. My approach centers on clarity, empathy, and continuous learning.",
   ],
   highlights: [
@@ -61,7 +61,7 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Head of Engineering',
     company: 'Teikametrics',
     logo: '/logos/teikametrics.jpeg',
-    description: 'Led engineering post-acquisition, integrating adjusti.co AI platform and team. Scaled machine learning infrastructure for e-commerce optimization.',
+    description: 'Led engineering post-acquisition, integrating adjusti.co market intelligence platform and team. Scaled machine learning infrastructure for ecommerce data analysis and AI-based optimization.',
     achievements: [
       'Successfully integrated acquired AI startup',
       'Led engineering team of 15+ building ML systems',
@@ -75,10 +75,11 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Co-Founder & CTO',
     company: 'adjusti.co',
     logo: '/logos/adjusti.jpeg',
-    description: 'Co-founded AI-powered advertising optimization platform leveraging machine learning for automated campaign management. Built product from 0 to 1 and achieved successful acquisition.',
+    description: 'Co-founded ecommerce market intelligence platform providing insights to help customers make better data-driven decisions. Created comprehensive robust datasets for AI algorithms, enabling best results for AI-based bidders. Built product from 0 to 1 and achieved successful acquisition.',
     achievements: [
-      'Built end-to-end AI platform with ML models for bid optimization',
-      'Developed predictive algorithms for ad performance forecasting',
+      'Built end-to-end market intelligence platform with AI-powered insights',
+      'Created robust datasets powering AI algorithms for optimal decision making',
+      'Developed infrastructure supporting AI-based bidders and optimization systems',
       'Acquired by Teikametrics in 2020',
       'Raised seed funding from top investors',
     ],
@@ -176,7 +177,7 @@ export const SUCCESS_STORIES = [
     id: 'ai-startup',
     title: 'Built & Exited AI Startup',
     metric: '100%',
-    description: 'Co-founded adjusti.co, an AI-powered advertising platform using ML for campaign optimization. Built predictive models, scaled to production, and achieved acquisition by Teikametrics in 2020.',
+    description: 'Co-founded adjusti.co, an ecommerce market intelligence platform that provided insights for better data-driven decisions. Created comprehensive datasets for AI algorithms powering AI-based bidders and achieved acquisition by Teikametrics in 2020.',
     impact: 'From idea to AI exit in under 2 years',
   },
   {
