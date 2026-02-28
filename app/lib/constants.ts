@@ -39,29 +39,17 @@ export const ABOUT_CONTENT = {
 
 export const EXPERIENCE_TIMELINE = [
   {
-    id: 'monday-senior',
-    year: '2024 - Present',
+    id: 'monday',
+    year: '2021 - Present',
     title: 'Senior Tech Lead',
     company: 'monday.com',
     logo: '/logos/monday.jpeg',
-    description: 'Leading WorkForms product development, serving millions of users. Driving technical strategy, architecture decisions, and team growth.',
+    description: 'Leading WorkForms product development, serving millions of users worldwide. Drove the product from inception to scale, while building and mentoring high-performing engineering teams.',
     achievements: [
-      'Promoted to Senior Tech Lead',
-      'Leading cross-functional product initiatives',
-      'Mentoring engineering teams',
-    ],
-  },
-  {
-    id: 'monday-lead',
-    year: '2021 - 2024',
-    title: 'Tech Lead',
-    company: 'monday.com',
-    logo: '/logos/monday.jpeg',
-    description: 'Led the development of WorkForms from inception to millions of users. Built and scaled engineering teams.',
-    achievements: [
-      'Scaled WorkForms to millions of users',
-      'Built high-performing engineering team',
-      'Established technical best practices',
+      'Promoted to Senior Tech Lead in 2024',
+      'Scaled WorkForms to millions of users globally',
+      'Built and led cross-functional engineering teams',
+      'Established technical best practices and architecture standards',
     ],
   },
   {

@@ -8,7 +8,7 @@ export default function ExperienceTimeline() {
   return (
     <section
       id="experience"
-      className="py-20 md:py-32 bg-[var(--color-bg-secondary)]"
+      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-secondary)]"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -28,7 +28,7 @@ export default function ExperienceTimeline() {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-[var(--color-border)]" />
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-[var(--color-border)]" />
 
             {/* Timeline items */}
             <div className="space-y-12">
@@ -41,11 +41,11 @@ export default function ExperienceTimeline() {
                   }`}
                 >
                   {/* Dot */}
-                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--color-accent-secondary)] rounded-full border-4 border-[var(--color-bg-secondary)] z-10" />
+                  <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--color-accent-secondary)] rounded-full border-4 border-[var(--color-bg-secondary)] z-10" />
 
                   {/* Content */}
                   <div
-                    className={`flex-1 ml-16 md:ml-0 ${
+                    className={`flex-1 ml-14 md:ml-0 ${
                       index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
                     }`}
                   >
@@ -62,6 +62,9 @@ export default function ExperienceTimeline() {
                               src={item.logo}
                               alt={`${item.company} logo`}
                               className="w-full h-full object-contain"
+                              loading="lazy"
+                              width="48"
+                              height="48"
                             />
                           </div>
                         )}

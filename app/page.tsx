@@ -12,10 +12,10 @@ import ContactSection from '@/app/components/sections/ContactSection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       <ScrollProgress />
       <Navbar />
-      <main>
+      <main className="w-full">
         <HeroSection />
         <AboutSection />
         <ExperienceTimeline />
