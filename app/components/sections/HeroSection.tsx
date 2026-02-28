@@ -15,7 +15,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Content */}
-          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+          <div className="space-y-8 sm:space-y-12 text-center lg:text-left">
             <motion.div
               variants={fadeInDown}
               initial="hidden"
