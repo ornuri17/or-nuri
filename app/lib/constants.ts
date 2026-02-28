@@ -69,10 +69,10 @@ export const EXPERIENCE_TIMELINE = [
     logo: '/logos/teikametrics.jpeg',
     description: 'Led engineering post-acquisition, integrating adjusti.co market intelligence platform and team. Scaled machine learning infrastructure for ecommerce data analysis and AI-based optimization.',
     achievements: [
-      'Successfully integrated acquired AI startup',
+      'Successfully integrated acquired ecommerce market intelligence platform',
       'Led engineering team of 15+ building ML systems',
-      'Scaled AI platform infrastructure to handle millions of predictions daily',
-      'Enhanced ML models for advertising optimization',
+      'Scaled platform infrastructure to handle millions of data points daily',
+      'Enhanced market intelligence capabilities and AI-based optimization systems',
     ],
   },
   {
