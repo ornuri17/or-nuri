@@ -25,7 +25,7 @@ export const HERO_CONTENT = {
 export const ABOUT_CONTENT = {
   title: 'About',
   paragraphs: [
-    "I'm an AI & Tech Leader at monday.com, where I lead the Collaborative Work Management group—an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
+    "I'm an AI & Tech Leader at monday.com, where I lead the Collaborative Work Management group, an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
     "Previously, I co-founded adjusti.co, an ecommerce market intelligence platform that provided insights to help customers make better data-driven decisions. We created comprehensive robust datasets for AI algorithms, achieving best results for AI-based bidders and other optimization systems. adjusti.co was acquired by Teikametrics in 2020. I'm an alumnus of the prestigious Zell Entrepreneurship Program at Reichman University.",
     "Today, I serve on advisory boards and help startups integrate AI into their products, navigate technical architecture challenges, and build high-performing engineering teams. My approach centers on clarity, empathy, and continuous learning.",
   ],
@@ -140,7 +140,7 @@ export const LEADERSHIP_PILLARS = [
   {
     id: 'learning',
     title: 'Innovation & Learning',
-    description: 'AI and technology evolve rapidly. I foster a culture of curiosity, experimentation with new ML techniques, and continuous growth—staying at the forefront of AI innovation.',
+    description: 'AI and technology evolve rapidly. I foster a culture of curiosity, experimentation with new ML techniques, and continuous growth, staying at the forefront of AI innovation.',
     icon: '🚀',
   },
 ];
@@ -218,7 +218,7 @@ export const ADVISORY_CONTENT = {
 
 export const CONTACT_CONTENT = {
   title: "Let's Build Something Great Together",
-  description: "Whether you're looking for advisory support, exploring leadership opportunities, or just want to connect—I'd love to hear from you.",
+  description: "Whether you're looking for advisory support, exploring leadership opportunities, or just want to connect, I'd love to hear from you.",
   cta: {
     primary: 'Schedule a Call',
     secondary: 'Download CV',

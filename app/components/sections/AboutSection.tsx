@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ABOUT_CONTENT } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer, defaultViewport } from '@/app/lib/animations';
@@ -38,6 +39,40 @@ export default function AboutSection() {
               </motion.p>
             ))}
           </div>
+
+          {/* Company Logos */}
+          <motion.div
+            variants={fadeInUp}
+            className="py-8"
+          >
+            <p className="text-sm font-medium text-[var(--color-text-muted)] text-center mb-8 uppercase tracking-wide">
+              Organizations I've worked with
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-3xl mx-auto">
+              {[
+                { src: '/logos/monday.jpeg', alt: 'monday.com', width: 140, height: 40 },
+                { src: '/logos/teikametrics.jpeg', alt: 'Teikametrics', width: 140, height: 40 },
+                { src: '/logos/adjusti.jpeg', alt: 'adjusti.co', width: 120, height: 40 },
+                { src: '/logos/reichman.jpeg', alt: 'Reichman University', width: 120, height: 40 },
+                { src: '/logos/icast.svg', alt: 'iCast', width: 100, height: 40 },
+              ].map((logo, index) => (
+                <motion.div
+                  key={logo.alt}
+                  variants={fadeInUp}
+                  className="relative grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    className="object-contain"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
 
           {/* Highlights */}
           <motion.div
