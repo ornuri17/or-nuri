@@ -39,9 +39,9 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="w-full px-6 sm:px-8 lg:px-10">
           {/* Desktop: 3-column grid layout */}
-          <div className="hidden md:grid md:grid-cols-3 items-center h-16">
+          <div className="hidden md:grid md:grid-cols-3 items-center h-16 w-full">
             {/* Left: Logo */}
             <div className="flex justify-start">
               <motion.button
