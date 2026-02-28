@@ -40,19 +40,22 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <motion.button
-              onClick={() => scrollToElement('hero')}
-              className="text-xl font-bold text-[var(--color-accent-primary)] hover:text-[var(--color-accent-secondary)] transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {SITE_CONFIG.name}
-            </motion.button>
+          {/* Desktop: 3-column grid layout */}
+          <div className="hidden md:grid md:grid-cols-3 items-center h-16">
+            {/* Left: Logo */}
+            <div className="flex justify-start">
+              <motion.button
+                onClick={() => scrollToElement('hero')}
+                className="text-xl font-bold text-[var(--color-accent-primary)] hover:text-[var(--color-accent-secondary)] transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {SITE_CONFIG.name}
+              </motion.button>
+            </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-2">
+            {/* Center: Navigation */}
+            <div className="flex items-center justify-center gap-2">
               {NAV_ITEMS.map((item) => (
                 <motion.button
                   key={item.href}
@@ -66,9 +69,27 @@ export default function Navbar() {
               ))}
             </div>
 
+            {/* Right: Empty for balance */}
+            <div className="flex justify-end">
+              {/* Empty - for visual balance */}
+            </div>
+          </div>
+
+          {/* Mobile: Simple flex layout */}
+          <div className="flex md:hidden items-center justify-between h-16">
+            {/* Logo */}
+            <motion.button
+              onClick={() => scrollToElement('hero')}
+              className="text-xl font-bold text-[var(--color-accent-primary)] hover:text-[var(--color-accent-secondary)] transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {SITE_CONFIG.name}
+            </motion.button>
+
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-[var(--color-bg-tertiary)] transition-colors"
+              className="p-2 rounded-lg hover:bg-[var(--color-bg-tertiary)] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
