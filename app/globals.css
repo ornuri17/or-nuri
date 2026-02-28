@@ -34,7 +34,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* Offset for fixed navbar */
+  scroll-padding-top: 120px; /* Offset for fixed navbar + breathing room */
 }
 
 body {
