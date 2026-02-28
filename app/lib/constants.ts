@@ -10,6 +10,7 @@ export const SITE_CONFIG = {
   url: 'https://or-nuri.ai',
   email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
+  calendar: 'https://calendar.app.google/2bPceXnVdMSiXDa86',
 };
 
 export const HERO_CONTENT = {

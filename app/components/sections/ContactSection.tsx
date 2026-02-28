@@ -99,7 +99,7 @@ export default function ContactSection() {
             <Button
               variant="primary"
               size="lg"
-              href={SITE_CONFIG.linkedin}
+              href={SITE_CONFIG.calendar}
             >
               {CONTACT_CONTENT.cta.primary}
             </Button>
