@@ -25,7 +25,7 @@ export const HERO_CONTENT = {
 export const ABOUT_CONTENT = {
   title: 'About',
   paragraphs: [
-    "I'm an AI & Tech Leader at monday.com, where I tech lead the Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
+    "I'm an AI & Tech Leader at monday.com, where I tech lead the Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. I specialize in building AI-powered products that scale.",
     "Previously, I co-founded adjusti.co, an ecommerce market intelligence platform that provided insights to help customers make better data-driven decisions. We created comprehensive robust datasets for AI algorithms, achieving best results for AI-based bidders and other optimization systems. adjusti.co was acquired by Teikametrics in 2020.",
     "I hold an MSc in Machine Learning & Data Science and a BSc in Computer Science from Reichman University, and I'm an alumnus of the prestigious Zell Entrepreneurship Program, where I built and launched adjusti.co.",
     "Today, I serve on advisory boards and help startups integrate AI into their products, navigate technical architecture challenges, and build high-performing engineering teams. My approach centers on clarity, empathy, and continuous learning.",
