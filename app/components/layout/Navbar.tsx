@@ -52,12 +52,12 @@ export default function Navbar() {
             </motion.button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center gap-2">
               {NAV_ITEMS.map((item) => (
                 <motion.button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="px-4 py-2 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] rounded-lg hover:bg-[var(--color-bg-tertiary)] transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] rounded-lg hover:bg-[var(--color-bg-tertiary)] transition-colors whitespace-nowrap"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

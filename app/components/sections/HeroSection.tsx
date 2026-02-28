@@ -25,7 +25,7 @@ export default function HeroSection() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[var(--color-text-primary)] leading-tight">
                 {HERO_CONTENT.headline}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-[var(--color-text-secondary)] font-medium">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[var(--color-text-secondary)] font-medium lg:whitespace-nowrap">
                 {HERO_CONTENT.subheadline}
               </p>
             </motion.div>
@@ -71,7 +71,7 @@ export default function HeroSection() {
                 <img
                   src="/images/or-nuri-professional.jpg"
                   alt="Or Nuri - Senior Tech Lead"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[center_20%]"
                   loading="eager"
                   width="800"
                   height="800"
