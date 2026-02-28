@@ -10,13 +10,13 @@ export default function AboutSection() {
       id="about"
       className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-primary)]"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={defaultViewport}
-          className="space-y-12"
+          className="space-y-16"
         >
           {/* Title */}
           <motion.h2
@@ -27,12 +27,12 @@ export default function AboutSection() {
           </motion.h2>
 
           {/* Paragraphs */}
-          <div className="space-y-6">
+          <div className="space-y-8 text-center">
             {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
               <motion.p
                 key={index}
                 variants={fadeInUp}
-                className="text-lg text-[var(--color-text-secondary)] leading-relaxed"
+                className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-loose"
               >
                 {paragraph}
               </motion.p>
@@ -42,16 +42,16 @@ export default function AboutSection() {
           {/* Highlights */}
           <motion.div
             variants={fadeInUp}
-            className="bg-[var(--color-bg-tertiary)] rounded-2xl p-8 border border-[var(--color-border)]"
+            className="bg-[var(--color-bg-tertiary)] rounded-2xl p-10 md:p-12 border border-[var(--color-border)]"
           >
-            <h3 className="text-xl font-semibold text-[var(--color-text-primary)] mb-6">
+            <h3 className="text-2xl font-semibold text-[var(--color-text-primary)] mb-8 text-center">
               Highlights
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-6 max-w-3xl mx-auto">
               {ABOUT_CONTENT.highlights.map((highlight, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-3 text-[var(--color-text-secondary)]"
+                  className="flex items-start gap-4 text-[var(--color-text-secondary)] text-lg"
                 >
                   <svg
                     className="w-6 h-6 text-[var(--color-accent-secondary)] flex-shrink-0 mt-0.5"
