@@ -64,22 +64,15 @@ export default function HeroSection() {
             className="relative"
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
-              {/* Placeholder for professional headshot */}
+              {/* Gradient background effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent-secondary)] to-[var(--color-accent-primary)] rounded-full opacity-20 blur-3xl" />
-              <div className="relative w-full h-full bg-[var(--color-bg-tertiary)] rounded-full border-4 border-[var(--color-border)] flex items-center justify-center">
-                <div className="text-center text-[var(--color-text-muted)]">
-                  <svg
-                    className="w-32 h-32 mx-auto mb-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                  </svg>
-                  <p className="text-sm">
-                    Add professional headshot:<br />
-                    /public/images/or-nuri-professional.jpg
-                  </p>
-                </div>
+              {/* Profile image */}
+              <div className="relative w-full h-full rounded-full border-4 border-[var(--color-border)] overflow-hidden shadow-2xl">
+                <img
+                  src="/images/or-nuri-professional.jpg"
+                  alt="Or Nuri - Senior Tech Lead"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>

@@ -95,6 +95,5 @@ export const jsonLd = {
   ],
   sameAs: [
     SITE_CONFIG.linkedin,
-    SITE_CONFIG.github,
-  ].filter(Boolean),
+  ],
 };

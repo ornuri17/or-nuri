@@ -32,7 +32,7 @@ export default function ContactSection() {
           {/* Contact Methods */}
           <motion.div
             variants={fadeInUp}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto"
           >
             {/* Email */}
             <a

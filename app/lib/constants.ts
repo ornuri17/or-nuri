@@ -8,9 +8,8 @@ export const SITE_CONFIG = {
   title: 'Or Nuri | Senior Tech Lead & Entrepreneur',
   description: 'Senior Tech Lead at monday.com leading products used by millions. Ex-Founder (acquired), advisor to startups, MSc in Machine Learning.',
   url: 'https://or-nuri.ai',
-  email: 'or.nuri@example.com', // TODO: Update with real email
+  email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
-  github: 'https://github.com/ornuri', // TODO: Update if exists
 };
 
 export const HERO_CONTENT = {
