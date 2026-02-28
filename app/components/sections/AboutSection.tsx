@@ -48,20 +48,19 @@ export default function AboutSection() {
             <p className="text-sm font-medium text-[var(--color-text-muted)] text-center mb-8 uppercase tracking-wide">
               Organizations I've worked with
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-3xl mx-auto">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 max-w-4xl mx-auto">
               {[
-                { src: '/logos/monday.jpeg', alt: 'monday.com', width: 100, height: 30 },
-                { src: '/logos/teikametrics.jpeg', alt: 'Teikametrics', width: 100, height: 30 },
-                { src: '/logos/adjusti.jpeg', alt: 'adjusti.co', width: 90, height: 30 },
-                { src: '/logos/record.jpeg', alt: 'Record', width: 90, height: 30 },
-                { src: '/logos/reichman.jpeg', alt: 'Reichman University', width: 90, height: 30 },
-                { src: '/logos/icast.svg', alt: 'iCast', width: 80, height: 30 },
+                { src: '/logos/monday.jpeg', alt: 'monday.com', width: 70, height: 24 },
+                { src: '/logos/teikametrics.jpeg', alt: 'Teikametrics', width: 70, height: 24 },
+                { src: '/logos/adjusti.jpeg', alt: 'adjusti.co', width: 60, height: 24 },
+                { src: '/logos/record.jpeg', alt: 'Record', width: 60, height: 24 },
+                { src: '/logos/reichman.jpeg', alt: 'Reichman University', width: 60, height: 24 },
+                { src: '/logos/icast.svg', alt: 'iCast', width: 55, height: 24 },
               ].map((logo, index) => (
-                <motion.div
+                <div
                   key={logo.alt}
-                  variants={fadeInUp}
-                  className="relative grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
+                  className="relative grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 h-6 flex items-center"
+                  style={{ minHeight: '24px' }}
                 >
                   <Image
                     src={logo.src}
@@ -70,7 +69,7 @@ export default function AboutSection() {
                     height={logo.height}
                     className="object-contain"
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>
