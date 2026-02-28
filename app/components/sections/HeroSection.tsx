@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { HERO_CONTENT } from '@/app/lib/constants';
-import { fadeInUp, fadeInDown } from '@/app/lib/animations';
-import Button from '@/app/components/ui/Button';
-import { scrollToElement } from '@/app/lib/utils';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { HERO_CONTENT } from "@/app/lib/constants";
+import { fadeInUp, fadeInDown } from "@/app/lib/animations";
+import Button from "@/app/components/ui/Button";
+import { scrollToElement } from "@/app/lib/utils";
 
 export default function HeroSection() {
   return (
@@ -41,14 +42,14 @@ export default function HeroSection() {
               <Button
                 variant="primary"
                 size="lg"
-                onClick={() => scrollToElement('contact')}
+                onClick={() => scrollToElement("contact")}
               >
                 {HERO_CONTENT.cta.primary}
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => scrollToElement('experience')}
+                onClick={() => scrollToElement("experience")}
               >
                 {HERO_CONTENT.cta.secondary}
               </Button>
@@ -68,13 +69,13 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent-secondary)] to-[var(--color-accent-primary)] rounded-full opacity-20 blur-3xl" />
               {/* Profile image */}
               <div className="relative w-full h-full rounded-full border-4 border-[var(--color-border)] overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src="/images/or-nuri-professional.jpg"
                   alt="Or Nuri - Tech Leader & AI Expert"
-                  className="w-full h-full object-cover object-[center_25%]"
-                  loading="eager"
-                  width="800"
-                  height="800"
+                  fill
+                  className="object-cover object-[center_15%]"
+                  priority
+                  sizes="(max-width: 640px) 20rem, (max-width: 768px) 24rem, 28rem"
                 />
               </div>
             </div>
@@ -90,7 +91,7 @@ export default function HeroSection() {
         transition={{ delay: 0.8, duration: 0.5 }}
       >
         <motion.button
-          onClick={() => scrollToElement('about')}
+          onClick={() => scrollToElement("about")}
           className="flex flex-col items-center gap-2 text-[var(--color-text-muted)] hover:text-[var(--color-accent-primary)] transition-colors"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

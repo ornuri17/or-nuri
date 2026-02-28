@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { NAV_ITEMS, SITE_CONFIG } from '@/app/lib/constants';
-import { cn, scrollToElement } from '@/app/lib/utils';
-import { useIsMobile } from '@/app/hooks/useMediaQuery';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { NAV_ITEMS, SITE_CONFIG } from "@/app/lib/constants";
+import { cn, scrollToElement } from "@/app/lib/utils";
+import { useIsMobile } from "@/app/hooks/useMediaQuery";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,12 +16,12 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (href: string) => {
-    const id = href.replace('#', '');
+    const id = href.replace("#", "");
     scrollToElement(id);
     setIsMobileMenuOpen(false);
   };
@@ -30,10 +30,10 @@ export default function Navbar() {
     <>
       <motion.nav
         className={cn(
-          'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
+          "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
           isScrolled
-            ? 'bg-white/80 backdrop-blur-lg border-b border-[var(--color-border)] shadow-sm'
-            : 'bg-transparent'
+            ? "bg-white/80 backdrop-blur-lg border-b border-[var(--color-border)] shadow-sm"
+            : "bg-transparent",
         )}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -43,9 +43,9 @@ export default function Navbar() {
           {/* Desktop: 3-column grid layout */}
           <div className="hidden md:grid md:grid-cols-3 items-center h-16 w-full">
             {/* Left: Logo */}
-            <div className="flex justify-start">
+            <div className="flex justify-start ml-4">
               <motion.button
-                onClick={() => scrollToElement('hero')}
+                onClick={() => scrollToElement("hero")}
                 className="text-xl font-bold text-[var(--color-accent-primary)] hover:text-[var(--color-accent-secondary)] transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -79,7 +79,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center justify-between h-16">
             {/* Logo */}
             <motion.button
-              onClick={() => scrollToElement('hero')}
+              onClick={() => scrollToElement("hero")}
               className="text-xl font-bold text-[var(--color-accent-primary)] hover:text-[var(--color-accent-secondary)] transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -118,7 +118,7 @@ export default function Navbar() {
             <motion.div
               className="md:hidden bg-white border-t border-[var(--color-border)]"
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
             >
