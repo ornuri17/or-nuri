@@ -94,7 +94,7 @@ export default function ContactSection() {
           {/* CTAs */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-4 justify-center pt-8"
+            className="flex justify-center pt-8"
           >
             <Button
               variant="primary"
@@ -102,13 +102,6 @@ export default function ContactSection() {
               href={SITE_CONFIG.linkedin}
             >
               {CONTACT_CONTENT.cta.primary}
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              href="/resume/or-nuri-cv.pdf"
-            >
-              {CONTACT_CONTENT.cta.secondary}
             </Button>
           </motion.div>
         </motion.div>
