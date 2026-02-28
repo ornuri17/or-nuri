@@ -25,7 +25,7 @@ export const HERO_CONTENT = {
 export const ABOUT_CONTENT = {
   title: 'About',
   paragraphs: [
-    "I'm an AI & Tech Leader at monday.com, where I lead WorkForms—a product used by millions of users worldwide. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
+    "I'm an AI & Tech Leader at monday.com, where I lead the Collaborative Work Management group—an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. With an MSc in Machine Learning & Data Science, I specialize in building AI-powered products that scale and empowering teams to achieve extraordinary results.",
     "Previously, I co-founded adjusti.co, an AI-powered advertising optimization platform that leveraged machine learning for campaign optimization and was acquired by Teikametrics in 2020. I'm an alumnus of the prestigious Zell Entrepreneurship Program at Reichman University.",
     "Today, I serve on advisory boards and help startups integrate AI into their products, navigate technical architecture challenges, and build high-performing engineering teams. My approach centers on clarity, empathy, and continuous learning.",
   ],
@@ -45,11 +45,12 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Senior Tech Lead',
     company: 'monday.com',
     logo: '/logos/monday.jpeg',
-    description: 'Leading WorkForms product development with AI-powered features, serving millions of users worldwide. Drove the product from inception to scale, integrating machine learning capabilities while building and mentoring high-performing engineering teams.',
+    description: 'Leading the Collaborative Work Management group, an AI-first organization that embeds AI directly into products to do work for customers and improve collaboration between teams and agents. Serving millions of users worldwide while driving AI integration across the platform.',
     achievements: [
       'Promoted to Senior Tech Lead in 2024',
-      'Scaled WorkForms to millions of users globally with AI-enhanced features',
-      'Integrated ML models for intelligent form optimization and analytics',
+      'Lead AI-first Collaborative Work Management group',
+      'Embed AI agents that autonomously complete work for customers',
+      'Scaled products to millions of users with AI-enhanced collaboration',
       'Built and led cross-functional engineering teams',
       'Established technical best practices and AI/ML architecture standards',
     ],
