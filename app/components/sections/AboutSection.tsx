@@ -50,11 +50,11 @@ export default function AboutSection() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 items-center justify-items-center max-w-3xl mx-auto">
               {[
-                { src: '/logos/monday.jpeg', alt: 'monday.com', width: 140, height: 40 },
-                { src: '/logos/teikametrics.jpeg', alt: 'Teikametrics', width: 140, height: 40 },
-                { src: '/logos/adjusti.jpeg', alt: 'adjusti.co', width: 120, height: 40 },
-                { src: '/logos/reichman.jpeg', alt: 'Reichman University', width: 120, height: 40 },
-                { src: '/logos/icast.svg', alt: 'iCast', width: 100, height: 40 },
+                { src: '/logos/monday.jpeg', alt: 'monday.com', width: 100, height: 30 },
+                { src: '/logos/teikametrics.jpeg', alt: 'Teikametrics', width: 100, height: 30 },
+                { src: '/logos/adjusti.jpeg', alt: 'adjusti.co', width: 90, height: 30 },
+                { src: '/logos/reichman.jpeg', alt: 'Reichman University', width: 90, height: 30 },
+                { src: '/logos/icast.svg', alt: 'iCast', width: 80, height: 30 },
               ].map((logo, index) => (
                 <motion.div
                   key={logo.alt}
