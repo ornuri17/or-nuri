@@ -53,6 +53,7 @@ export default function AboutSection() {
                 { src: '/logos/monday.jpeg', alt: 'monday.com', width: 100, height: 30 },
                 { src: '/logos/teikametrics.jpeg', alt: 'Teikametrics', width: 100, height: 30 },
                 { src: '/logos/adjusti.jpeg', alt: 'adjusti.co', width: 90, height: 30 },
+                { src: '/logos/record.jpeg', alt: 'Record', width: 90, height: 30 },
                 { src: '/logos/reichman.jpeg', alt: 'Reichman University', width: 90, height: 30 },
                 { src: '/logos/icast.svg', alt: 'iCast', width: 80, height: 30 },
               ].map((logo, index) => (
