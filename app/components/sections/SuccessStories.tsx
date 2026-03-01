@@ -13,7 +13,7 @@ export default function SuccessStories() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={{ once: true, amount: 0.1 }}
           className="space-y-12"
         >
           {/* Title */}
@@ -34,11 +34,11 @@ export default function SuccessStories() {
                   <div className="flex flex-col h-full">
                     <div className="space-y-6 flex-grow">
                       {/* Icon & Metric */}
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="text-5xl font-black text-[var(--color-accent-secondary)]">
+                      <div className="flex items-center justify-between gap-3 mb-2">
+                        <div className="text-3xl md:text-4xl font-black text-[var(--color-accent-secondary)] leading-tight">
                           {story.metric}
                         </div>
-                        <div className="text-4xl">{story.icon}</div>
+                        <div className="text-4xl flex-shrink-0">{story.icon}</div>
                       </div>
 
                       {/* Title */}

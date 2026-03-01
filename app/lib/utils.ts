@@ -26,10 +26,16 @@ export function formatDate(date: Date): string {
 export function scrollToElement(id: string): void {
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    // Use scrollIntoView for better mobile compatibility
+    try {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    } catch (e) {
+      // Fallback for browsers that don't support smooth scroll
+      element.scrollIntoView(true);
+    }
   }
 }
 

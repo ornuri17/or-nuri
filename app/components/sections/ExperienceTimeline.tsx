@@ -15,7 +15,7 @@ export default function ExperienceTimeline() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={{ once: true, amount: 0.1 }}
         >
           {/* Title */}
           <motion.h2

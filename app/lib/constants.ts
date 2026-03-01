@@ -256,6 +256,7 @@ export const ADVISORY_CONTENT = {
   roles: [
     {
       company: 'Record',
+      logo: '/logos/record.jpeg',
       description: 'Advisory Board Member - AI-powered customer support platform',
       focus: ['AI Product Strategy', 'ML Architecture', 'Go-to-Market'],
     },

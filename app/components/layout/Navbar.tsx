@@ -22,8 +22,11 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     const id = href.replace("#", "");
-    scrollToElement(id);
     setIsMobileMenuOpen(false);
+    // Small delay to let menu close before scrolling
+    setTimeout(() => {
+      scrollToElement(id);
+    }, 100);
   };
 
   return (

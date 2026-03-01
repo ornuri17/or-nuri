@@ -16,7 +16,7 @@ export default function ContactSection() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center space-y-12"
         >
           {/* Title & Description */}

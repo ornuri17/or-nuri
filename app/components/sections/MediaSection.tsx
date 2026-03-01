@@ -15,7 +15,7 @@ export default function MediaSection() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={{ once: true, amount: 0.1 }}
           className="space-y-16"
         >
           {/* Title & Description */}

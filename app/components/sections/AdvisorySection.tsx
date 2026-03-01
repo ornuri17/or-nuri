@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ADVISORY_CONTENT } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer, defaultViewport } from '@/app/lib/animations';
@@ -19,7 +20,7 @@ export default function AdvisorySection() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={{ once: true, amount: 0.1 }}
           className="space-y-12"
         >
           {/* Title & Description */}
@@ -37,9 +38,23 @@ export default function AdvisorySection() {
             <motion.div key={index} variants={fadeInUp}>
               <Card>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">
-                    {role.company}
-                  </h3>
+                  {/* Company Name & Logo */}
+                  <div className="flex items-center gap-4">
+                    {role.logo && (
+                      <div className="relative w-16 h-16 flex-shrink-0">
+                        <Image
+                          src={role.logo}
+                          alt={`${role.company} logo`}
+                          width={64}
+                          height={64}
+                          className="object-contain rounded-lg"
+                        />
+                      </div>
+                    )}
+                    <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">
+                      {role.company}
+                    </h3>
+                  </div>
                   <p className="text-lg text-[var(--color-text-secondary)]">
                     {role.description}
                   </p>
