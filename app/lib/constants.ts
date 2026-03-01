@@ -187,14 +187,14 @@ export const SUCCESS_STORIES = [
   {
     id: 'ai-scale',
     title: 'Scaled Products to Millions',
-    metric: '10M+',
+    metric: '10M+ Requests',
     description: 'Tech lead WorkForms from tens of thousands to tens of millions of daily requests. Tech lead WorkDocs from hundreds to tens of thousands of blocks. Leading AI-first Collaborative Work Management group with AI agents that autonomously complete work for customers.',
     impact: 'Serving millions of users with AI-powered products',
   },
   {
     id: 'slo-excellence',
     title: 'Engineering Excellence & SLOs',
-    metric: '99.9%',
+    metric: '99.9% Availability',
     description: 'Integrated SLOs in WorkForms improving availability from 89% to 99.9% and p99 latency from 84% to 99.9%. Integrated SLOs in WorkDocs reducing p99 loading latency from 7.5s to 3.5s. Led full refactor deleting 10K+ lines from monolith.',
     impact: 'World-class reliability and performance',
   },
