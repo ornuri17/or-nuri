@@ -31,24 +31,26 @@ export default function SuccessStories() {
             {SUCCESS_STORIES.map((story) => (
               <motion.div key={story.id} variants={fadeInUp}>
                 <Card className="h-full">
-                  <div className="space-y-4">
-                    {/* Metric */}
-                    <div className="text-5xl font-black text-[var(--color-accent-secondary)]">
-                      {story.metric}
+                  <div className="flex flex-col h-full">
+                    <div className="space-y-4 flex-grow">
+                      {/* Metric */}
+                      <div className="text-5xl font-black text-[var(--color-accent-secondary)]">
+                        {story.metric}
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                        {story.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                        {story.description}
+                      </p>
                     </div>
 
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-                      {story.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                      {story.description}
-                    </p>
-
-                    {/* Impact */}
-                    <div className="pt-4 border-t border-[var(--color-border)]">
+                    {/* Impact - Always at bottom */}
+                    <div className="pt-4 mt-4 border-t border-[var(--color-border)]">
                       <p className="text-sm font-semibold text-[var(--color-accent-primary)]">
                         {story.impact}
                       </p>
