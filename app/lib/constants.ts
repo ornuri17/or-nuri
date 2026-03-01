@@ -179,24 +179,24 @@ export const EXPERTISE_AREAS = [
 export const SUCCESS_STORIES = [
   {
     id: 'ai-startup',
-    title: 'Built & Exited AI Startup',
-    metric: '100%',
-    description: 'Co-founded adjusti.co, an ecommerce market intelligence platform that provided insights for better data-driven decisions. Created comprehensive datasets for AI algorithms powering AI-based bidders and achieved acquisition by Teikametrics in 2020.',
-    impact: 'From idea to AI exit in under 2 years',
+    title: 'Built & Exited Bootstrapped Startup',
+    metric: '2,000+',
+    description: 'Co-founded adjusti.co (with Alon Maltzov) 100% bootstrap with no funding. Built ecommerce market intelligence platform monitoring Amazon & Walmart 24/7 at zip code level. Served 2,000+ brands globally, trusted by top marketing agencies across Europe, USA & Canada. Acquired by Teikametrics in 2020.',
+    impact: 'From idea to acquisition, fully bootstrapped',
   },
   {
     id: 'ai-scale',
-    title: 'Scaled AI-Powered Product',
-    metric: 'Millions',
-    description: 'Led WorkForms with integrated ML capabilities from inception to millions of users globally. Implemented intelligent analytics, form optimization, and AI-driven insights.',
-    impact: 'AI features serving millions of users daily',
+    title: 'Scaled Products to Millions',
+    metric: '10M+',
+    description: 'Tech lead WorkForms from tens of thousands to tens of millions of daily requests. Tech lead WorkDocs from hundreds to tens of thousands of blocks. Leading AI-first Collaborative Work Management group with AI agents that autonomously complete work for customers.',
+    impact: 'Serving millions of users with AI-powered products',
   },
   {
-    id: 'ai-advisory',
-    title: 'AI Advisory & Mentorship',
-    metric: 'Multiple',
-    description: 'Advising startups on AI integration, ML architecture, and building AI-powered products. Helping founders navigate technical decisions and AI product strategy.',
-    impact: 'Empowering the next generation of AI startups',
+    id: 'slo-excellence',
+    title: 'Engineering Excellence & SLOs',
+    metric: '99.9%',
+    description: 'Integrated SLOs in WorkForms improving availability from 89% to 99.9% and p99 latency from 84% to 99.9%. Integrated SLOs in WorkDocs reducing p99 loading latency from 7.5s to 3.5s. Led full refactor deleting 10K+ lines from monolith.',
+    impact: 'World-class reliability and performance',
   },
 ];
 
