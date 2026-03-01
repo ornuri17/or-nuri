@@ -186,7 +186,7 @@ export const SUCCESS_STORIES = [
   },
   {
     id: 'ai-scale',
-    title: 'Scaled Products to Millions',
+    title: 'Scaled Products to Millions of Users',
     metric: '10M+ Requests',
     description: 'Tech lead WorkForms from tens of thousands to tens of millions of daily requests. Tech lead WorkDocs from hundreds to tens of thousands of blocks. Leading AI-first Collaborative Work Management group with AI agents that autonomously complete work for customers.',
     impact: 'Serving millions of users with AI-powered products',
