@@ -12,7 +12,7 @@ export default function AdvisorySection() {
   return (
     <section
       id="advisory"
-      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-secondary)]"
+      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-primary)]"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

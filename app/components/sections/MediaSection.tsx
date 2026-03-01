@@ -8,7 +8,7 @@ export default function MediaSection() {
   return (
     <section
       id="media"
-      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-primary)]"
+      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-secondary)]"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
