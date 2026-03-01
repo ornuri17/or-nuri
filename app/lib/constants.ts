@@ -196,7 +196,7 @@ export const SUCCESS_STORIES = [
     title: 'Engineering Excellence & SLOs',
     metric: '99.9% Availability',
     description: 'Integrated SLOs in WorkForms improving availability from 89% to 99.9% and p99 latency from 84% to 99.9%. Integrated SLOs in WorkDocs reducing p99 loading latency from 7.5s to 3.5s. Led full refactor deleting 10K+ lines from monolith.',
-    impact: 'World-class reliability and performance',
+    impact: 'Achieving world-class reliability and performance at scale',
   },
 ];
 
