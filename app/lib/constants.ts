@@ -200,6 +200,49 @@ export const SUCCESS_STORIES = [
   },
 ];
 
+export const MEDIA_COVERAGE = {
+  title: 'Press & Media',
+  description: 'Featured coverage of key milestones and achievements',
+  items: [
+    {
+      id: 'acquisition',
+      title: 'adjusti.co Acquisition by Teikametrics',
+      description: 'Coverage of adjusti.co acquisition, bringing ecommerce market intelligence to Teikametrics platform',
+      date: 'October 2020',
+      links: [
+        {
+          outlet: 'Calcalist',
+          url: 'https://www.calcalist.co.il/local/articles/0,7340,L-3859593,00.html',
+          logo: 'calcalist',
+        },
+        {
+          outlet: 'BusinessWire',
+          url: 'https://www.businesswire.com/news/home/20201014005161/en/Teikametrics-Acquires-Adjusti.co-to-Provide-Market-Intelligence-for-Amazon-and-Walmart',
+          logo: 'businesswire',
+        },
+        {
+          outlet: 'CTech',
+          url: 'https://www.calcalistech.com/ctech/articles/0,7340,L-3859710,00.html',
+          logo: 'ctech',
+        },
+      ],
+    },
+    {
+      id: 'loreal',
+      title: 'L\'Oréal Brandstorm International Competition',
+      description: 'Represented Israel at L\'Oréal Brandstorm international competition after winning Israeli competition during BSc studies',
+      date: '2016',
+      links: [
+        {
+          outlet: 'Ynet',
+          url: 'https://www.ynet.co.il/articles/0,7340,L-4831519,00.html',
+          logo: 'ynet',
+        },
+      ],
+    },
+  ],
+};
+
 export const ADVISORY_CONTENT = {
   title: 'Advisory Work',
   description: "I'm passionate about helping startups integrate AI and navigate the journey from idea to product-market fit. I serve on advisory boards and work closely with founders on:",
@@ -234,6 +277,7 @@ export const NAV_ITEMS = [
   { label: 'Experience', href: '#experience' },
   { label: 'Leadership', href: '#leadership' },
   { label: 'Expertise', href: '#expertise' },
+  { label: 'Media', href: '#media' },
   { label: 'Advisory', href: '#advisory' },
   { label: 'Contact', href: '#contact' },
 ];

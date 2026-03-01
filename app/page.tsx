@@ -7,6 +7,7 @@ import ExperienceTimeline from '@/app/components/sections/ExperienceTimeline';
 import LeadershipSection from '@/app/components/sections/LeadershipSection';
 import ExpertiseSection from '@/app/components/sections/ExpertiseSection';
 import SuccessStories from '@/app/components/sections/SuccessStories';
+import MediaSection from '@/app/components/sections/MediaSection';
 import AdvisorySection from '@/app/components/sections/AdvisorySection';
 import ContactSection from '@/app/components/sections/ContactSection';
 
@@ -22,6 +23,7 @@ export default function Home() {
         <LeadershipSection />
         <ExpertiseSection />
         <SuccessStories />
+        <MediaSection />
         <AdvisorySection />
         <ContactSection />
       </main>
