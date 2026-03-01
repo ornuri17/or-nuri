@@ -67,12 +67,13 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Head of Engineering',
     company: 'Teikametrics',
     logo: '/logos/teikametrics.jpeg',
-    description: 'Led engineering post-acquisition, integrating adjusti.co market intelligence platform and team. Scaled machine learning infrastructure for ecommerce data analysis and AI-based optimization.',
+    description: 'Led engineering post-acquisition, integrating adjusti.co market intelligence platform and team. Created robust system monitoring user behaviors and marketing performance on Amazon, providing unique market data that dramatically improved Teikametrics AI Bidder.',
     achievements: [
       'Successfully integrated acquired ecommerce market intelligence platform',
-      'Led engineering team of 15+ building ML systems',
-      'Scaled platform infrastructure to handle millions of data points daily',
-      'Enhanced market intelligence capabilities and AI-based optimization systems',
+      'Led team of 8 engineers across TLV, Bangalore, and Boston',
+      'Created robust system monitoring user behaviors and marketing performance on Amazon',
+      'Created new revenue stream for Teikametrics',
+      'Dramatically improved Teikametrics AI Bidder by providing unique market data',
     ],
   },
   {
