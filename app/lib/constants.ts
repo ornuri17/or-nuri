@@ -126,18 +126,6 @@ export const EXPERIENCE_TIMELINE = [
       'Company acquired by Storytel',
     ],
   },
-  {
-    id: 'idf',
-    year: '2010 - 2013',
-    title: 'Full Stack Developer',
-    company: 'IDF ICT',
-    description: 'Military service in elite technology unit, developing mission-critical systems.',
-    achievements: [
-      'Developed secure military systems',
-      'Full stack development experience',
-      'Team collaboration in high-pressure environment',
-    ],
-  },
 ];
 
 export const LEADERSHIP_PILLARS = [
