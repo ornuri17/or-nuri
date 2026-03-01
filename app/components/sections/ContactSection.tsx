@@ -9,7 +9,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-16 sm:py-20 md:py-32 bg-gradient-to-br from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)]"
+      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-secondary)]"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
