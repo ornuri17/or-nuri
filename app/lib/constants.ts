@@ -100,11 +100,10 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Zell Entrepreneurship Program',
     company: 'Reichman University',
     logo: '/logos/reichman.jpeg',
-    description: 'One of Israel\'s most prestigious and selective entrepreneurship programs at Reichman University. An intensive 2-year program combining academic excellence with real-world startup development, providing full scholarships, mentorship from top entrepreneurs and VCs, and access to Israel\'s thriving tech ecosystem.',
+    description: 'One of Israel\'s most prestigious and selective entrepreneurship programs at Reichman University. An intensive one-year program combining academic excellence with real-world startup development, mentorship from top entrepreneurs and VCs, and access to Israel\'s thriving tech ecosystem.',
     achievements: [
       'Selected from highly competitive pool (acceptance rate <5%)',
-      'Full scholarship covering tuition, living expenses, and startup funding',
-      'Intensive curriculum: business strategy, fundraising, product development, and go-to-market',
+      'Intensive one-year curriculum: business strategy, fundraising, product development, and go-to-market',
       'Direct mentorship from successful entrepreneurs, VCs, and industry leaders',
       'Access to exclusive network of alumni founders and Israel\'s tech ecosystem',
       'Built and launched adjusti.co from 0 to 1 during the program',
