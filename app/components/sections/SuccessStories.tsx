@@ -32,9 +32,9 @@ export default function SuccessStories() {
               <motion.div key={story.id} variants={fadeInUp}>
                 <Card className="h-full bg-gradient-to-br from-white to-[var(--color-bg-tertiary)] hover:shadow-xl transition-shadow">
                   <div className="flex flex-col h-full">
-                    <div className="space-y-4 flex-grow">
+                    <div className="space-y-6 flex-grow">
                       {/* Icon & Metric */}
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between mb-2">
                         <div className="text-5xl font-black text-[var(--color-accent-secondary)]">
                           {story.metric}
                         </div>
