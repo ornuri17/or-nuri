@@ -159,8 +159,8 @@ export const EXPERTISE_AREAS = [
   {
     id: 'product',
     title: 'Technical Leadership',
-    description: 'Tech leading ~20 developers in AI-first organization. Leading AI adoption across directorate. Built products from 0 to 1 and scaled to tens of millions of daily requests. Expert in technology infrastructure decisions and technical strategy.',
-    skills: ['Tech Leadership', 'AI Adoption', 'Technical Strategy', '0-to-1 Development', 'System Architecture', 'International R&D'],
+    description: 'Tech leading ~20 developers in AI-first organization. Leading AI adoption across directorate. Unique experience across all company stages: 0 to 1 (founding), 1 to 100 (early growth), 100 to 1K (scaling), and 1K to 1M+ (massive scale). Expert in technology infrastructure decisions and technical strategy.',
+    skills: ['Tech Leadership', 'AI Adoption', '0-to-1 Development', '1-to-100 Growth', '100-to-1K Scaling', '1K-to-1M+ Scale', 'Technical Strategy'],
   },
   {
     id: 'fullstack',
