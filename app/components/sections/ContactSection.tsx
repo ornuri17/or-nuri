@@ -32,7 +32,7 @@ export default function ContactSection() {
           {/* Contact Methods */}
           <motion.div
             variants={fadeInUp}
-            className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto"
+            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
           >
             {/* Email */}
             <a
@@ -89,20 +89,38 @@ export default function ContactSection() {
                 </div>
               </div>
             </a>
-          </motion.div>
 
-          {/* CTAs */}
-          <motion.div
-            variants={fadeInUp}
-            className="flex justify-center pt-8"
-          >
-            <Button
-              variant="primary"
-              size="lg"
+            {/* Google Meet */}
+            <a
               href={SITE_CONFIG.calendar}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-4 p-6 bg-white rounded-2xl border border-[var(--color-border)] hover:border-[var(--color-accent-secondary)] hover:shadow-lg transition-all"
             >
-              {CONTACT_CONTENT.cta.primary}
-            </Button>
+              <div className="w-16 h-16 bg-[var(--color-bg-tertiary)] rounded-full flex items-center justify-center group-hover:bg-[var(--color-accent-secondary)] transition-colors">
+                <svg
+                  className="w-8 h-8 text-[var(--color-text-primary)] group-hover:text-white transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div className="font-semibold text-[var(--color-text-primary)] mb-1">
+                  Let's meet
+                </div>
+                <div className="text-sm text-[var(--color-text-secondary)]">
+                  Schedule a call
+                </div>
+              </div>
+            </a>
           </motion.div>
         </motion.div>
       </div>
