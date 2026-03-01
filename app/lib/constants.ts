@@ -180,7 +180,7 @@ export const SUCCESS_STORIES = [
   {
     id: 'ai-startup',
     title: 'Built & Exited Bootstrapped Startup',
-    metric: '2,000+',
+    metric: '2,000+ Brands',
     description: 'Co-founded adjusti.co (with Alon Maltzov) 100% bootstrap with no funding. Built ecommerce market intelligence platform monitoring Amazon & Walmart 24/7 at zip code level. Served 2,000+ brands globally, trusted by top marketing agencies across Europe, USA & Canada. Acquired by Teikametrics in 2020.',
     impact: 'From idea to acquisition, fully bootstrapped',
   },
