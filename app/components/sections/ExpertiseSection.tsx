@@ -34,12 +34,15 @@ export default function ExpertiseSection() {
           <div className="grid md:grid-cols-2 gap-8">
             {EXPERTISE_AREAS.map((area) => (
               <motion.div key={area.id} variants={fadeInUp}>
-                <Card className="h-full">
+                <Card className="h-full hover:shadow-lg transition-shadow">
                   <div className="space-y-4">
-                    {/* Title */}
-                    <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">
-                      {area.title}
-                    </h3>
+                    {/* Icon & Title */}
+                    <div className="flex items-center gap-3">
+                      <span className="text-4xl">{area.icon}</span>
+                      <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">
+                        {area.title}
+                      </h3>
+                    </div>
 
                     {/* Description */}
                     <p className="text-[var(--color-text-secondary)] leading-relaxed">

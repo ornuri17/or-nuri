@@ -30,12 +30,15 @@ export default function SuccessStories() {
           <div className="grid md:grid-cols-3 gap-8">
             {SUCCESS_STORIES.map((story) => (
               <motion.div key={story.id} variants={fadeInUp}>
-                <Card className="h-full">
+                <Card className="h-full bg-gradient-to-br from-white to-[var(--color-bg-tertiary)] hover:shadow-xl transition-shadow">
                   <div className="flex flex-col h-full">
                     <div className="space-y-4 flex-grow">
-                      {/* Metric */}
-                      <div className="text-5xl font-black text-[var(--color-accent-secondary)]">
-                        {story.metric}
+                      {/* Icon & Metric */}
+                      <div className="flex items-center justify-between">
+                        <div className="text-5xl font-black text-[var(--color-accent-secondary)]">
+                          {story.metric}
+                        </div>
+                        <div className="text-4xl">{story.icon}</div>
                       </div>
 
                       {/* Title */}

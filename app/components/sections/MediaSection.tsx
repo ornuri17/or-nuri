@@ -54,30 +54,39 @@ export default function MediaSection() {
 
                   {/* Links */}
                   <div className="flex flex-wrap gap-4 pt-4 border-t border-[var(--color-border)]">
-                    {item.links.map((link) => (
-                      <a
-                        key={link.outlet}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-bg-tertiary)] hover:bg-[var(--color-accent-secondary)] text-[var(--color-text-primary)] hover:text-white rounded-lg transition-colors text-sm font-medium"
-                      >
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+                    {item.links.map((link) => {
+                      // Extract domain from URL for favicon
+                      const domain = new URL(link.url).hostname;
+                      return (
+                        <a
+                          key={link.outlet}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-[var(--color-bg-tertiary)] to-white hover:from-[var(--color-accent-secondary)] hover:to-[var(--color-accent-secondary-hover)] text-[var(--color-text-primary)] hover:text-white rounded-xl transition-all shadow-sm hover:shadow-md text-sm font-semibold border border-[var(--color-border)] hover:border-transparent"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          <img
+                            src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
+                            alt={`${link.outlet} favicon`}
+                            className="w-5 h-5"
                           />
-                        </svg>
-                        Read on {link.outlet}
-                      </a>
-                    ))}
+                          <span>{link.outlet}</span>
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               </motion.div>
