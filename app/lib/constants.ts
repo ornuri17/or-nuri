@@ -153,26 +153,26 @@ export const EXPERTISE_AREAS = [
   {
     id: 'ai-ml',
     title: 'AI & Machine Learning',
-    description: 'MSc in Machine Learning & Data Science. Specialized in building production AI systems, ML models, and AI-powered products that scale to millions of users.',
-    skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Predictive Analytics', 'MLOps', 'AI Product Strategy', 'TensorFlow', 'PyTorch'],
+    description: 'MSc in Machine Learning & Data Science. Building AI-first products with AI agents that autonomously complete work. Created ecommerce market intelligence platforms powering AI-based bidders and optimization systems.',
+    skills: ['AI Agents', 'Machine Learning', 'Market Intelligence', 'AI Product Strategy', 'MLOps', 'Predictive Analytics', 'Data Science'],
   },
   {
     id: 'product',
     title: 'Technical Leadership',
-    description: 'Led AI-powered products from 0 to 1 and scaled to millions of users. Expert in technical strategy, ML integration, and building scalable architectures.',
-    skills: ['Technical Strategy', '0-to-1 Development', 'ML Integration', 'System Design', 'Architecture', 'Engineering Excellence'],
+    description: 'Tech leading ~20 developers in AI-first organization. Leading AI adoption across directorate. Built products from 0 to 1 and scaled to tens of millions of daily requests. Expert in technology infrastructure decisions and technical strategy.',
+    skills: ['Tech Leadership', 'AI Adoption', 'Technical Strategy', '0-to-1 Development', 'System Architecture', 'International R&D'],
   },
   {
     id: 'fullstack',
-    title: 'Full Stack & AI Infrastructure',
-    description: '10+ years building scalable systems. Expert in ML infrastructure, cloud platforms, and modern frameworks for AI applications.',
-    skills: ['Python', 'TypeScript', 'React', 'Node.js', 'AWS', 'ML Infrastructure', 'Vector Databases', 'API Design'],
+    title: 'Scalability & Performance',
+    description: 'Scaled products from tens of thousands to tens of millions of daily requests. Built 24/7 monitoring systems at zip code granularity. Reduced latency 50% through protocol modernization. Led full stack modernization (C# to Node.js/React, Windows to Linux).',
+    skills: ['High Scalability', 'Performance Optimization', 'Real-time Monitoring', 'Protocol Design', 'Stack Modernization', 'Cloud Infrastructure'],
   },
   {
     id: 'management',
-    title: 'Engineering Leadership',
-    description: 'Built and led high-performing teams working on AI/ML products. Focus on technical excellence, mentorship, and innovation culture.',
-    skills: ['Team Building', 'Technical Mentorship', 'AI Strategy', 'Agile/Scrum', 'Hiring', 'ML Team Leadership'],
+    title: 'SRE & Engineering Excellence',
+    description: 'Integrated SLOs improving availability from 89% to 99.9% and p99 latency from 84% to 99.9%. Led full refactors deleting 10K+ lines of code. Leading on-call training across international R&D. Knowledge sharing on AI, SLOs, Testing, Observability.',
+    skills: ['SLOs/SLIs', 'Observability', 'On-call Leadership', 'Code Quality', 'Testing', 'Refactoring', 'Knowledge Sharing'],
   },
 ];
 
