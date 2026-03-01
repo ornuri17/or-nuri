@@ -130,21 +130,21 @@ export const EXPERIENCE_TIMELINE = [
 
 export const LEADERSHIP_PILLARS = [
   {
-    id: 'clarity',
-    title: 'Clarity',
-    description: 'Transparent communication and clear goals drive alignment. I believe in making complex AI concepts simple and ensuring everyone understands the "why" behind our technical decisions.',
-    icon: '🎯',
+    id: 'trust',
+    title: 'Trust & Transparency',
+    description: 'Building teams on trust, open and honest communication, and egoless environments. I believe in creating spaces where people can speak freely, share ideas without ego, and grow together through transparent dialogue.',
+    icon: '🤝',
   },
   {
-    id: 'empathy',
-    title: 'Empathy',
-    description: 'Great teams are built on understanding and trust. I invest in people, recognize their strengths, and create environments where engineers and data scientists can thrive together.',
-    icon: '❤️',
+    id: 'ownership',
+    title: 'Ownership & Execution',
+    description: 'Empowering teams with full ownership and a can-do approach. I believe in learning with your hands, rolling up your sleeves, and taking complete responsibility for outcomes. Action over perfection, results over excuses.',
+    icon: '⚡',
   },
   {
-    id: 'learning',
-    title: 'Innovation & Learning',
-    description: 'AI and technology evolve rapidly. I foster a culture of curiosity, experimentation with new ML techniques, and continuous growth, staying at the forefront of AI innovation.',
+    id: 'empowerment',
+    title: 'Empowerment & Impact',
+    description: 'Leading without authority through enablement and customer-centric thinking. I focus on removing blockers, enabling teams to make decisions, and keeping the customer at the center of everything we build.',
     icon: '🚀',
   },
 ];
