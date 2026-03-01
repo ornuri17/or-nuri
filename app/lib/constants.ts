@@ -82,13 +82,14 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Co-Founder & CTO',
     company: 'adjusti.co',
     logo: '/logos/adjusti.jpeg',
-    description: 'Co-founded ecommerce market intelligence platform providing insights to help customers make better data-driven decisions. Created comprehensive robust datasets for AI algorithms, enabling best results for AI-based bidders. Built product from 0 to 1 and achieved successful acquisition.',
+    description: 'Co-founded with Alon Maltzov (CEO) an ecommerce market intelligence platform providing insights to help customers make better data-driven decisions. Created comprehensive robust datasets for AI algorithms, enabling best results for AI-based bidders. Built product from 0 to 1 and achieved successful acquisition.',
     achievements: [
+      'Co-founded with Alon Maltzov (CEO), 100% bootstrap with no external funding',
       'Built end-to-end market intelligence platform with AI-powered insights',
+      'Provided market intelligence to over 2,000 brands across the globe',
+      'Trusted by top marketing agencies in Europe, USA & Canada',
       'Created robust datasets powering AI algorithms for optimal decision making',
-      'Developed infrastructure supporting AI-based bidders and optimization systems',
       'Acquired by Teikametrics in 2020',
-      'Raised seed funding from top investors',
     ],
   },
   {
