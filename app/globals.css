@@ -58,3 +58,10 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Hide scroll indicator on landscape mobile devices with limited height */
+@media (max-height: 500px) and (orientation: landscape) {
+  #hero .scroll-indicator {
+    display: none !important;
+  }
+}
