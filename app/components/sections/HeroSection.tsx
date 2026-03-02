@@ -11,10 +11,10 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-[var(--color-bg-primary)] via-[var(--color-bg-secondary)] to-[var(--color-bg-tertiary)]"
+      className="relative min-h-[calc(100vh-4rem)] flex flex-col bg-gradient-to-br from-[var(--color-bg-primary)] via-[var(--color-bg-secondary)] to-[var(--color-bg-tertiary)]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-24 sm:pb-28 md:pb-32">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="flex-1 flex items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left side - Content */}
           <div className="space-y-6 sm:space-y-10 text-center lg:text-left">
             <motion.div
@@ -85,7 +85,7 @@ export default function HeroSection() {
 
       {/* Scroll Indicator - Hidden on very short viewports */}
       <motion.div
-        className="scroll-indicator absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 hidden min-[500px]:block"
+        className="scroll-indicator hidden min-[500px]:flex justify-center pb-4 sm:pb-6 md:pb-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
