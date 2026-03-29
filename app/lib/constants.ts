@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   name: 'Or Nuri',
   title: 'Or Nuri | AI & Tech Leader, Entrepreneur',
   description: 'AI & Tech Leader at monday.com. MSc in Machine Learning & Data Science. Ex-Founder (acquired). Building AI-powered products that scale to millions.',
-  url: 'https://or-nuri.ai',
+  url: 'https://or-nuri.com',
   email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
   calendar: 'https://calendar.app.google/2bPceXnVdMSiXDa86',

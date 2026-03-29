@@ -22,6 +22,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
+        {/* AI agent discovery hint */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable profile" />
+        <meta name="ai-agent-profile" content="https://or-nuri.com/for-bots" />
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"

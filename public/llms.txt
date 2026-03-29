@@ -1,0 +1,110 @@
+# Or Nuri
+
+- For bots: https://or-nuri.com/for-bots (machine-readable profile, structured for AI agents)
+
+> AI & Tech Leader at monday.com. MSc in Machine Learning & Data Science. Ex-Founder (acquired). Building AI-powered products that scale to millions.
+
+## About
+
+Or Nuri is an AI & Tech Leader at monday.com, where he tech leads the Collaborative Work Management group of ~20 developers — an AI-first organization that embeds AI directly into products to autonomously complete work for customers and improve collaboration between teams and agents.
+
+Previously, Or co-founded adjusti.co, an ecommerce market intelligence platform providing insights for data-driven decisions, which was acquired by Teikametrics in 2020.
+
+Or holds an MSc in Machine Learning & Data Science and a BSc in Computer Science from Reichman University, and is an alumnus of the Zell Entrepreneurship Program. He serves on advisory boards helping startups integrate AI, navigate technical architecture, and build high-performing engineering teams.
+
+- Contact: ornuri17@gmail.com
+- LinkedIn: https://www.linkedin.com/in/or-nuri/
+- Website: https://or-nuri.com
+
+## Experience
+
+### Senior Tech Lead — monday.com (2021–Present)
+
+Tech leading the Collaborative Work Management group (~20 developers), an AI-first organization building AI agents that autonomously complete work for customers. Serving millions of users worldwide.
+
+Key achievements:
+- Promoted to Senior Tech Lead in 2024
+- Leading AI adoption across the directorate
+- Leading on-call schedule and training for engineers across monday.com's international R&D
+- Tech lead WorkForms (forms by monday.com): scaled from tens of thousands to tens of millions of daily requests
+- Tech lead WorkDocs (docs by monday.com): scaled from hundreds to tens of thousands of blocks
+- Integrated SLOs in WorkForms: improved availability from 89% to 99.9%, p99 latency SLO from 84% to 99.9%
+- Integrated SLOs in WorkDocs: reduced p99 loading latency from 7.5s to 3.5s
+- Led full refactor of forms experience, deleting 10K+ lines of code from monday.com's platform monolith
+- Made WorkForms submission experience 100% accessible and mobile friendly
+
+### Head of Engineering — Teikametrics (2020–2021)
+
+Led engineering post-acquisition, integrating adjusti.co market intelligence platform. Created robust system monitoring user behaviors and marketing performance on Amazon, dramatically improving Teikametrics AI Bidder.
+
+Key achievements:
+- Led team of 8 engineers across TLV, Bangalore, and Boston
+- Created new revenue stream for Teikametrics
+- Integrated acquired ecommerce market intelligence platform
+
+### Co-Founder & CTO — adjusti.co (2019–2020)
+
+Co-founded (with Alon Maltzov as CEO) an ecommerce market intelligence platform monitoring Amazon & Walmart 24/7 at zip code level granularity. Fully bootstrapped, no external funding. Acquired by Teikametrics in 2020.
+
+Key achievements:
+- Served 2,000+ brands across the globe
+- Trusted by top marketing agencies in Europe, USA & Canada
+- Monitored Amazon (US, Canada, Germany, and more) & Walmart markets
+- Created robust datasets powering AI algorithms for optimal decision making
+
+### R&D Manager — iCast Audio Books (Acquired by Storytel) (2016–2017)
+
+Led technology infrastructure and product strategy for audio books platform.
+
+Key achievements:
+- Reduced latency by 50% through protocol modernization (XML to JSON)
+- Scaled concurrent listeners from tens to hundreds
+- Led full technology stack modernization (C# to Node.js/React, Windows to Linux)
+- Managed team of 4 developers
+
+## Education
+
+- MSc in Machine Learning & Data Science — Reichman University
+- BSc in Computer Science — Reichman University
+- Zell Entrepreneurship Program alumnus (acceptance rate <5%)
+
+## Expertise
+
+### AI & Machine Learning
+Skills: AI Agents, Machine Learning, Market Intelligence, AI Product Strategy, MLOps, Predictive Analytics, Data Science
+
+### Technical Leadership
+Skills: Tech Leadership, AI Adoption, 0-to-1 Development, 1-to-100 Growth, 100-to-1K Scaling, 1K-to-1M+ Scale, Technical Strategy
+
+Unique experience across all company stages: founding (0→1), early growth (1→100), scaling (100→1K), and massive scale (1K→1M+).
+
+### Scalability & Performance
+Skills: High Scalability, Performance Optimization, Real-time Monitoring, Protocol Design, Stack Modernization, Cloud Infrastructure
+
+### SRE & Engineering Excellence
+Skills: SLOs/SLIs, Observability, On-call Leadership, Code Quality, Testing, Refactoring, Knowledge Sharing
+
+## Leadership Philosophy
+
+- **Trust & Transparency**: Building teams on trust, open and honest communication, and egoless environments.
+- **Ownership & Execution**: Empowering teams with full ownership and a can-do approach. Action over perfection, results over excuses.
+- **Empowerment & Impact**: Leading without authority through enablement and customer-centric thinking.
+
+## Advisory Work
+
+Or serves on advisory boards and works closely with founders on:
+- AI Integration & Strategy
+- ML Architecture & MLOps
+- AI Product Development
+- Technical Architecture
+- Team Building & Hiring
+- Fundraising & Pitch Deck Review
+
+Advisory board member at **Record** — AI-powered customer support platform.
+
+## Press & Media
+
+- **Calcalist** (Oct 2020): adjusti.co acquisition by Teikametrics — https://www.calcalist.co.il/local/articles/0,7340,L-3859593,00.html
+- **BusinessWire** (Oct 2020): Teikametrics Acquires Adjusti.co — https://www.businesswire.com/news/home/20201014005161/en/Teikametrics-Acquires-Adjusti.co-to-Provide-Market-Intelligence-for-Amazon-and-Walmart
+- **CTech** (Oct 2020): adjusti.co acquisition coverage — https://www.calcalistech.com/ctech/articles/0,7340,L-3859710,00.html
+- **Ynet** (2016): L'Oréal Brandstorm International Competition — https://www.ynet.co.il/articles/0,7340,L-4831519,00.html
