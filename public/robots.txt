@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# AI agent profile — machine-readable, structured for answer engines
+# https://or-nuri.com/for-bots
+
+Sitemap: https://or-nuri.com/sitemap.xml
+
+# LLMs.txt — plain-text profile for AI crawlers
+# https://or-nuri.com/llms.txt
