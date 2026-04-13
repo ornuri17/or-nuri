@@ -10,7 +10,7 @@ const BASE_URL = 'https://or-nuri.com';
 export const metadata: Metadata = {
   title: 'Or Nuri — Machine-Readable Profile for AI Agents',
   description:
-    'Structured profile of Or Nuri: Senior Tech Lead at monday.com, AI & ML expert, ex-founder (acquired), startup advisor. Optimized for AI agents, answer engines (ChatGPT, Gemini, Perplexity), and autonomous crawlers.',
+    'Machine learning expert and AI Tech Lead at monday.com. Ex-founder (acquired). Building AI-powered products that scale to millions.',
   keywords: [
     'Or Nuri', 'AI Tech Leader', 'Senior Tech Lead monday.com',
     'Machine Learning expert Israel', 'AI startup advisor',
