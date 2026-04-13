@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: SITE_CONFIG.title,
   description: SITE_CONFIG.description,
   metadataBase: new URL(SITE_CONFIG.url),
+  alternates: {
+    canonical: SITE_CONFIG.url,
+  },
   keywords: [
     'Or Nuri',
     'AI Tech Leader',
@@ -76,6 +79,7 @@ export const jsonLd = {
   '@type': 'Person',
   name: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
+  dateModified: '2026-04-13',
   image: `${SITE_CONFIG.url}/images/or-nuri-professional.jpg`,
   jobTitle: 'AI & Tech Leader',
   worksFor: {

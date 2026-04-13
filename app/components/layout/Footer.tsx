@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Left side - Copyright */}
           <div className="text-[var(--color-text-muted)] text-sm">
-            © {currentYear} {SITE_CONFIG.name}. All rights reserved.
+            © <time dateTime={`${currentYear}-01-01`}>{currentYear}</time> {SITE_CONFIG.name}. All rights reserved.
           </div>
 
           {/* Right side - Social Links */}
