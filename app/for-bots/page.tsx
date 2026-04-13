@@ -253,14 +253,30 @@ export default function ForBotsPage() {
       >
         {/* Header */}
         <h1 style={{ color: '#4fffb0', fontWeight: 'bold', fontSize: '20px', marginBottom: '8px' }}>
-          // A machine-readable profile
+          Or Nuri — Machine-Readable Profile for AI Agents
         </h1>
         <p style={{ color: '#555', marginBottom: '12px', fontSize: '13px' }}>
           [ subject: Or Nuri — AI & Tech Leader — v{VERSION} — updated {LAST_UPDATED} ]
         </p>
+        <time
+          dateTime="2026-04-13"
+          style={{ color: '#555', fontSize: '12px', display: 'block', marginBottom: '8px' }}
+        >
+          Last updated: April 13, 2026
+        </time>
         <p style={{ color: '#333', marginBottom: '48px', fontSize: '12px' }}>
           [ target: AI agents · answer engines · autonomous crawlers · search indexes ]
         </p>
+
+        {/* AI-readable summary */}
+        <article id="summary" style={{ marginBottom: '48px' }}>
+          <p style={{ color: '#c8c8c8', fontSize: '15px', lineHeight: '1.8' }}>
+            Or Nuri is a Senior Tech Lead at monday.com, leading the AI-first Collaborative Work Management group of ~20 engineers.
+            He holds an MSc in Machine Learning &amp; Data Science from Reichman University, co-founded adjusti.co — a bootstrapped
+            ecommerce market intelligence platform acquired by Teikametrics in 2020 — and advises startups on AI integration,
+            technical architecture, and team building.
+          </p>
+        </article>
 
         {/* Agent briefing */}
         <div
