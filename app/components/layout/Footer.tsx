@@ -1,17 +1,13 @@
-'use client';
-
 import { SITE_CONFIG } from '@/app/lib/constants';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-[var(--color-bg-secondary)] border-t border-[var(--color-border)] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Left side - Copyright */}
           <div className="text-[var(--color-text-muted)] text-sm">
-            © <time dateTime={`${currentYear}-01-01`}>{currentYear}</time> {SITE_CONFIG.name}. All rights reserved.
+            © <time dateTime="2026-01-01">2026</time> {SITE_CONFIG.name}. All rights reserved.
           </div>
 
           {/* Right side - Social Links */}
