@@ -1,11 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ABOUT_CONTENT } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer, defaultViewport } from '@/app/lib/animations';
 
 export default function AboutSection() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section
       id="about"
@@ -29,15 +32,60 @@ export default function AboutSection() {
 
           {/* Paragraphs */}
           <div className="space-y-8 text-center">
-            {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
-              <motion.p
-                key={index}
-                variants={fadeInUp}
-                className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-loose"
+            <AnimatePresence initial={false}>
+              {!expanded && (
+                <motion.p
+                  key="summary"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="overflow-hidden text-lg md:text-xl text-[var(--color-text-secondary)] leading-loose"
+                >
+                  {ABOUT_CONTENT.summary}
+                </motion.p>
+              )}
+            </AnimatePresence>
+
+            <AnimatePresence initial={false}>
+              {expanded && (
+                <motion.div
+                  key="paragraphs"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="overflow-hidden space-y-8"
+                >
+                  {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
+                    <p
+                      key={index}
+                      className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-loose"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <motion.div variants={fadeInUp} className="flex justify-center">
+              <button
+                onClick={() => setExpanded(!expanded)}
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-accent-secondary)] bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-full px-3 py-1 cursor-pointer transition-colors"
               >
-                {paragraph}
-              </motion.p>
-            ))}
+                {expanded ? 'Summarize' : 'Elaborate'}
+                <svg
+                  className={`w-3.5 h-3.5 transition-transform ${expanded ? 'rotate-180' : ''}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </motion.div>
           </div>
 
           {/* Company Logos */}
