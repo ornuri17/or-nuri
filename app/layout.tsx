@@ -42,6 +42,7 @@ export default function RootLayout({
         {/* AI agent discovery hint */}
         <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable profile" />
         <meta name="ai-agent-profile" content="https://or-nuri.com/for-bots" />
+        <link rel="me" href="https://www.linkedin.com/in/or-nuri/" />
 
         {/* JSON-LD Structured Data */}
         <script
