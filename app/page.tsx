@@ -11,6 +11,7 @@ const ExpertiseSection = lazy(() => import('@/app/components/sections/ExpertiseS
 const SuccessStories = lazy(() => import('@/app/components/sections/SuccessStories'));
 const MediaSection = lazy(() => import('@/app/components/sections/MediaSection'));
 const AdvisorySection = lazy(() => import('@/app/components/sections/AdvisorySection'));
+const FAQSection = lazy(() => import('@/app/components/sections/FAQSection'));
 const ContactSection = lazy(() => import('@/app/components/sections/ContactSection'));
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
           <SuccessStories />
           <MediaSection />
           <AdvisorySection />
+          <FAQSection />
           <ContactSection />
         </Suspense>
       </main>
