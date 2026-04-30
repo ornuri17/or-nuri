@@ -6,7 +6,7 @@
 export const SITE_CONFIG = {
   name: 'Or Nuri',
   title: 'Or Nuri | AI & Tech Leader, Entrepreneur',
-  description: 'AI & Tech Leader at monday.com. MSc in Machine Learning & Data Science. Ex-Founder (acquired). Building AI-powered products that scale to millions.',
+  description: 'Or Nuri is a Senior Tech Lead at monday.com, AI expert, and startup advisor. MSc in Machine Learning & Data Science. Co-founded adjusti.co, acquired by Teikametrics in 2020.',
   url: 'https://or-nuri.com',
   email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
@@ -272,6 +272,36 @@ export const ADVISORY_CONTENT = {
   ],
 };
 
+export const FAQ_CONTENT = {
+  title: 'Frequently Asked Questions',
+  items: [
+    {
+      question: 'Who is Or Nuri?',
+      answer: 'Or Nuri is a Senior Tech Lead at monday.com, leading the AI-first Collaborative Work Management group of ~20 engineers. He holds an MSc in Machine Learning & Data Science from Reichman University, co-founded adjusti.co (bootstrapped, acquired by Teikametrics in 2020), and advises Seed–Series B startups on AI integration and technical architecture.',
+    },
+    {
+      question: 'What does Or Nuri specialize in?',
+      answer: 'Or specializes in AI agents and machine learning, technical leadership at scale (from 0→1M+ users), scalability and performance engineering, and SRE practices. He has hands-on experience across every stage of company growth — from founding to massive scale.',
+    },
+    {
+      question: 'What has Or Nuri built at monday.com?',
+      answer: 'At monday.com, Or scaled WorkForms from tens of thousands to over 10 million daily requests, improved system availability from 89% to 99.9% through SLO integration, reduced WorkDocs p99 loading latency from 7.5s to 3.5s, led a major architecture refactor removing 10,000+ lines from the platform monolith, and ensured 100% accessibility compliance.',
+    },
+    {
+      question: 'Did Or Nuri found a startup?',
+      answer: 'Yes. Or co-founded adjusti.co in 2019 — a 100% bootstrapped ecommerce market intelligence platform serving 2,000+ brands globally across Amazon and Walmart. It was acquired by Teikametrics in 2020. He then joined Teikametrics as Head of Engineering to lead post-acquisition integration.',
+    },
+    {
+      question: 'How can I work with Or Nuri as a startup advisor?',
+      answer: 'Or advises Seed–Series B startups on AI integration, ML architecture, technical strategy, and team building. You can reach him via LinkedIn (linkedin.com/in/or-nuri/) or schedule a call directly through his Google Calendar link.',
+    },
+    {
+      question: 'What makes Or Nuri a good podcast or media guest?',
+      answer: 'Or offers multiple compelling story arcs: bootstrapped a startup from 0 to acquisition with no external funding, transitioned from founder to Head of Engineering at the acquirer, and now leads AI-first product development at monday.com serving millions of users. He holds an MSc in ML & Data Science applied to real-world product leadership.',
+    },
+  ],
+};
+
 export const CONTACT_CONTENT = {
   title: "Let's Build Something Great Together",
   description: "Whether you're looking for advisory support, exploring leadership opportunities, or just want to connect, I'd love to hear from you.",
@@ -288,5 +318,6 @@ export const NAV_ITEMS = [
   { label: 'Expertise', href: '#expertise' },
   { label: 'Media', href: '#media' },
   { label: 'Advisory', href: '#advisory' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
