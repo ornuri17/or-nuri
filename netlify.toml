@@ -5,6 +5,26 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '''</llms.txt>; rel="describedby"; type="text/plain", </for-bots/>; rel="describedby", </sitemap.xml>; rel="sitemap"'''
+
+[[headers]]
+  for = "/.well-known/api-catalog"
+  [headers.values]
+    Content-Type = "application/linkset+json"
+
+[[headers]]
+  for = "/.well-known/agent-skills/*"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+
+[[headers]]
+  for = "/.well-known/agent-skills/index.json"
+  [headers.values]
+    Content-Type = "application/json"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

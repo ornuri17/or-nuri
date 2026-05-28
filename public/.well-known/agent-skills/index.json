@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "or-nuri-profile",
+      "type": "skill-md",
+      "description": "Retrieve structured profile data about Or Nuri — bootstrapped founder, startup advisor, and Senior Tech Lead at monday.com.",
+      "url": "https://or-nuri.com/.well-known/agent-skills/or-nuri-profile/SKILL.md",
+      "digest": "sha256:2e124c43238e2ab193c120b75a9133e14082d886ffd733ef536812bfa1c20e19"
+    }
+  ]
+}
