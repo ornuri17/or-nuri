@@ -1,0 +1,10 @@
+{
+  "issuer": "https://or-nuri.com",
+  "authorization_endpoint": "https://or-nuri.com/for-bots/",
+  "token_endpoint": "https://or-nuri.com/for-bots/",
+  "jwks_uri": "https://or-nuri.com/.well-known/jwks.json",
+  "response_types_supported": ["code"],
+  "grant_types_supported": ["authorization_code"],
+  "subject_types_supported": ["public"],
+  "token_endpoint_auth_methods_supported": ["none"]
+}
