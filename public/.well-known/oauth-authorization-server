@@ -10,6 +10,7 @@
   "agent_auth": {
     "skill": "https://or-nuri.com/auth.md",
     "register_uri": "https://or-nuri.com/for-bots/",
+    "claim_uri": "https://or-nuri.com/for-bots/",
     "identity_types_supported": ["anonymous"],
     "anonymous": {
       "credential_types_supported": ["none"]
