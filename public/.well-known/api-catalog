@@ -1,0 +1,18 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://or-nuri.com",
+      "service-desc": [
+        {
+          "href": "https://or-nuri.com/llms.txt",
+          "type": "text/plain"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://or-nuri.com/for-bots/"
+        }
+      ]
+    }
+  ]
+}

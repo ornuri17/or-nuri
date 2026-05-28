@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { metadata as siteMetadata, jsonLd } from "./metadata";
+import WebMCPProvider from "./components/WebMCPProvider";
 
 export const metadata: Metadata = siteMetadata;
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <WebMCPProvider />
         {children}
       </body>
     </html>
