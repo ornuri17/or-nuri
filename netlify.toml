@@ -21,6 +21,16 @@
     Content-Type = "application/json"
 
 [[headers]]
+  for = "/.well-known/mcp/server-card.json"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/auth.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+
+[[headers]]
   for = "/.well-known/agent-skills/*"
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
@@ -32,7 +42,7 @@
 
 [[edge_functions]]
   function = "markdown-agent"
-  path = "/*"
+  path = "/"
 
 [[redirects]]
   from = "/*"
