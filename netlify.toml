@@ -16,6 +16,21 @@
     Content-Type = "application/linkset+json"
 
 [[headers]]
+  for = "/.well-known/oauth-authorization-server"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/.well-known/oauth-protected-resource"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/.well-known/jwks.json"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
   for = "/.well-known/agent-card.json"
   [headers.values]
     Content-Type = "application/json"
