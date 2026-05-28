@@ -1,0 +1,6 @@
+{
+  "resource": "https://or-nuri.com",
+  "authorization_servers": ["https://or-nuri.com"],
+  "scopes_supported": ["profile", "read"],
+  "bearer_methods_supported": ["header"]
+}
