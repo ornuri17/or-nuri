@@ -16,6 +16,11 @@
     Content-Type = "application/linkset+json"
 
 [[headers]]
+  for = "/.well-known/agent-card.json"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
   for = "/.well-known/agent-skills/*"
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
@@ -24,6 +29,10 @@
   for = "/.well-known/agent-skills/index.json"
   [headers.values]
     Content-Type = "application/json"
+
+[[edge_functions]]
+  function = "markdown-agent"
+  path = "/*"
 
 [[redirects]]
   from = "/*"

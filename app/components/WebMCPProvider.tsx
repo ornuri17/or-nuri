@@ -4,11 +4,12 @@ import { useEffect } from 'react';
 
 export default function WebMCPProvider() {
   useEffect(() => {
-    if (!('modelContext' in document)) return;
-
-    const ctx = document.modelContext as {
-      registerTool: (tool: object, options?: object) => void;
-    };
+    // Try navigator.modelContext (scanner/early implementations) then document.modelContext (spec)
+    type ModelContext = { registerTool: (tool: object, options?: object) => void };
+    const ctx: ModelContext | null =
+      ('modelContext' in navigator ? (navigator as unknown as { modelContext: ModelContext }).modelContext : null) ??
+      ('modelContext' in document ? (document as unknown as { modelContext: ModelContext }).modelContext : null);
+    if (!ctx) return;
 
     const controller = new AbortController();
     const { signal } = controller;
