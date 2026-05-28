@@ -1,0 +1,13 @@
+{
+  "serverInfo": {
+    "name": "or-nuri-profile",
+    "version": "1.0.0"
+  },
+  "description": "Provides structured profile data about Or Nuri — bootstrapped founder, Senior Tech Lead at monday.com, and startup advisor.",
+  "endpoint": "/for-bots/",
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  }
+}
