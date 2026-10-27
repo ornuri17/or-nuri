@@ -195,7 +195,7 @@ export const SUCCESS_STORIES = [
     impact: 'From manual vendor audits to a full handoff to AI agents',
     link: {
       label: "Featured on monday.com's Startup for Startup podcast (ep. 359)",
-      url: 'https://open.spotify.com/episode/5sO0qsT02YdFsLwCS3tMcG',
+      url: 'https://www.youtube.com/watch?v=XYWJDX9qggQ',
     },
   },
   {
