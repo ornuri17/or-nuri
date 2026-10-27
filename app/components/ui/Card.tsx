@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { cn } from '@/app/lib/utils';
 
 interface CardProps {
@@ -10,6 +9,10 @@ interface CardProps {
   padding?: 'sm' | 'md' | 'lg';
 }
 
+/**
+ * Surface used across sections: white, hairline border, soft shadow,
+ * a gentle lift on hover (CSS only, so reduced motion turns it off).
+ */
 export default function Card({
   children,
   className,
@@ -17,23 +20,21 @@ export default function Card({
   padding = 'md',
 }: CardProps) {
   const paddingStyles = {
-    sm: 'p-4',
-    md: 'p-6',
-    lg: 'p-8',
+    sm: 'p-5',
+    md: 'p-6 sm:p-8',
+    lg: 'p-8 sm:p-10',
   };
 
   return (
-    <motion.div
+    <div
       className={cn(
-        'bg-[var(--color-bg-tertiary)] rounded-2xl border border-[var(--color-border)] transition-all duration-300',
+        'relative bg-white rounded-2xl border border-[var(--color-border)] shadow-[var(--shadow-soft)] transition-[box-shadow,border-color,transform] duration-300 ease-out',
         paddingStyles[padding],
-        hover && 'hover:shadow-lg hover:border-[var(--color-accent-secondary)]',
+        hover && 'hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-lift)]',
         className
       )}
-      whileHover={hover ? { y: -4 } : {}}
-      transition={{ duration: 0.2 }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

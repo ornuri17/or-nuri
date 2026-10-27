@@ -19,7 +19,7 @@ export default function Home() {
     <div className="min-h-screen w-full">
       <ScrollProgress />
       <Navbar />
-      <main className="w-full">
+      <main id="main" className="w-full">
         <HeroSection />
         <Suspense fallback={null}>
           <AboutSection />

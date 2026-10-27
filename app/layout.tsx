@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { metadata as siteMetadata, jsonLd } from "./metadata";
 import WebMCPProvider from "./components/WebMCPProvider";
+import MotionProvider from "./components/MotionProvider";
 
 export const metadata: Metadata = siteMetadata;
 
@@ -24,7 +25,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap"
         />
 
         {/* Google Analytics */}
@@ -52,8 +53,11 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         <WebMCPProvider />
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );
