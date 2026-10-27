@@ -301,7 +301,7 @@ export const FAQ_CONTENT = {
     },
     {
       question: 'What has Or Nuri built at monday.com?',
-      answer: 'At monday.com, Or leads a project where autonomous AI agents find accessibility issues in the product and a second team of agents fixes them end to end, all the way to production. Earlier, as tech lead of the Collaborative Work Management group, he scaled WorkForms from tens of thousands to over 10 million daily requests, improved system availability from 89% to 99.9% through SLO integration, reduced WorkDocs p99 loading latency from 7.5s to 3.5s, led a major architecture refactor removing 10,000+ lines from the platform monolith, and made the WorkForms submission experience 100% accessible.',
+      answer: 'At monday.com, Or leads a project where autonomous AI agents find accessibility issues in the product and a second team of agents fixes them end to end, all the way to production. Earlier, as tech lead of the Collaborative Work Management group, he scaled WorkForms from tens of thousands to over 10 million daily requests, improved system availability from 89% to 99.9% through SLO integration, reduced WorkDocs p99 loading latency from 7.5s to 3.5s, led a major architecture refactor removing 10,000+ lines from the platform monolith, and made the WorkForms submission experience 99% accessible (WCAG).',
     },
     {
       question: 'Did Or Nuri found a startup?',
