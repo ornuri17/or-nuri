@@ -27,7 +27,7 @@ export default function SuccessStories() {
           </motion.div>
 
           {/* Stories */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {SUCCESS_STORIES.map((story) => (
               <motion.div key={story.id} variants={fadeInUp}>
                 <Card className="h-full bg-gradient-to-br from-white to-[var(--color-bg-tertiary)] hover:shadow-xl transition-shadow">

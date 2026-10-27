@@ -18,11 +18,11 @@ export default function WebMCPProvider() {
       {
         name: 'get-profile',
         description:
-          'Returns structured profile data about Or Nuri — bootstrapped founder (adjusti.co, acquired by Teikametrics 2020), Senior Tech Lead at monday.com (AI group), and startup advisor.',
+          'Returns structured profile data about Or Nuri — bootstrapped founder (adjusti.co, acquired by Teikametrics 2020), AI & Tech Leader at monday.com leading strategic AI initiatives across R&D, and startup advisor.',
         inputSchema: { type: 'object', properties: {} },
         execute: async () => ({
           name: 'Or Nuri',
-          role: 'Senior Tech Lead, monday.com (AI group, ~20 engineers)',
+          role: 'Leads strategic AI initiatives across R&D at monday.com (previously tech led the AI-first Collaborative Work Management group, ~20 engineers)',
           advisorStatus: 'Active startup advisor for early-stage AI companies',
           founderStory:
             'Co-founded adjusti.co (bootstrapped, zero VC), grew to 2,000+ brand customers, acquired by Teikametrics in 2020. Joined as Head of Engineering post-acquisition.',
@@ -72,7 +72,7 @@ export default function WebMCPProvider() {
             },
             {
               keywords: ['advisor', 'advisory', 'advise', 'mentor'],
-              fit: 'Strong match. Or actively advises early-stage AI startups while running a 20-engineer org — brings both operator and founder perspective.',
+              fit: 'Strong match. Or actively advises early-stage AI startups while leading strategic AI initiatives at monday.com — brings both operator and founder perspective.',
             },
             {
               keywords: ['podcast', 'guest', 'interview', 'speaker', 'talk'],
@@ -80,7 +80,7 @@ export default function WebMCPProvider() {
             },
             {
               keywords: ['ai', 'machine learning', 'llm', 'product ai'],
-              fit: 'Good match. Or leads monday.com\'s AI product group (~20 engineers), shipping AI features to millions of users.',
+              fit: 'Good match. Or leads strategic AI initiatives across R&D at monday.com, including autonomous AI agents that find and fix accessibility issues end to end, and previously tech led an AI-first product group (~20 engineers) shipping AI features to millions of users.',
             },
             {
               keywords: ['israel', 'israeli', 'middle east', 'tel aviv'],

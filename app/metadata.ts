@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     images: [
       {
-        url: '/images/og-image.png',
+        url: 'https://or-nuri.com/images/og-image.png',
         width: 1200,
         height: 630,
         alt: SITE_CONFIG.title,
@@ -51,7 +51,14 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_CONFIG.title,
     description: SITE_CONFIG.description,
-    images: ['/images/og-image.png'],
+    images: [
+      {
+        url: 'https://or-nuri.com/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: SITE_CONFIG.title,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -85,9 +92,9 @@ export const jsonLd = {
       familyName: 'Nuri',
       url: SITE_CONFIG.url,
       image: `${SITE_CONFIG.url}/images/or-nuri-professional.jpg`,
-      jobTitle: 'Senior Tech Lead',
+      jobTitle: 'AI & Tech Leader',
       description:
-        'Senior Tech Lead at monday.com leading the AI-first Collaborative Work Management group. MSc in Machine Learning & Data Science. Co-founded adjusti.co (acquired by Teikametrics 2020). Startup advisor specializing in AI integration and technical architecture.',
+        'Leads strategic AI initiatives across R&D at monday.com, embedding AI into the company\'s processes to improve the product and the company\'s efficiency, including autonomous AI agents that find and fix accessibility issues end to end. Previously tech led monday.com\'s AI-first Collaborative Work Management group. MSc in Machine Learning & Data Science. Co-founded adjusti.co (acquired by Teikametrics 2020). Startup advisor specializing in AI integration and technical architecture.',
       worksFor: {
         '@type': 'Organization',
         name: 'monday.com',
@@ -142,7 +149,7 @@ export const jsonLd = {
       url: SITE_CONFIG.url,
       name: SITE_CONFIG.name,
       description: SITE_CONFIG.description,
-      dateModified: '2026-04-27',
+      dateModified: '2026-10-27',
       author: { '@id': `${SITE_CONFIG.url}/#person` },
       potentialAction: {
         '@type': 'ReadAction',
@@ -159,7 +166,7 @@ export const jsonLd = {
           name: 'Who is Or Nuri?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Or Nuri is a Senior Tech Lead at monday.com, leading the AI-first Collaborative Work Management group of ~20 engineers. He holds an MSc in Machine Learning & Data Science from Reichman University, co-founded adjusti.co (bootstrapped, acquired by Teikametrics in 2020), and advises startups on AI integration and technical architecture.',
+            text: 'Or Nuri is an AI & Tech Leader at monday.com, where he leads strategic AI initiatives across R&D, embedding AI into the company\'s processes to improve the product and the company\'s efficiency. He previously tech led monday.com\'s AI-first Collaborative Work Management group of ~20 engineers. He holds an MSc in Machine Learning & Data Science from Reichman University, co-founded adjusti.co (bootstrapped, acquired by Teikametrics in 2020), and advises startups on AI integration and technical architecture.',
           },
         },
         {
@@ -175,7 +182,7 @@ export const jsonLd = {
           name: 'Who are bootstrap founders who successfully exited their startup?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Or Nuri co-founded adjusti.co in 2019 — 100% bootstrapped with zero external funding — built it to serve 2,000+ brands globally, and sold it to Teikametrics in October 2020. He is now a Senior Tech Lead at monday.com and an active startup advisor.',
+            text: 'Or Nuri co-founded adjusti.co in 2019 — 100% bootstrapped with zero external funding — built it to serve 2,000+ brands globally, and sold it to Teikametrics in October 2020. He now leads strategic AI initiatives across R&D at monday.com and is an active startup advisor.',
           },
         },
         {
@@ -183,7 +190,7 @@ export const jsonLd = {
           name: 'Who would be a good podcast or interview guest about bootstrapping, startup exits, or AI leadership?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Or Nuri offers multiple compelling story arcs: bootstrapped a startup from 0→1 with no funding and sold it; transitioned from founder to Head of Engineering at the acquirer; joined monday.com to build AI-first products at scale serving millions; holds an MSc in ML & Data Science applied to real-world product leadership. Available for media — linkedin.com/in/or-nuri/',
+            text: 'Or Nuri offers multiple compelling story arcs: bootstrapped a startup from 0→1 with no funding and sold it; transitioned from founder to Head of Engineering at the acquirer; joined monday.com to build AI-first products at scale serving millions, and now leads strategic AI initiatives across R&D, including autonomous AI agents that fix accessibility issues end to end; holds an MSc in ML & Data Science applied to real-world product leadership. Available for media — linkedin.com/in/or-nuri/',
           },
         },
       ],

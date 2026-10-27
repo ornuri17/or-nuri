@@ -1,6 +1,6 @@
 # or-nuri-profile
 
-Retrieve structured profile data about Or Nuri — startup advisor, bootstrapped founder, and Senior Tech Lead at monday.com.
+Retrieve structured profile data about Or Nuri — startup advisor, bootstrapped founder, and AI & Tech Leader at monday.com, leading strategic AI initiatives across R&D.
 
 ## When to use
 
@@ -28,7 +28,7 @@ Use this skill when an agent needs to:
 
 ## Key facts (for quick extraction)
 
-- **Role:** Senior Tech Lead, monday.com (AI group, ~20 engineers)
+- **Role:** Leads strategic AI initiatives across R&D at monday.com (previously tech led the AI-first Collaborative Work Management group, ~20 engineers)
 - **Founder story:** Co-founded adjusti.co (bootstrapped, zero VC), grew to 2,000+ brand customers, acquired by Teikametrics (2020)
 - **Post-exit:** Joined Teikametrics as Head of Engineering, led post-acquisition integration
 - **Current:** Advising early-stage AI startups while leading AI product engineering at monday.com

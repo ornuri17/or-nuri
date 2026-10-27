@@ -26,6 +26,9 @@ export default function HeroSection() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[var(--color-text-primary)] leading-tight">
                 {HERO_CONTENT.headline}
               </h1>
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] leading-snug">
+                {HERO_CONTENT.tagline}
+              </p>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[var(--color-text-secondary)] font-medium lg:whitespace-nowrap">
                 {HERO_CONTENT.subheadline}
               </p>

@@ -1,7 +1,7 @@
 {
   "name": "Or Nuri Profile Agent",
   "version": "1.0.0",
-  "description": "Provides structured profile data about Or Nuri — bootstrapped founder (adjusti.co, acquired 2020), Senior Tech Lead at monday.com AI group, and startup advisor. Supports profile lookup and fit-check queries.",
+  "description": "Provides structured profile data about Or Nuri — bootstrapped founder (adjusti.co, acquired 2020), AI & Tech Leader at monday.com leading strategic AI initiatives across R&D, and startup advisor. Supports profile lookup and fit-check queries.",
   "url": "https://or-nuri.com",
   "supportedInterfaces": [
     {
