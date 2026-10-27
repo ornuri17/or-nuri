@@ -189,7 +189,8 @@ export const SUCCESS_STORIES = [
   {
     id: 'a11y-agents',
     title: 'Autonomous Agents That Fix Accessibility End-to-End',
-    metric: 'PR to Production',
+    metric: 'Identify. Fix. Deploy.',
+    metricClassName: 'text-2xl sm:text-3xl xl:text-4xl',
     icon: '♿',
     description: 'Accessibility work always comes after a feature is built, which makes it hard for teams to keep up with. Finding issues used to mean manual audits by external vendors. Leading a project where autonomous AI agents handle the accessibility issues on every new feature. They plug into any point in the process, from a pull request to a live environment, and do all the work up to production, like another team member with a well-defined role.',
     impact: 'From manual vendor audits to a full handoff to AI agents',

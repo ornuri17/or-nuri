@@ -35,7 +35,7 @@ export default function SuccessStories() {
                     <div className="space-y-6 flex-grow">
                       {/* Icon & Metric */}
                       <div className="flex items-center justify-between gap-3 mb-2">
-                        <div className="text-3xl md:text-4xl font-black text-[var(--color-accent-secondary)] leading-tight">
+                        <div className={`${story.metricClassName ?? 'text-3xl md:text-4xl'} font-black text-[var(--color-accent-secondary)] leading-tight`}>
                           {story.metric}
                         </div>
                         <div className="text-4xl flex-shrink-0">{story.icon}</div>
