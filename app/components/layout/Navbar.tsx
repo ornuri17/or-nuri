@@ -49,12 +49,12 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto w-full px-6 sm:px-8">
           {/* Desktop: 3-column grid layout */}
-          <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center h-16 w-full">
+          <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] gap-4 items-center h-16 w-full">
             {/* Left: Logo */}
             <div className="flex justify-start">
               <button
                 onClick={() => scrollToElement("hero")}
-                className="text-[17px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)] hover:text-[var(--color-accent-secondary)] transition-colors"
+                className="text-[17px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)] hover:text-[var(--color-accent-secondary)] transition-colors whitespace-nowrap"
               >
                 {SITE_CONFIG.name}
               </button>

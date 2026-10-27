@@ -114,6 +114,15 @@ body {
   color: transparent;
 }
 
+/* Hero fills exactly one screen on every device. The navbar is fixed and
+   sits inside this height (the hero carries its own top padding), so the
+   next section starts at the fold. 100vh is the fallback for browsers
+   without small-viewport units. */
+.hero-fullscreen {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 /* Hero backdrop: soft blue glow over a faint grid that fades out */
 .hero-backdrop {
   background:

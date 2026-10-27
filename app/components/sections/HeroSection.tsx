@@ -14,13 +14,13 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="hero-backdrop relative isolate overflow-hidden -mt-16 pt-16 sm:min-h-[100svh] flex flex-col"
+      className="hero-backdrop hero-fullscreen relative isolate overflow-hidden -mt-16 pt-16 flex flex-col"
     >
       {/* Faint grid, fading out from the center */}
       <div aria-hidden="true" className="hero-grid absolute inset-0 -z-10" />
 
-      <div className="flex-1 flex items-center max-w-6xl mx-auto px-6 sm:px-8 pt-10 pb-16 sm:py-16 w-full">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-center w-full">
+      <div className="flex-1 flex items-center max-w-6xl mx-auto px-6 sm:px-8 py-[clamp(1rem,3svh,2.5rem)] sm:py-16 w-full">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-[clamp(1.5rem,4.5svh,3rem)] sm:gap-10 lg:gap-16 items-center w-full">
           {/* Left side - Content */}
           <div className="text-center lg:text-left">
             <motion.div
@@ -53,7 +53,7 @@ export default function HeroSection() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.15 }}
-              className="mt-8 sm:mt-10 grid grid-cols-2 sm:flex gap-3 justify-center lg:justify-start"
+              className="mt-[clamp(1.5rem,4svh,2.5rem)] sm:mt-10 grid grid-cols-2 sm:flex gap-3 justify-center lg:justify-start"
             >
               <Button variant="primary" size="lg" onClick={() => scrollToElement("contact")}>
                 {HERO_CONTENT.cta.primary}
@@ -72,7 +72,7 @@ export default function HeroSection() {
             transition={{ delay: 0.1 }}
             className="relative order-first lg:order-last"
           >
-            <div className="relative mx-auto w-52 sm:w-60 lg:w-full lg:max-w-[22rem]">
+            <div className="relative mx-auto w-[clamp(10rem,calc(45svh-9rem),15rem)] sm:w-60 lg:w-full lg:max-w-[22rem]">
               {/* Soft glow behind the portrait */}
               <div
                 aria-hidden="true"
@@ -85,7 +85,7 @@ export default function HeroSection() {
                   fill
                   className="object-cover object-[center_18%]"
                   priority
-                  sizes="(max-width: 640px) 13rem, (max-width: 1024px) 15rem, 22rem"
+                  sizes="(max-width: 1024px) 15rem, 22rem"
                 />
                 {/* Subtle inner edge for a finished look */}
                 <div aria-hidden="true" className="absolute inset-0 rounded-[inherit] ring-1 ring-inset ring-white/20" />
@@ -95,19 +95,19 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator - Hidden on very short viewports */}
+      {/* Scroll cue, anchored to the bottom of the screen. Hidden on very short viewports */}
       <motion.div
-        className="scroll-indicator hidden sm:flex justify-center pb-6 md:pb-8"
+        className="scroll-indicator flex justify-center pb-[clamp(0.5rem,2svh,1.75rem)] sm:pb-6 md:pb-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.6 }}
       >
         <button
           onClick={() => scrollToElement("about")}
-          className="group flex flex-col items-center gap-2 text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors"
+          className="group flex flex-col items-center justify-center gap-2 min-w-11 min-h-11 text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors"
           aria-label="Scroll to content"
         >
-          <span className="text-xs font-medium tracking-wide">Scroll to explore</span>
+          <span className="hidden sm:block text-xs font-medium tracking-wide">Scroll to explore</span>
           <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[var(--color-border)] bg-white/70 shadow-[var(--shadow-soft)] group-hover:border-[var(--color-border-strong)] transition-colors scroll-cue">
             <Icon name="arrowDown" className="w-4 h-4" />
           </span>
