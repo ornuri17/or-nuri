@@ -53,9 +53,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <a href="#main" className="skip-link">
-          Skip to content
-        </a>
         <WebMCPProvider />
         <MotionProvider>{children}</MotionProvider>
       </body>
