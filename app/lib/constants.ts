@@ -188,7 +188,7 @@ export const EXPERTISE_AREAS = [
 export const SUCCESS_STORIES = [
   {
     id: 'a11y-agents',
-    title: 'Autonomous Accessibility Agents',
+    title: 'AI Accessibility Agents',
     metric: 'Identify. Fix. Deploy.',
     metricClassName: 'text-2xl sm:text-3xl xl:text-4xl',
     icon: '♿',
