@@ -72,7 +72,7 @@ export default function HeroSection() {
             transition={{ delay: 0.1 }}
             className="relative order-first lg:order-last"
           >
-            <div className="relative mx-auto w-40 sm:w-56 lg:w-full lg:max-w-[22rem]">
+            <div className="relative mx-auto w-52 sm:w-60 lg:w-full lg:max-w-[22rem]">
               {/* Soft glow behind the portrait */}
               <div
                 aria-hidden="true"
@@ -85,7 +85,7 @@ export default function HeroSection() {
                   fill
                   className="object-cover object-[center_18%]"
                   priority
-                  sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 22rem"
+                  sizes="(max-width: 640px) 13rem, (max-width: 1024px) 15rem, 22rem"
                 />
                 {/* Subtle inner edge for a finished look */}
                 <div aria-hidden="true" className="absolute inset-0 rounded-[inherit] ring-1 ring-inset ring-white/20" />

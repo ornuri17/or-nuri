@@ -63,9 +63,9 @@ export default function SuccessStories() {
                           className="group block text-sm font-semibold leading-relaxed text-[var(--color-accent-secondary)] hover:text-[var(--color-accent-secondary-hover)] transition-colors"
                         >
                           {(() => {
-                            // Keep the last word and the arrow together so the arrow never wraps alone
+                            // Keep the last two words and the arrow together so the arrow never wraps alone
                             const words = story.link.label.split(' ');
-                            const last = words.pop();
+                            const last = words.splice(-2).join('\u00a0');
                             return (
                               <span className="underline decoration-[var(--color-accent-secondary)]/30 underline-offset-4 group-hover:decoration-current transition-colors">
                                 {words.join(' ')}{' '}
