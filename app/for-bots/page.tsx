@@ -442,7 +442,7 @@ export default function ForBotsPage() {
               'Integrated SLOs: availability 89% → 99.9%, p99 latency 84% → 99.9%',
               'Reduced WorkDocs p99 loading latency from 7.5s to 3.5s',
               'Led full architecture refactor — deleted 10K+ lines from platform monolith',
-              'Led WorkForms to 100% accessibility and mobile compliance',
+              'Led WorkForms to 99% accessibility (WCAG) and mobile compliance',
               'Leads on-call training across monday.com international R&D',
               'Knowledge sharing on AI, SLOs, Testing, Observability',
             ]}
