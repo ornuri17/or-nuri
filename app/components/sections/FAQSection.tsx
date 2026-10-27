@@ -34,7 +34,7 @@ export default function FAQSection() {
               const answerId = `faq-answer-${index}`;
               return (
                 <div key={index} className={isOpen ? 'bg-[var(--color-bg-secondary)]/60' : undefined}>
-                  <h3>
+                  <h3 className="[text-wrap:pretty]">
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className="group w-full flex items-start justify-between gap-5 px-5 sm:px-7 py-5 sm:py-6 text-left transition-colors hover:bg-[var(--color-bg-secondary)] focus-visible:outline-offset-[-3px]"

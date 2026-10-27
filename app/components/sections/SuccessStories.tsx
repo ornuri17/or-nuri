@@ -62,14 +62,24 @@ export default function SuccessStories() {
                           rel="noopener noreferrer"
                           className="group block text-sm font-semibold leading-relaxed text-[var(--color-accent-secondary)] hover:text-[var(--color-accent-secondary-hover)] transition-colors"
                         >
-                          <span className="underline decoration-[var(--color-accent-secondary)]/30 underline-offset-4 group-hover:decoration-current transition-colors">
-                            {story.link.label}
-                          </span>
-                          <Icon
-                            name="arrowUpRight"
-                            strokeWidth={2}
-                            className="inline-block align-[-2px] ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                          />
+                          {(() => {
+                            // Keep the last word and the arrow together so the arrow never wraps alone
+                            const words = story.link.label.split(' ');
+                            const last = words.pop();
+                            return (
+                              <span className="underline decoration-[var(--color-accent-secondary)]/30 underline-offset-4 group-hover:decoration-current transition-colors">
+                                {words.join(' ')}{' '}
+                                <span className="whitespace-nowrap">
+                                  {last}
+                                  <Icon
+                                    name="arrowUpRight"
+                                    strokeWidth={2}
+                                    className="inline-block align-[-2px] ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                  />
+                                </span>
+                              </span>
+                            );
+                          })()}
                         </a>
                       )}
                     </div>
