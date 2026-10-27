@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
 
 export const HERO_CONTENT = {
   headline: 'Or Nuri',
-  tagline: 'I build autonomous AI agents that collaborate — and ship real work to production.',
+  tagline: 'I build autonomous AI agents that collaborate - and ship real work to production.',
   subheadline: 'AI & Tech Leader | Founder | Startup Advisor',
   cta: {
     primary: "Let's Connect",
@@ -25,7 +25,7 @@ export const HERO_CONTENT = {
 
 export const ABOUT_CONTENT = {
   title: 'About',
-  summary: "I'm an AI & Tech Leader at monday.com, where I lead strategic AI initiatives across R&D, embedding AI into the company's processes to improve the product and the company's efficiency. Previously, I co-founded adjusti.co — an ecommerce market intelligence platform acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science from Reichman University.",
+  summary: "I'm an AI & Tech Leader at monday.com, where I lead strategic AI initiatives across R&D, embedding AI into the company's processes to improve the product and the company's efficiency. Previously, I co-founded adjusti.co, an ecommerce market intelligence platform acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science from Reichman University.",
   paragraphs: [
     "I'm an AI & Tech Leader at monday.com, where I lead broad, high-impact strategic projects across R&D that embed AI into the company's processes to improve both the product and the company's efficiency. One of them: teams of autonomous AI agents that find accessibility issues in our product and carry each fix all the way to production.",
     "Before that, I tech led monday.com's Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. I specialize in building AI-powered products that scale.",
@@ -189,10 +189,14 @@ export const SUCCESS_STORIES = [
   {
     id: 'a11y-agents',
     title: 'Autonomous Agents That Fix Accessibility End-to-End',
-    metric: 'Find → Fix → Ship',
+    metric: 'PR to Production',
     icon: '♿',
-    description: 'monday.com\'s product wasn\'t 100% accessible, and finding issues meant paying external vendors for manual audits. Leading a project where one team of autonomous AI agents scans the product and reports accessibility issues, and a second team takes each issue, plans the fix with access to the full codebase, and carries it all the way to production.',
-    impact: 'From manual vendor audits to autonomous fixes in production',
+    description: 'Accessibility work always comes after a feature is built, which makes it hard for teams to keep up with. Finding issues used to mean manual audits by external vendors. Leading a project where autonomous AI agents handle the accessibility issues on every new feature. They plug into any point in the process, from a pull request to a live environment, and do all the work up to production, like another team member with a well-defined role.',
+    impact: 'From manual vendor audits to a full handoff to AI agents',
+    link: {
+      label: "Featured on monday.com's Startup for Startup podcast (ep. 359)",
+      url: 'https://open.spotify.com/episode/5sO0qsT02YdFsLwCS3tMcG',
+    },
   },
   {
     id: 'ai-scale',

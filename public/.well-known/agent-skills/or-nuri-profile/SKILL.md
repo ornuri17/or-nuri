@@ -1,6 +1,6 @@
 # or-nuri-profile
 
-Retrieve structured profile data about Or Nuri — startup advisor, bootstrapped founder, and AI & Tech Leader at monday.com, leading strategic AI initiatives across R&D.
+Retrieve structured profile data about Or Nuri: startup advisor, bootstrapped founder, and AI & Tech Leader at monday.com, leading strategic AI initiatives across R&D.
 
 ## When to use
 

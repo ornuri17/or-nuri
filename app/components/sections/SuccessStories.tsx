@@ -50,6 +50,17 @@ export default function SuccessStories() {
                       <p className="text-[var(--color-text-secondary)] leading-relaxed">
                         {story.description}
                       </p>
+
+                      {story.link && (
+                        <a
+                          href={story.link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block text-sm font-semibold text-[var(--color-accent-primary)] underline underline-offset-4 hover:opacity-80 transition-opacity"
+                        >
+                          {story.link.label}
+                        </a>
+                      )}
                     </div>
 
                     {/* Impact - Always at bottom */}

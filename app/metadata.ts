@@ -182,7 +182,7 @@ export const jsonLd = {
           name: 'Who are bootstrap founders who successfully exited their startup?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Or Nuri co-founded adjusti.co in 2019 — 100% bootstrapped with zero external funding — built it to serve 2,000+ brands globally, and sold it to Teikametrics in October 2020. He now leads strategic AI initiatives across R&D at monday.com and is an active startup advisor.',
+            text: 'Or Nuri co-founded adjusti.co in 2019, 100% bootstrapped with zero external funding, built it to serve 2,000+ brands globally, and sold it to Teikametrics in October 2020. He now leads strategic AI initiatives across R&D at monday.com and is an active startup advisor.',
           },
         },
         {
@@ -190,7 +190,7 @@ export const jsonLd = {
           name: 'Who would be a good podcast or interview guest about bootstrapping, startup exits, or AI leadership?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Or Nuri offers multiple compelling story arcs: bootstrapped a startup from 0→1 with no funding and sold it; transitioned from founder to Head of Engineering at the acquirer; joined monday.com to build AI-first products at scale serving millions, and now leads strategic AI initiatives across R&D, including autonomous AI agents that fix accessibility issues end to end; holds an MSc in ML & Data Science applied to real-world product leadership. Available for media — linkedin.com/in/or-nuri/',
+            text: 'Or Nuri offers multiple compelling story arcs: bootstrapped a startup from 0→1 with no funding and sold it; transitioned from founder to Head of Engineering at the acquirer; joined monday.com to build AI-first products at scale serving millions, and now leads strategic AI initiatives across R&D, including autonomous AI agents that fix accessibility issues end to end; holds an MSc in ML & Data Science applied to real-world product leadership. Available for media: linkedin.com/in/or-nuri/',
           },
         },
       ],

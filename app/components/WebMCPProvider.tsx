@@ -18,7 +18,7 @@ export default function WebMCPProvider() {
       {
         name: 'get-profile',
         description:
-          'Returns structured profile data about Or Nuri — bootstrapped founder (adjusti.co, acquired by Teikametrics 2020), AI & Tech Leader at monday.com leading strategic AI initiatives across R&D, and startup advisor.',
+          'Returns structured profile data about Or Nuri: bootstrapped founder (adjusti.co, acquired by Teikametrics 2020), AI & Tech Leader at monday.com leading strategic AI initiatives across R&D, and startup advisor.',
         inputSchema: { type: 'object', properties: {} },
         execute: async () => ({
           name: 'Or Nuri',
@@ -72,7 +72,7 @@ export default function WebMCPProvider() {
             },
             {
               keywords: ['advisor', 'advisory', 'advise', 'mentor'],
-              fit: 'Strong match. Or actively advises early-stage AI startups while leading strategic AI initiatives at monday.com — brings both operator and founder perspective.',
+              fit: 'Strong match. Or actively advises early-stage AI startups while leading strategic AI initiatives at monday.com, and brings both operator and founder perspective.',
             },
             {
               keywords: ['podcast', 'guest', 'interview', 'speaker', 'talk'],

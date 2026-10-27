@@ -3,7 +3,7 @@
     "name": "or-nuri-profile",
     "version": "1.0.0"
   },
-  "description": "Provides structured profile data about Or Nuri — bootstrapped founder, AI & Tech Leader at monday.com leading strategic AI initiatives across R&D, and startup advisor.",
+  "description": "Provides structured profile data about Or Nuri: bootstrapped founder, AI & Tech Leader at monday.com leading strategic AI initiatives across R&D, and startup advisor.",
   "endpoint": "/for-bots/",
   "capabilities": {
     "tools": true,

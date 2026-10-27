@@ -4,7 +4,7 @@
     {
       "name": "or-nuri-profile",
       "type": "skill-md",
-      "description": "Retrieve structured profile data about Or Nuri — bootstrapped founder, startup advisor, and AI & Tech Leader at monday.com, leading strategic AI initiatives across R&D.",
+      "description": "Retrieve structured profile data about Or Nuri: bootstrapped founder, startup advisor, and AI & Tech Leader at monday.com, leading strategic AI initiatives across R&D.",
       "url": "https://or-nuri.com/.well-known/agent-skills/or-nuri-profile/SKILL.md",
       "digest": "sha256:2e124c43238e2ab193c120b75a9133e14082d886ffd733ef536812bfa1c20e19"
     }
