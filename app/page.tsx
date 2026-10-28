@@ -4,6 +4,7 @@ import Navbar from '@/app/components/layout/Navbar';
 import Footer from '@/app/components/layout/Footer';
 import HeroSection from '@/app/components/sections/HeroSection';
 
+const NowSection = lazy(() => import('@/app/components/sections/NowSection'));
 const AboutSection = lazy(() => import('@/app/components/sections/AboutSection'));
 const ExperienceTimeline = lazy(() => import('@/app/components/sections/ExperienceTimeline'));
 const LeadershipSection = lazy(() => import('@/app/components/sections/LeadershipSection'));
@@ -25,6 +26,7 @@ export default function Home() {
       <main id="main" className="w-full">
         <HeroSection />
         <Suspense fallback={null}>
+          <NowSection />
           <AboutSection />
           <ExperienceTimeline />
           <LeadershipSection />

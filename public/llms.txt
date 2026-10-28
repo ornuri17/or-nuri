@@ -4,6 +4,12 @@
 
 > AI & Tech Leader at monday.com, leading strategic AI initiatives across R&D. Builds autonomous AI agents that collaborate and ship real work to production. MSc in Machine Learning & Data Science. Ex-Founder (acquired).
 
+## Now (October 2026)
+
+- Leading strategic AI initiatives across R&D at monday.com, bringing AI agents into how we build software.
+- Leading our autonomous accessibility agents, which identify, fix and deploy accessibility issues end to end.
+- Sharing what I learn building AI agents, here and on LinkedIn.
+
 ## About
 
 Or Nuri is an AI & Tech Leader at monday.com, where he leads strategic AI initiatives across R&D: broad, high-impact projects that embed AI into the company's processes to improve both the product and the company's efficiency. His current flagship project is a system of autonomous AI agents that find accessibility issues in monday.com's product and fix them end to end, all the way to production.

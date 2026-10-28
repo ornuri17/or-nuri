@@ -23,6 +23,17 @@ export const HERO_CONTENT = {
   },
 };
 
+// "Now" section: what I'm focused on this month. Refresh the items and the date monthly.
+export const NOW_CONTENT = {
+  title: 'Now',
+  updated: 'October 2026',
+  items: [
+    'Leading strategic AI initiatives across R&D at monday.com, bringing AI agents into how we build software.',
+    'Leading our autonomous accessibility agents, which identify, fix and deploy accessibility issues end to end.',
+    'Sharing what I learn building AI agents, here and on LinkedIn.',
+  ],
+};
+
 export const ABOUT_CONTENT = {
   title: 'About',
   summary: "I'm an AI & Tech Leader at monday.com, where I lead strategic AI initiatives across R&D, embedding AI into the company's processes to improve the product and the company's efficiency. Previously, I co-founded adjusti.co, an ecommerce market intelligence platform acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science from Reichman University.",
