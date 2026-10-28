@@ -312,11 +312,11 @@ export const FAQ_CONTENT = {
   items: [
     {
       question: 'Who is Or Nuri?',
-      answer: 'Or Nuri is an AI & Tech Leader at monday.com, where he leads strategic AI initiatives across R&D, embedding AI into the company\'s processes to improve the product and the company\'s efficiency. He previously tech led monday.com\'s AI-first Collaborative Work Management group of ~20 engineers. He holds an MSc in Machine Learning & Data Science from Reichman University, co-founded adjusti.co (bootstrapped, acquired by Teikametrics in 2020), and advises Seed–Series B startups on AI integration and technical architecture.',
+      answer: 'Or Nuri is an AI & Tech Leader at monday.com, where he leads strategic AI initiatives across R&D, embedding AI into the company\'s processes to improve the product and the company\'s efficiency. He previously tech led monday.com\'s AI-first Collaborative Work Management group of ~20 engineers. He holds an MSc in Machine Learning & Data Science from Reichman University, co-founded adjusti.co (bootstrapped, acquired by Teikametrics in 2020), and advises Seed-Series B startups on AI integration and technical architecture.',
     },
     {
       question: 'What does Or Nuri specialize in?',
-      answer: 'Or specializes in AI agents and machine learning, technical leadership at scale (from 0→1M+ users), scalability and performance engineering, and SRE practices. He has hands-on experience across every stage of company growth — from founding to massive scale.',
+      answer: 'Or specializes in AI agents and machine learning, technical leadership at scale (from 0→1M+ users), scalability and performance engineering, and SRE practices. He has hands-on experience across every stage of company growth, from founding to massive scale.',
     },
     {
       question: 'What has Or Nuri built at monday.com?',
@@ -324,11 +324,11 @@ export const FAQ_CONTENT = {
     },
     {
       question: 'Did Or Nuri found a startup?',
-      answer: 'Yes. Or co-founded adjusti.co in 2019 — a 100% bootstrapped ecommerce market intelligence platform serving 2,000+ brands globally across Amazon and Walmart. It was acquired by Teikametrics in 2020. He then joined Teikametrics as Head of Engineering to lead post-acquisition integration.',
+      answer: 'Yes. Or co-founded adjusti.co in 2019, a 100% bootstrapped ecommerce market intelligence platform serving 2,000+ brands globally across Amazon and Walmart. It was acquired by Teikametrics in 2020. He then joined Teikametrics as Head of Engineering to lead post-acquisition integration.',
     },
     {
       question: 'How can I work with Or Nuri as a startup advisor?',
-      answer: 'Or advises Seed–Series B startups on AI integration, ML architecture, technical strategy, and team building. You can reach him via LinkedIn (linkedin.com/in/or-nuri/) or schedule a call directly through his Google Calendar link.',
+      answer: 'Or advises Seed-Series B startups on AI integration, ML architecture, technical strategy, and team building. You can reach him via LinkedIn (linkedin.com/in/or-nuri/) or schedule a call directly through his Google Calendar link.',
     },
     {
       question: 'What makes Or Nuri a good podcast or media guest?',

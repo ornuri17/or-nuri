@@ -4,7 +4,7 @@ This document describes how AI agents can access and interact with or-nuri.com.
 
 ## Access Model
 
-or-nuri.com is a public, read-only personal site. All content is freely accessible — no authentication is required to read profile data, structured content, or the agent skills index.
+or-nuri.com is a public, read-only personal site. All content is freely accessible: no authentication is required to read profile data, structured content, or the agent skills index.
 
 ## Agent Registration
 
