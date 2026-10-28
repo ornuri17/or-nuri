@@ -3,59 +3,57 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ADVISORY_CONTENT } from '@/app/lib/constants';
-import { fadeInUp, staggerContainer, defaultViewport } from '@/app/lib/animations';
+import { fadeInUp, staggerContainer } from '@/app/lib/animations';
 import Card from '@/app/components/ui/Card';
 import Badge from '@/app/components/ui/Badge';
 import Button from '@/app/components/ui/Button';
+import SectionHeading from '@/app/components/ui/SectionHeading';
+import Icon from '@/app/components/ui/Icon';
 import { scrollToElement } from '@/app/lib/utils';
 
 export default function AdvisorySection() {
   return (
     <section
       id="advisory"
-      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-primary)]"
+      className="py-20 sm:py-24 md:py-32 bg-[var(--color-bg-primary)]"
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="space-y-12"
+          className="space-y-5 lg:space-y-6"
         >
-          {/* Title & Description */}
-          <motion.div variants={fadeInUp} className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">
-              {ADVISORY_CONTENT.title}
-            </h2>
-            <p className="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
-              {ADVISORY_CONTENT.description}
-            </p>
-          </motion.div>
+          <SectionHeading
+            title={ADVISORY_CONTENT.title}
+            description={ADVISORY_CONTENT.description}
+            className="mb-7 md:mb-10"
+          />
 
           {/* Current Roles */}
           {ADVISORY_CONTENT.roles.map((role, index) => (
             <motion.div key={index} variants={fadeInUp}>
               <Card>
-                <div className="space-y-4">
+                <div className="space-y-5">
                   {/* Company Name & Logo */}
                   <div className="flex items-center gap-4">
                     {role.logo && (
-                      <div className="relative w-16 h-16 flex-shrink-0">
+                      <div className="relative w-14 h-14 flex-shrink-0 rounded-2xl overflow-hidden bg-white ring-1 ring-[var(--color-border)] shadow-[var(--shadow-soft)]">
                         <Image
                           src={role.logo}
                           alt={`${role.company} logo`}
-                          width={64}
-                          height={64}
-                          className="object-contain rounded-lg"
+                          fill
+                          sizes="56px"
+                          className="object-cover"
                         />
                       </div>
                     )}
-                    <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">
+                    <h3 className="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[var(--color-text-primary)]">
                       {role.company}
                     </h3>
                   </div>
-                  <p className="text-lg text-[var(--color-text-secondary)]">
+                  <p className="text-base sm:text-lg leading-relaxed text-[var(--color-text-secondary)]">
                     {role.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -72,44 +70,33 @@ export default function AdvisorySection() {
 
           {/* Focus Areas */}
           <motion.div variants={fadeInUp}>
-            <Card>
+            <Card hover={false} className="bg-gradient-to-b from-white to-[var(--color-bg-secondary)]">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">
+                <h3 className="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[var(--color-text-primary)]">
                   How I Can Help
                 </h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <ul className="grid md:grid-cols-2 gap-x-8 gap-y-4">
                   {ADVISORY_CONTENT.focusAreas.map((area) => (
-                    <div
+                    <li
                       key={area}
-                      className="flex items-start gap-3 text-[var(--color-text-secondary)]"
+                      className="flex items-start gap-3 text-[15px] sm:text-base leading-relaxed text-[var(--color-text-secondary)]"
                     >
-                      <svg
-                        className="w-6 h-6 text-[var(--color-accent-secondary)] flex-shrink-0 mt-0.5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                      <span className="mt-[3px] flex-shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-[var(--color-accent-soft)] text-[var(--color-accent-secondary)] ring-1 ring-inset ring-blue-100">
+                        <Icon name="check" strokeWidth={2.5} className="w-3 h-3" />
+                      </span>
                       <span>{area}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </Card>
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={fadeInUp} className="text-center">
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => scrollToElement('contact')}
-            >
-              Let's Discuss Your Startup
+          <motion.div variants={fadeInUp} className="pt-6 text-center">
+            <Button variant="primary" size="lg" onClick={() => scrollToElement('contact')}>
+              Let&apos;s Discuss Your Startup
+              <Icon name="arrowRight" strokeWidth={2} className="w-4 h-4" />
             </Button>
           </motion.div>
         </motion.div>

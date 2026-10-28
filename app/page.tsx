@@ -17,9 +17,12 @@ const ContactSection = lazy(() => import('@/app/components/sections/ContactSecti
 export default function Home() {
   return (
     <div className="min-h-screen w-full">
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <ScrollProgress />
       <Navbar />
-      <main className="w-full">
+      <main id="main" className="w-full">
         <HeroSection />
         <Suspense fallback={null}>
           <AboutSection />

@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Color Palette - Modern Minimalist */
+  /* Color palette: calm neutrals, deep navy ink, one confident blue */
   --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f8fafc;
-  --color-bg-tertiary: #f1f5f9;
+  --color-bg-secondary: #f7f9fc;
+  --color-bg-tertiary: #eef2f8;
 
-  --color-text-primary: #0f172a;
+  --color-text-primary: #0b1324;
   --color-text-secondary: #475569;
-  --color-text-muted: #94a3b8;
+  --color-text-muted: #64748b;
 
-  --color-accent-primary: #0f172a;
-  --color-accent-primary-hover: #1e293b;
-  --color-accent-secondary: #3b82f6;
-  --color-accent-secondary-hover: #2563eb;
+  --color-accent-primary: #0f1a33;
+  --color-accent-primary-hover: #1c2a4d;
+  --color-accent-secondary: #2563eb;
+  --color-accent-secondary-hover: #1d4ed8;
+  --color-accent-soft: #eff4ff;
 
-  --color-border: #e2e8f0;
-  --color-divider: #f1f5f9;
+  --color-border: #e3e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-divider: #eef2f6;
 
   /* Typography */
   --font-sans:
@@ -25,6 +27,10 @@
   /* Spacing for sections */
   --spacing-section: 5rem; /* 80px */
   --spacing-section-lg: 7.5rem; /* 120px */
+
+  /* Depth */
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 1px rgba(15, 23, 42, 0.02);
+  --shadow-lift: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -12px rgba(15, 26, 51, 0.18);
 }
 
 * {
@@ -41,14 +47,115 @@ body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
   line-height: 1.6;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   overflow-x: hidden;
 }
 
+@layer base {
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.16);
+  color: var(--color-text-primary);
+}
+
+/* One clear, consistent focus ring for keyboard users (in the base layer so utilities can adjust it) */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-accent-secondary);
+    outline-offset: 3px;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 60;
+  padding: 0.625rem 1rem;
+  border-radius: 9999px;
+  background: var(--color-accent-primary);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* Section heading accent */
+.section-kicker {
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-accent-secondary), #60a5fa);
+}
+
+/* Gradient text for the success story metrics */
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hero fills exactly one screen on every device. The navbar is fixed and
+   sits inside this height (the hero carries its own top padding), so the
+   next section starts at the fold. 100vh is the fallback for browsers
+   without small-viewport units. */
+.hero-fullscreen {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Hero backdrop: soft blue glow over a faint grid that fades out */
+.hero-backdrop {
+  background:
+    radial-gradient(60rem 32rem at 75% -10%, rgba(37, 99, 235, 0.12), transparent 60%),
+    radial-gradient(40rem 28rem at 0% 30%, rgba(96, 165, 250, 0.10), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, var(--color-bg-secondary) 100%);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 26, 51, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 26, 51, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+}
+
+/* Gentle float for the scroll cue */
+@keyframes scroll-cue {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.scroll-cue {
+  animation: scroll-cue 2.4s ease-in-out infinite;
+}
+
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {

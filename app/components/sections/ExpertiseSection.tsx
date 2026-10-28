@@ -2,55 +2,47 @@
 
 import { motion } from 'framer-motion';
 import { EXPERTISE_AREAS } from '@/app/lib/constants';
-import { fadeInUp, staggerContainer, defaultViewport } from '@/app/lib/animations';
+import { fadeInUp, staggerContainer } from '@/app/lib/animations';
 import Card from '@/app/components/ui/Card';
 import Badge from '@/app/components/ui/Badge';
+import SectionHeading from '@/app/components/ui/SectionHeading';
+import { IconTile } from '@/app/components/ui/Icon';
 
 export default function ExpertiseSection() {
   return (
     <section
       id="expertise"
-      className="py-16 sm:py-20 md:py-32 bg-[var(--color-bg-secondary)]"
+      className="py-20 sm:py-24 md:py-32 bg-[var(--color-bg-secondary)] border-y border-[var(--color-divider)]"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="space-y-12"
+          className="space-y-12 md:space-y-16"
         >
-          {/* Title */}
-          <motion.div variants={fadeInUp} className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">
-              Technical Expertise
-            </h2>
-            <p className="text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto">
-              A decade of experience across the full technology stack
-            </p>
-          </motion.div>
+          <SectionHeading
+            title="Technical Expertise"
+            description="A decade of experience across the full technology stack"
+          />
 
           {/* Expertise Areas */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
             {EXPERTISE_AREAS.map((area) => (
               <motion.div key={area.id} variants={fadeInUp}>
-                <Card className="h-full hover:shadow-lg transition-shadow">
-                  <div className="space-y-4">
-                    {/* Icon & Title */}
-                    <div className="flex items-center gap-3">
-                      <span className="text-4xl">{area.icon}</span>
-                      <h3 className="text-2xl font-bold text-[var(--color-text-primary)]">
+                <Card className="h-full">
+                  <div className="flex flex-col h-full gap-4">
+                    <div className="flex items-center gap-4">
+                      <IconTile id={area.id} fallback={area.icon} />
+                      <h3 className="text-xl font-semibold tracking-[-0.015em] text-[var(--color-text-primary)]">
                         {area.title}
                       </h3>
                     </div>
-
-                    {/* Description */}
-                    <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                    <p className="text-[15px] sm:text-base leading-relaxed text-[var(--color-text-secondary)]">
                       {area.description}
                     </p>
-
-                    {/* Skills */}
-                    <div className="flex flex-wrap gap-2 pt-4">
+                    <div className="flex flex-wrap gap-2 pt-2 mt-auto">
                       {area.skills.map((skill) => (
                         <Badge key={skill} variant="default">
                           {skill}

@@ -2,25 +2,25 @@ import { SITE_CONFIG } from '@/app/lib/constants';
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-bg-secondary)] border-t border-[var(--color-border)] py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[var(--color-accent-primary)] border-t border-white/10 py-10">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Left side - Copyright */}
-          <div className="text-[var(--color-text-muted)] text-sm">
+          <div className="text-slate-400 text-sm">
             © <time dateTime="2026-01-01">2026</time> {SITE_CONFIG.name}. All rights reserved.
           </div>
 
           {/* Right side - Social Links */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center gap-2">
             <a
               href={SITE_CONFIG.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-accent-primary)] transition-colors"
+              className="flex items-center justify-center w-10 h-10 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="LinkedIn"
             >
               <svg
-                className="w-5 h-5"
+                className="w-[18px] h-[18px]"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -31,11 +31,11 @@ export default function Footer() {
 
             <a
               href={`mailto:${SITE_CONFIG.email}`}
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-accent-primary)] transition-colors"
+              className="flex items-center justify-center w-10 h-10 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="Email"
             >
               <svg
-                className="w-5 h-5"
+                className="w-[18px] h-[18px]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
