@@ -46,8 +46,9 @@ export default function SuccessStories() {
                       </div>
 
                       {/* Title */}
+                      {/* Keep short joining words with the word after them, so a line never ends on "to" or "&" */}
                       <h3 className="text-[19px] sm:text-xl font-semibold tracking-[-0.02em] leading-snug text-[var(--color-text-primary)]">
-                        {story.title}
+                        {story.title.replace(/(^|\s)(to|of|&)\s/g, '$1$2\u00a0')}
                       </h3>
 
                       {/* Description */}
@@ -89,7 +90,7 @@ export default function SuccessStories() {
                       <span className="mt-[2px] flex-shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-[var(--color-accent-primary)] text-white">
                         <Icon name="check" strokeWidth={2.75} className="w-3 h-3" />
                       </span>
-                      <p className="text-sm font-semibold leading-relaxed text-[var(--color-text-primary)]">
+                      <p className="text-sm font-semibold leading-relaxed text-balance text-[var(--color-text-primary)]">
                         {story.impact}
                       </p>
                     </div>

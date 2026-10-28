@@ -54,7 +54,7 @@ export default function WebMCPProvider() {
             need: {
               type: 'string',
               description:
-                'The need to evaluate — e.g. "podcast guest about bootstrapping", "AI startup advisor", "speaker on engineering leadership"',
+                'The need to evaluate, e.g. "podcast guest about bootstrapping", "AI startup advisor", "speaker on engineering leadership"',
             },
           },
           required: ['need'],
