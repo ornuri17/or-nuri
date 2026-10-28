@@ -6,7 +6,7 @@
 export const SITE_CONFIG = {
   name: 'Or Nuri',
   title: 'Or Nuri | AI & Tech Leader, Entrepreneur',
-  description: 'Or Nuri is a Senior Tech Lead at monday.com, AI expert, and startup advisor. MSc in Machine Learning & Data Science. Co-founded adjusti.co, acquired by Teikametrics in 2020.',
+  description: 'Or Nuri leads strategic AI initiatives across R&D at monday.com, building autonomous AI agents that ship real work to production. AI expert and startup advisor. MSc in Machine Learning & Data Science. Co-founded adjusti.co, acquired by Teikametrics in 2020.',
   url: 'https://or-nuri.com',
   email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
@@ -14,7 +14,8 @@ export const SITE_CONFIG = {
 };
 
 export const HERO_CONTENT = {
-  headline: 'Building Products That Scale, Teams That Thrive',
+  headline: 'Or Nuri',
+  tagline: 'I build autonomous AI agents that collaborate - and ship real work to production.',
   subheadline: 'AI & Tech Leader | Founder | Startup Advisor',
   cta: {
     primary: "Let's Connect",
@@ -24,15 +25,16 @@ export const HERO_CONTENT = {
 
 export const ABOUT_CONTENT = {
   title: 'About',
-  summary: "I'm an AI & Tech Leader at monday.com, where I tech lead the Collaborative Work Management group of ~20 developers. Previously, I co-founded adjusti.co — an ecommerce market intelligence platform acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science from Reichman University.",
+  summary: "I'm an AI & Tech Leader at monday.com, where I lead strategic AI initiatives across R&D, embedding AI into the company's processes to improve the product and the company's efficiency. Previously, I co-founded adjusti.co, an ecommerce market intelligence platform acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science from Reichman University.",
   paragraphs: [
-    "I'm an AI & Tech Leader at monday.com, where I tech lead the Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. I specialize in building AI-powered products that scale.",
+    "I'm an AI & Tech Leader at monday.com, where I lead broad, high-impact strategic projects across R&D that embed AI into the company's processes to improve both the product and the company's efficiency. One of them: teams of autonomous AI agents that find accessibility issues in our product and carry each fix all the way to production.",
+    "Before that, I tech led monday.com's Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. I specialize in building AI-powered products that scale.",
     "Previously, I co-founded adjusti.co, an ecommerce market intelligence platform that provided insights to help customers make better data-driven decisions. We created comprehensive robust datasets for AI algorithms, achieving best results for AI-based bidders and other optimization systems. adjusti.co was acquired by Teikametrics in 2020.",
     "I hold an MSc in Machine Learning & Data Science and a BSc in Computer Science from Reichman University, and I'm an alumnus of the prestigious Zell Entrepreneurship Program, where I built and launched adjusti.co.",
     "Today, I serve on advisory boards and help startups integrate AI into their products, navigate technical architecture challenges, and build high-performing engineering teams. My approach centers on clarity, empathy, and continuous learning.",
   ],
   highlights: [
-    'AI & Tech Leader at monday.com, serving millions of users',
+    'Leading strategic AI initiatives across R&D at monday.com',
     'MSc in Machine Learning & Data Science (Reichman University)',
     'Founded and exited AI-powered startup (adjusti.co → Teikametrics)',
     'Zell Entrepreneurship Program alumnus',
@@ -44,18 +46,20 @@ export const EXPERIENCE_TIMELINE = [
   {
     id: 'monday',
     year: '2021 - Present',
-    title: 'Senior Tech Lead',
+    title: 'AI & Tech Leader',
     company: 'monday.com',
     logo: '/logos/monday.jpeg',
-    description: 'Tech leading the Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to do work for customers and improve collaboration between teams and agents. Serving millions of users worldwide while driving AI integration across the platform.',
+    description: 'Leads strategic AI initiatives across R&D at monday.com: broad, high-impact projects that embed AI into the company\'s processes to improve the product and the company\'s efficiency, including autonomous AI agents that find and fix accessibility issues end to end. Previously tech led the Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to do work for customers and improve collaboration between teams and agents, serving millions of users worldwide.',
     achievements: [
+      'Leads strategic AI initiatives across R&D, embedding AI into the company\'s processes to improve the product and the company\'s efficiency',
+      'Leads a project where autonomous AI agents scan the product for accessibility issues and a second team of agents fixes them end to end, all the way to production',
       'Promoted to Senior Tech Lead in 2024',
-      'Tech lead AI-first Collaborative Work Management group of ~20 developers',
-      'Leading the adoption of AI in my directorate',
+      'Tech led the AI-first Collaborative Work Management group of ~20 developers',
+      'Led the adoption of AI in my directorate',
       'Leading the on-call schedule and training for on-call engineers across monday\'s international R&D',
-      'Tech lead WorkForms product (forms by monday.com), scaling from tens of thousands to tens of millions of requests daily',
-      'Tech lead WorkDocs product (docs by monday.com), scaling from hundreds of blocks to tens of thousands of blocks',
-      'Led project to make WorkForms submission experience 100% accessible and mobile friendly',
+      'Tech led WorkForms product (forms by monday.com), scaling from tens of thousands to tens of millions of requests daily',
+      'Tech led WorkDocs product (docs by monday.com), scaling from hundreds of blocks to tens of thousands of blocks',
+      'Led project to make WorkForms submission experience 99% accessible (WCAG) and mobile friendly',
       'Integrated SLOs in WorkForms: improved availability from 89% to 99.9%, and p99 latency SLO from 84% to 99.9%',
       'Integrated SLOs in WorkDocs: reduced p99 loading latency from 7.5 seconds to 3.5 seconds',
       'Led full refactor of forms experience, rebuilding UI and server-side architecture, deleting 10K+ lines of code from monday\'s platform monolith',
@@ -162,7 +166,7 @@ export const EXPERTISE_AREAS = [
     id: 'product',
     title: 'Technical Leadership',
     icon: '👥',
-    description: 'Tech leading ~20 developers in AI-first organization. Leading AI adoption across directorate. Unique experience across all company stages: 0 to 1 (founding), 1 to 100 (early growth), 100 to 1K (scaling), and 1K to 1M+ (massive scale). Expert in technology infrastructure decisions and technical strategy.',
+    description: 'Leading strategic AI initiatives across monday.com R&D. Previously tech led ~20 developers in an AI-first organization and led AI adoption across the directorate. Unique experience across all company stages: 0 to 1 (founding), 1 to 100 (early growth), 100 to 1K (scaling), and 1K to 1M+ (massive scale). Expert in technology infrastructure decisions and technical strategy.',
     skills: ['Tech Leadership', 'AI Adoption', '0-to-1 Development', '1-to-100 Growth', '100-to-1K Scaling', '1K-to-1M+ Scale', 'Technical Strategy'],
   },
   {
@@ -183,20 +187,33 @@ export const EXPERTISE_AREAS = [
 
 export const SUCCESS_STORIES = [
   {
-    id: 'ai-startup',
-    title: 'Built & Exited Bootstrapped Startup',
-    metric: '2,000+ Brands',
-    icon: '🚀',
-    description: 'Co-founded adjusti.co (with Alon Maltzov) 100% bootstrap with no funding. Built ecommerce market intelligence platform monitoring Amazon & Walmart 24/7 at zip code level. Served 2,000+ brands globally, trusted by top marketing agencies across Europe, USA & Canada. Acquired by Teikametrics in 2020.',
-    impact: 'From idea to acquisition, fully bootstrapped',
+    id: 'a11y-agents',
+    title: 'AI Accessibility Agents',
+    metric: 'Identify. Fix. Deploy.',
+    metricClassName: 'text-2xl sm:text-3xl xl:text-4xl',
+    icon: '♿',
+    description: 'Accessibility work always comes after a feature is built, which makes it hard for teams to keep up with. Finding issues used to mean manual audits by external vendors. Leading a project where autonomous AI agents handle the accessibility issues on every new feature. They plug into any point in the process, from a pull request to a live environment, and do all the work up to production, like another team member with a well-defined role.',
+    impact: 'From manual vendor audits to a full handoff to AI agents',
+    link: {
+      label: "Featured on monday.com's Startup for Startup podcast (ep. 359)",
+      url: 'https://www.youtube.com/watch?v=XYWJDX9qggQ',
+    },
   },
   {
     id: 'ai-scale',
     title: 'Scaled Products to Millions of Users',
     metric: '10M+ Requests',
     icon: '📈',
-    description: 'Tech lead WorkForms from tens of thousands to tens of millions of daily requests. Tech lead WorkDocs from hundreds to tens of thousands of blocks. Leading AI-first Collaborative Work Management group with AI agents that autonomously complete work for customers.',
+    description: 'Tech led WorkForms from tens of thousands to tens of millions of daily requests. Tech led WorkDocs from hundreds to tens of thousands of blocks. Led the AI-first Collaborative Work Management group, building AI agents that autonomously complete work for customers.',
     impact: 'Serving millions of users with AI-powered products',
+  },
+  {
+    id: 'ai-startup',
+    title: 'Built & Exited Bootstrapped Startup',
+    metric: '2,000+ Brands',
+    icon: '🚀',
+    description: 'Co-founded adjusti.co (with Alon Maltzov) 100% bootstrap with no funding. Built ecommerce market intelligence platform monitoring Amazon & Walmart 24/7 at zip code level. Served 2,000+ brands globally, trusted by top marketing agencies across Europe, USA & Canada. Acquired by Teikametrics in 2020.',
+    impact: 'From idea to acquisition, fully bootstrapped',
   },
   {
     id: 'slo-excellence',
@@ -277,7 +294,7 @@ export const FAQ_CONTENT = {
   items: [
     {
       question: 'Who is Or Nuri?',
-      answer: 'Or Nuri is a Senior Tech Lead at monday.com, leading the AI-first Collaborative Work Management group of ~20 engineers. He holds an MSc in Machine Learning & Data Science from Reichman University, co-founded adjusti.co (bootstrapped, acquired by Teikametrics in 2020), and advises Seed–Series B startups on AI integration and technical architecture.',
+      answer: 'Or Nuri is an AI & Tech Leader at monday.com, where he leads strategic AI initiatives across R&D, embedding AI into the company\'s processes to improve the product and the company\'s efficiency. He previously tech led monday.com\'s AI-first Collaborative Work Management group of ~20 engineers. He holds an MSc in Machine Learning & Data Science from Reichman University, co-founded adjusti.co (bootstrapped, acquired by Teikametrics in 2020), and advises Seed–Series B startups on AI integration and technical architecture.',
     },
     {
       question: 'What does Or Nuri specialize in?',
@@ -285,7 +302,7 @@ export const FAQ_CONTENT = {
     },
     {
       question: 'What has Or Nuri built at monday.com?',
-      answer: 'At monday.com, Or scaled WorkForms from tens of thousands to over 10 million daily requests, improved system availability from 89% to 99.9% through SLO integration, reduced WorkDocs p99 loading latency from 7.5s to 3.5s, led a major architecture refactor removing 10,000+ lines from the platform monolith, and ensured 100% accessibility compliance.',
+      answer: 'At monday.com, Or leads a project where autonomous AI agents find accessibility issues in the product and a second team of agents fixes them end to end, all the way to production. Earlier, as tech lead of the Collaborative Work Management group, he scaled WorkForms from tens of thousands to over 10 million daily requests, improved system availability from 89% to 99.9% through SLO integration, reduced WorkDocs p99 loading latency from 7.5s to 3.5s, led a major architecture refactor removing 10,000+ lines from the platform monolith, and made the WorkForms submission experience 99% accessible (WCAG).',
     },
     {
       question: 'Did Or Nuri found a startup?',
@@ -297,7 +314,7 @@ export const FAQ_CONTENT = {
     },
     {
       question: 'What makes Or Nuri a good podcast or media guest?',
-      answer: 'Or offers multiple compelling story arcs: bootstrapped a startup from 0 to acquisition with no external funding, transitioned from founder to Head of Engineering at the acquirer, and now leads AI-first product development at monday.com serving millions of users. He holds an MSc in ML & Data Science applied to real-world product leadership.',
+      answer: 'Or offers multiple compelling story arcs: bootstrapped a startup from 0 to acquisition with no external funding, transitioned from founder to Head of Engineering at the acquirer, and now leads strategic AI initiatives across R&D at monday.com, including autonomous AI agents that fix accessibility issues end to end. He holds an MSc in ML & Data Science applied to real-world product leadership.',
     },
   ],
 };

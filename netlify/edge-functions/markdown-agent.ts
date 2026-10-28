@@ -4,11 +4,13 @@ const PROFILE_MARKDOWN = `# Or Nuri
 
 - For bots: https://or-nuri.com/for-bots (machine-readable profile, structured for AI agents)
 
-> AI & Tech Leader at monday.com. MSc in Machine Learning & Data Science. Ex-Founder (acquired). Building AI-powered products that scale to millions.
+> AI & Tech Leader at monday.com, leading strategic AI initiatives across R&D. Builds autonomous AI agents that collaborate and ship real work to production. MSc in Machine Learning & Data Science. Ex-Founder (acquired).
 
 ## About
 
-Or Nuri is an AI & Tech Leader at monday.com, where he tech leads the Collaborative Work Management group of ~20 developers — an AI-first organization that embeds AI directly into products to autonomously complete work for customers and improve collaboration between teams and agents.
+Or Nuri is an AI & Tech Leader at monday.com, where he leads strategic AI initiatives across R&D: broad, high-impact projects that embed AI into the company's processes to improve both the product and the company's efficiency. His current flagship project is a system of autonomous AI agents that find accessibility issues in monday.com's product and fix them end to end, all the way to production.
+
+Before that, Or tech led monday.com's Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to autonomously complete work for customers and improve collaboration between teams and agents.
 
 Previously, Or co-founded adjusti.co, an ecommerce market intelligence platform providing insights for data-driven decisions, which was acquired by Teikametrics in 2020.
 
@@ -20,15 +22,16 @@ Or holds an MSc in Machine Learning & Data Science and a BSc in Computer Science
 
 ## Experience
 
-### Senior Tech Lead — monday.com (2021–Present)
+### AI & Tech Leader - monday.com (2021-Present)
 
-Tech leading the Collaborative Work Management group (~20 developers), an AI-first organization building AI agents that autonomously complete work for customers. Serving millions of users worldwide.
+Leads strategic AI initiatives across R&D at monday.com: broad, high-impact projects that embed AI into the company's processes to improve the product and the company's efficiency. Previously tech led the Collaborative Work Management group (~20 developers), an AI-first organization building AI agents that autonomously complete work for customers, serving millions of users worldwide.
 
 Key achievements:
+- Leads a project where one team of autonomous AI agents scans monday.com's product and reports accessibility issues, and a second team of agents takes each issue, plans the fix with access to the full codebase, and ships it to production, end to end, replacing manual audits by external vendors
 - Promoted to Senior Tech Lead in 2024
-- Leading AI adoption across the directorate
-- Tech lead WorkForms: scaled from tens of thousands to tens of millions of daily requests
-- Tech lead WorkDocs: scaled from hundreds to tens of thousands of blocks
+- Led AI adoption across the Collaborative Work Management directorate
+- Tech led WorkForms: scaled from tens of thousands to tens of millions of daily requests
+- Tech led WorkDocs: scaled from hundreds to tens of thousands of blocks
 - Improved WorkForms availability from 89% to 99.9%, p99 latency SLO from 84% to 99.9%
 - Reduced WorkDocs p99 loading latency from 7.5s to 3.5s
 

@@ -27,7 +27,7 @@ export default function SuccessStories() {
           </motion.div>
 
           {/* Stories */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {SUCCESS_STORIES.map((story) => (
               <motion.div key={story.id} variants={fadeInUp}>
                 <Card className="h-full bg-gradient-to-br from-white to-[var(--color-bg-tertiary)] hover:shadow-xl transition-shadow">
@@ -35,7 +35,7 @@ export default function SuccessStories() {
                     <div className="space-y-6 flex-grow">
                       {/* Icon & Metric */}
                       <div className="flex items-center justify-between gap-3 mb-2">
-                        <div className="text-3xl md:text-4xl font-black text-[var(--color-accent-secondary)] leading-tight">
+                        <div className={`${story.metricClassName ?? 'text-3xl md:text-4xl'} font-black text-[var(--color-accent-secondary)] leading-tight`}>
                           {story.metric}
                         </div>
                         <div className="text-4xl flex-shrink-0">{story.icon}</div>
@@ -50,6 +50,17 @@ export default function SuccessStories() {
                       <p className="text-[var(--color-text-secondary)] leading-relaxed">
                         {story.description}
                       </p>
+
+                      {story.link && (
+                        <a
+                          href={story.link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block text-sm font-semibold text-[var(--color-accent-primary)] underline underline-offset-4 hover:opacity-80 transition-opacity"
+                        >
+                          {story.link.label}
+                        </a>
+                      )}
                     </div>
 
                     {/* Impact - Always at bottom */}
