@@ -534,6 +534,12 @@ export default function ForBotsPage() {
         {/* 08 — Press */}
         <Section num="08" title="PRESS_SIGNALS">
           <PressItem
+            date="Jul 2026"
+            outlet="Startup for Startup (monday.com podcast)"
+            headline="Ep. 359: איך מגדירים, מגייסים ומודדים מפתחים בעידן ה-AI (Hebrew; on defining, hiring and measuring developers in the AI era). Describes the autonomous accessibility agents project Or leads; Or is not named in the episode"
+            url="https://www.youtube.com/watch?v=XYWJDX9qggQ"
+          />
+          <PressItem
             date="Oct 2020"
             outlet="BusinessWire"
             headline="Teikametrics Acquires Adjusti.co to Provide Market Intelligence for Amazon and Walmart"
