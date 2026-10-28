@@ -230,6 +230,24 @@ export const MEDIA_COVERAGE = {
   description: 'Featured coverage of key milestones and achievements',
   items: [
     {
+      id: 'startup-for-startup-359',
+      title: 'Startup for Startup Podcast, Ep. 359',
+      description: 'monday.com\'s podcast on defining, hiring and measuring developers in the AI era, featuring the autonomous accessibility agents project I lead',
+      date: 'July 2026',
+      links: [
+        {
+          outlet: 'YouTube',
+          url: 'https://www.youtube.com/watch?v=XYWJDX9qggQ',
+          logo: 'youtube',
+        },
+        {
+          outlet: 'Spotify',
+          url: 'https://open.spotify.com/episode/5sO0qsT02YdFsLwCS3tMcG',
+          logo: 'spotify',
+        },
+      ],
+    },
+    {
       id: 'acquisition',
       title: 'adjusti.co Acquisition by Teikametrics',
       description: 'Coverage of adjusti.co acquisition, bringing ecommerce market intelligence to Teikametrics platform',
