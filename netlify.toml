@@ -8,7 +8,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Link = '''</llms.txt>; rel="describedby"; type="text/plain", </for-bots/>; rel="describedby", </sitemap.xml>; rel="sitemap"'''
+    Link = '''</llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </for-bots/>; rel="describedby", </sitemap.xml>; rel="sitemap"'''
 
 [[headers]]
   for = "/.well-known/api-catalog"
@@ -58,8 +58,3 @@
 [[edge_functions]]
   function = "markdown-agent"
   path = "/"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200

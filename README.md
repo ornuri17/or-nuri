@@ -1,4 +1,4 @@
-# or-nuri.ai
+# or-nuri.com
 
 Modern, minimalist personal website for Or Nuri - Senior Tech Lead at monday.com, entrepreneur, and startup advisor.
 
@@ -135,7 +135,7 @@ Add company logos to:
    - Node version: 20
 
 3. **Custom Domain:**
-   - Add custom domain: `or-nuri.ai`
+   - Add custom domain: `or-nuri.com` (production; `www` redirects to apex)
    - Configure DNS settings
    - Enable HTTPS (automatic via Let's Encrypt)
 

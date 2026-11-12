@@ -31,6 +31,13 @@ export default function HeroSection() {
             >
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-[-0.045em] leading-[1.02] text-[var(--color-text-primary)]">
                 {HERO_CONTENT.headline}
+                <span
+                  lang="he"
+                  dir="rtl"
+                  className="block mt-2 text-2xl sm:text-3xl lg:text-[2rem] font-medium tracking-normal leading-tight text-[var(--color-text-secondary)]"
+                >
+                  {HERO_CONTENT.hebrewHeadline}
+                </span>
               </h1>
               <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-medium tracking-[-0.02em] leading-[1.35] text-[var(--color-text-primary)]/85 max-w-xl mx-auto lg:mx-0">
                 {HERO_CONTENT.tagline}
