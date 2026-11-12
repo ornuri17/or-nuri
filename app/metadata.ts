@@ -10,10 +10,11 @@ export const metadata: Metadata = {
   description: SITE_CONFIG.description,
   metadataBase: new URL(SITE_CONFIG.url),
   alternates: {
-    canonical: SITE_CONFIG.url,
+    canonical: `${SITE_CONFIG.url}/`,
   },
   keywords: [
     'Or Nuri',
+    'אור נורי',
     'AI Tech Leader',
     'Machine Learning Expert',
     'AI Startup Founder',
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: SITE_CONFIG.url,
+    url: `${SITE_CONFIG.url}/`,
     title: SITE_CONFIG.title,
     description: SITE_CONFIG.description,
     siteName: SITE_CONFIG.name,
@@ -81,81 +82,127 @@ export const metadata: Metadata = {
 /**
  * JSON-LD Structured Data
  */
+const PERSON_ID = `${SITE_CONFIG.url}/#person`;
+
+export const personSchema = {
+  '@type': 'Person',
+  '@id': PERSON_ID,
+  name: SITE_CONFIG.name,
+  alternateName: [SITE_CONFIG.hebrewName, 'Or Nuri (אור נורי)'],
+  givenName: 'Or',
+  familyName: 'Nuri',
+  url: `${SITE_CONFIG.url}/`,
+  mainEntityOfPage: `${SITE_CONFIG.url}/`,
+  image: {
+    '@type': 'ImageObject',
+    url: `${SITE_CONFIG.url}/images/or-nuri-professional.jpg`,
+    width: 533,
+    height: 800,
+    caption: 'Or Nuri',
+  },
+  jobTitle: 'Senior Tech Lead',
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'AI & Tech Leader',
+    description: 'Leads strategic AI initiatives across R&D at monday.com.',
+  },
+  description:
+    'Senior Tech Lead at monday.com, leading strategic AI initiatives across R&D, including autonomous AI agents that find and fix accessibility issues end to end. Previously tech led monday.com\'s AI-first Collaborative Work Management group. MSc in Machine Learning & Data Science from Reichman University (IDC Herzliya). Founder of adjusti.co, acquired by Teikametrics in 2020. Startup advisor specializing in AI integration and technical architecture.',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'monday.com',
+    url: 'https://monday.com',
+    sameAs: 'https://www.wikidata.org/wiki/Q56919550',
+  },
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Reichman University',
+      alternateName: ['IDC Herzliya', 'Interdisciplinary Center Herzliya'],
+      url: 'https://www.runi.ac.il/en/',
+    },
+    {
+      '@type': 'EducationalOrganization',
+      name: 'Zell Entrepreneurship Program',
+      url: 'https://www.runi.ac.il/en/research-institutes/entrepreneurship/zell/',
+    },
+  ],
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'MSc, Machine Learning & Data Science',
+      credentialCategory: 'degree',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Reichman University (IDC Herzliya)' },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'BSc, Computer Science',
+      credentialCategory: 'degree',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Reichman University (IDC Herzliya)' },
+    },
+  ],
+  knowsAbout: [
+    'AI Agents', 'Artificial Intelligence', 'Machine Learning', 'Engineering Leadership',
+    'Entrepreneurship', 'Technical Leadership', 'MLOps', 'Scalability',
+    'Site Reliability Engineering', 'Startup Advisory', 'Ecommerce Market Intelligence',
+  ],
+  nationality: { '@type': 'Country', name: 'Israel' },
+  sameAs: [SITE_CONFIG.linkedin, SITE_CONFIG.crunchbase, SITE_CONFIG.github],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'professional inquiry',
+    url: SITE_CONFIG.calendar,
+  },
+};
+
+/** adjusti.co: founded by Or Nuri (schema.org has no "founderOf" on Person, so the link goes this way). */
+export const adjustiSchema = {
+  '@type': 'Organization',
+  '@id': `${SITE_CONFIG.url}/#adjusti`,
+  name: 'adjusti.co',
+  url: 'https://adjusti.co',
+  description:
+    'Bootstrapped ecommerce market intelligence platform monitoring Amazon and Walmart. Acquired by Teikametrics in 2020.',
+  foundingDate: '2019',
+  founder: { '@id': PERSON_ID },
+  subjectOf: {
+    '@type': 'NewsArticle',
+    headline: 'Teikametrics Acquires Adjusti.co to Provide Market Intelligence for Amazon and Walmart',
+    url: 'https://www.businesswire.com/news/home/20201014005161/en/Teikametrics-Acquires-Adjusti.co-to-Provide-Market-Intelligence-for-Amazon-and-Walmart',
+    datePublished: '2020-10-14',
+  },
+};
+
+export const websiteSchema = {
+  '@type': 'WebSite',
+  '@id': `${SITE_CONFIG.url}/#website`,
+  url: `${SITE_CONFIG.url}/`,
+  name: SITE_CONFIG.name,
+  alternateName: SITE_CONFIG.hebrewName,
+  description: SITE_CONFIG.description,
+  inLanguage: 'en',
+  author: { '@id': PERSON_ID },
+  publisher: { '@id': PERSON_ID },
+  about: { '@id': PERSON_ID },
+};
+
+/** Sitewide graph, rendered in the root layout on every page. */
 export const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [personSchema, adjustiSchema, websiteSchema],
+};
+
+/** Homepage-only graph: ProfilePage + FAQ, rendered in app/page.tsx. */
+export const homeJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Person',
-      '@id': `${SITE_CONFIG.url}/#person`,
-      name: SITE_CONFIG.name,
-      givenName: 'Or',
-      familyName: 'Nuri',
-      url: SITE_CONFIG.url,
-      image: `${SITE_CONFIG.url}/images/or-nuri-professional.jpg`,
-      jobTitle: 'AI & Tech Leader',
-      description:
-        'Leads strategic AI initiatives across R&D at monday.com, embedding AI into the company\'s processes to improve the product and the company\'s efficiency, including autonomous AI agents that find and fix accessibility issues end to end. Previously tech led monday.com\'s AI-first Collaborative Work Management group. MSc in Machine Learning & Data Science. Co-founded adjusti.co (acquired by Teikametrics 2020). Startup advisor specializing in AI integration and technical architecture.',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'monday.com',
-        url: 'https://monday.com',
-        sameAs: 'https://www.wikidata.org/wiki/Q56919550',
-      },
-      alumniOf: [
-        {
-          '@type': 'EducationalOrganization',
-          name: 'Reichman University',
-          url: 'https://www.runi.ac.il/en/',
-        },
-        {
-          '@type': 'EducationalOrganization',
-          name: 'Zell Entrepreneurship Program',
-          url: 'https://www.runi.ac.il/en/research-institutes/entrepreneurship/zell/',
-        },
-      ],
-      hasCredential: [
-        {
-          '@type': 'EducationalOccupationalCredential',
-          name: 'MSc, Machine Learning & Data Science',
-          credentialCategory: 'degree',
-          recognizedBy: { '@type': 'EducationalOrganization', name: 'Reichman University' },
-        },
-        {
-          '@type': 'EducationalOccupationalCredential',
-          name: 'BSc, Computer Science',
-          credentialCategory: 'degree',
-          recognizedBy: { '@type': 'EducationalOrganization', name: 'Reichman University' },
-        },
-      ],
-      knowsAbout: [
-        'Artificial Intelligence', 'Machine Learning', 'AI Agents',
-        'Technical Leadership', 'MLOps', 'Scalability', 'Site Reliability Engineering',
-        'Startup Advisory', 'Ecommerce Market Intelligence', 'Collaborative Work Management',
-      ],
-      nationality: { '@type': 'Country', name: 'Israel' },
-      sameAs: [
-        SITE_CONFIG.linkedin,
-        SITE_CONFIG.url,
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'professional inquiry',
-        url: SITE_CONFIG.calendar,
-      },
-    },
-    {
-      '@type': 'WebSite',
-      '@id': `${SITE_CONFIG.url}/#website`,
-      url: SITE_CONFIG.url,
-      name: SITE_CONFIG.name,
-      description: SITE_CONFIG.description,
-      dateModified: '2026-10-27',
-      author: { '@id': `${SITE_CONFIG.url}/#person` },
-      potentialAction: {
-        '@type': 'ReadAction',
-        target: `${SITE_CONFIG.url}/for-bots`,
-        name: 'Machine-Readable AI Profile',
-      },
+      '@type': 'ProfilePage',
+      '@id': `${SITE_CONFIG.url}/#profilepage`,
+      url: `${SITE_CONFIG.url}/`,
+      name: SITE_CONFIG.title,
+      isPartOf: { '@id': `${SITE_CONFIG.url}/#website` },
+      mainEntity: { '@id': PERSON_ID },
     },
     {
       '@type': 'FAQPage',

@@ -5,16 +5,20 @@
 
 export const SITE_CONFIG = {
   name: 'Or Nuri',
-  title: 'Or Nuri | AI & Tech Leader, Entrepreneur',
+  hebrewName: 'אור נורי',
+  title: 'Or Nuri - Senior Tech Lead at monday.com | AI & Entrepreneurship',
   description: 'Or Nuri leads strategic AI initiatives across R&D at monday.com, building autonomous AI agents that ship real work to production. AI expert and startup advisor. MSc in Machine Learning & Data Science. Co-founded adjusti.co, acquired by Teikametrics in 2020.',
   url: 'https://or-nuri.com',
   email: 'ornuri17@gmail.com',
   linkedin: 'https://www.linkedin.com/in/or-nuri/',
+  github: 'https://github.com/ornuri17',
+  crunchbase: 'https://www.crunchbase.com/person/or-nuri',
   calendar: 'https://calendar.app.google/2bPceXnVdMSiXDa86',
 };
 
 export const HERO_CONTENT = {
   headline: 'Or Nuri',
+  hebrewHeadline: 'אור נורי',
   tagline: 'I build autonomous AI agents that collaborate - and ship real work to production.',
   subheadline: 'AI & Tech Leader | Founder | Startup Advisor',
   cta: {
@@ -25,9 +29,9 @@ export const HERO_CONTENT = {
 
 export const ABOUT_CONTENT = {
   title: 'About',
-  summary: "I'm an AI & Tech Leader at monday.com, where I lead strategic AI initiatives across R&D, embedding AI into the company's processes to improve the product and the company's efficiency. Previously, I co-founded adjusti.co, an ecommerce market intelligence platform acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science from Reichman University.",
+  summary: "I'm Or Nuri (אור נורי), an AI & Tech Leader at monday.com, where I lead strategic AI initiatives across R&D, embedding AI into the company's processes to improve the product and the company's efficiency. Previously, I co-founded adjusti.co, an ecommerce market intelligence platform acquired by Teikametrics in 2020. I hold an MSc in Machine Learning & Data Science from Reichman University.",
   paragraphs: [
-    "I'm an AI & Tech Leader at monday.com, where I lead broad, high-impact strategic projects across R&D that embed AI into the company's processes to improve both the product and the company's efficiency. One of them: teams of autonomous AI agents that find accessibility issues in our product and carry each fix all the way to production.",
+    "I'm Or Nuri (אור נורי), an AI & Tech Leader at monday.com, where I lead broad, high-impact strategic projects across R&D that embed AI into the company's processes to improve both the product and the company's efficiency. One of them: teams of autonomous AI agents that find accessibility issues in our product and carry each fix all the way to production.",
     "Before that, I tech led monday.com's Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to actually do the work for monday.com customers and improve collaboration between teams and agents. I specialize in building AI-powered products that scale.",
     "Previously, I co-founded adjusti.co, an ecommerce market intelligence platform that provided insights to help customers make better data-driven decisions. We created comprehensive robust datasets for AI algorithms, achieving best results for AI-based bidders and other optimization systems. adjusti.co was acquired by Teikametrics in 2020.",
     "I hold an MSc in Machine Learning & Data Science and a BSc in Computer Science from Reichman University, and I'm an alumnus of the prestigious Zell Entrepreneurship Program, where I built and launched adjusti.co.",

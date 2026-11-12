@@ -1,11 +1,40 @@
+# robots.txt for https://or-nuri.com (personal site of Or Nuri)
+# Search engines and AI assistants are explicitly welcome to crawl everything.
+
+# Search engines
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+Allow: /
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI (Gemini) training and grounding token
+User-agent: Google-Extended
+Allow: /
+
+# Everyone else
 User-agent: *
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-# AI agent profile: machine-readable, structured for answer engines
-# https://or-nuri.com/for-bots
+# AI-readable profiles
+# https://or-nuri.com/llms.txt
+# https://or-nuri.com/llms-full.txt
+# https://or-nuri.com/for-bots/
 
 Sitemap: https://or-nuri.com/sitemap.xml
-
-# LLMs.txt: plain-text profile for AI crawlers
-# https://or-nuri.com/llms.txt

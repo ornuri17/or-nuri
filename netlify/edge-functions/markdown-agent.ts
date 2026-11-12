@@ -1,6 +1,6 @@
 import type { Context } from "@netlify/edge-functions";
 
-const PROFILE_MARKDOWN = `# Or Nuri
+const PROFILE_MARKDOWN = `# Or Nuri (אור נורי)
 
 - For bots: https://or-nuri.com/for-bots (machine-readable profile, structured for AI agents)
 
@@ -18,6 +18,8 @@ Or holds an MSc in Machine Learning & Data Science and a BSc in Computer Science
 
 - Contact: ornuri17@gmail.com
 - LinkedIn: https://www.linkedin.com/in/or-nuri/
+- Crunchbase: https://www.crunchbase.com/person/or-nuri
+- GitHub: https://github.com/ornuri17
 - Website: https://or-nuri.com
 
 ## Experience
