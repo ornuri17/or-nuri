@@ -6,7 +6,6 @@ User-agent: Googlebot
 User-agent: Bingbot
 User-agent: Applebot
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # Anthropic (Claude)
 User-agent: ClaudeBot
@@ -14,29 +13,24 @@ User-agent: Claude-User
 User-agent: Claude-SearchBot
 User-agent: anthropic-ai
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # OpenAI (ChatGPT)
 User-agent: GPTBot
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # Perplexity
 User-agent: PerplexityBot
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # Google AI (Gemini) training and grounding token
 User-agent: Google-Extended
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # Everyone else
 User-agent: *
 Allow: /
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # AI-readable profiles
 # https://or-nuri.com/llms.txt
