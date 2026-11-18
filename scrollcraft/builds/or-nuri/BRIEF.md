@@ -106,3 +106,19 @@ Lighthouse mobile: Performance 90 (old site 82), Accessibility 100, Best Practic
 SEO 100. Desktop: Performance 100 (old site 93).
 **Not verified:** a real phone (iOS Safari sticky and `svh` behaviour), Safari's support
 for the CSS `view()` rule (it is progressive enhancement and simply absent where unsupported).
+
+## Revision 2 (2026-11-18): owner feedback and redesign
+
+Owner on the editorial build: "I didn't like the design almost at all. It looks pretty old and,
+I don't know, old-fashioned, super not modern, not impressive. It looks like a very long
+wallpaper, newspaper."
+
+Follow-up answers: direction "Light premium minimal", length "Short and punchy", the form
+demo "Replace it", motion "More, still fast".
+
+Rebuilt as a light premium page: floating glass nav, layered hero (aura, grid, orbit ring,
+portrait card, floating proof chips with pointer and scroll depth), logo strip, count-up
+impact grid, animated agent pipeline (labelled as an illustration), compact career timeline,
+advisory and press cards, collapsed FAQ, contact card. One family (Geist), cobalt accent.
+Length went from ~14 to ~7 screens on desktop. Lighthouse: desktop 100 across the board;
+mobile performance 86–94 across three runs, accessibility, best practices, SEO 100.
