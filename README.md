@@ -4,42 +4,49 @@ Modern, minimalist personal website for Or Nuri - Senior Tech Lead at monday.com
 
 ## 🚀 Tech Stack
 
-- **Framework:** Next.js 16 (App Router)
+- **Framework:** Next.js 16 (App Router, static export)
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS v4
-- **Animations:** Framer Motion
+- **Styling:** Hand-written CSS with design tokens (`app/globals.css`), no CSS framework
+- **Motion:** CSS transitions, one CSS scroll-driven animation, and two small client components. No animation library.
+- **Fonts:** Newsreader (self-hosted, Latin, optical-size axis) and Geist (via `next/font`)
 - **Deployment:** Netlify
 
 ## 📦 Project Structure
 
 ```
-or-nuri.ai/
-├── app/
-│   ├── components/
-│   │   ├── layout/          # Layout components (Navbar, Footer, ScrollProgress)
-│   │   ├── sections/        # Page sections (Hero, About, Experience, etc.)
-│   │   └── ui/              # Reusable UI components (Button, Card, Badge, etc.)
-│   ├── hooks/               # Custom React hooks
-│   ├── lib/                 # Utilities, animations, constants
-│   ├── globals.css          # Global styles & design system
-│   ├── layout.tsx           # Root layout with SEO
-│   ├── metadata.ts          # SEO configuration
-│   └── page.tsx             # Main landing page
-├── public/                  # Static assets
-├── netlify.toml             # Netlify configuration
-└── next.config.ts           # Next.js configuration
+app/
+├── components/
+│   ├── Folio.tsx          # Running head: current chapter, Contents dialog, scroll reveals
+│   ├── FixStage.tsx       # Chapter III: the self-repairing form (signature interaction)
+│   └── WebMCPProvider.tsx # WebMCP tool registration for AI agents
+├── fonts/                 # Self-hosted Newsreader woff2 files
+├── lib/
+│   ├── constants.ts       # Site config, press, FAQ (also feeds metadata + JSON-LD)
+│   └── content.ts         # Chapter list, career, receipts, principles
+├── globals.css            # The whole design system and layout
+├── layout.tsx             # Fonts, analytics, discovery hints
+├── page.tsx               # The chapters
+└── not-found.tsx          # 404
+scrollcraft/               # Design brief and build record (not deployed)
 ```
 
-## 🎨 Design System
+## 🎨 Design
 
-### Colors
-- **Backgrounds:** White (#FFFFFF), Light Gray (#F8FAFC)
-- **Text:** Deep Navy (#0F172A), Gray shades
-- **Accent:** Navy (#0F172A), Blue (#3B82F6)
+The homepage is a chaptered editorial profile: a title page with a real table of contents,
+then seven chapters on alternating paper grounds, with one dark chapter as the peak.
+A folio in the left margin (a bottom chip on phones) names the current chapter and opens the contents.
 
-### Typography
-- **Font:** Inter (Google Fonts)
-- **Weights:** 400, 500, 600, 700, 900
+Chapter III is the signature: a small demo form with three real accessibility defects. Scrolling
+through it, each defect is circled, measured live in the browser (contrast ratio, target size,
+focus ring) and fixed, then stamped shipped. It re-enacts the accessibility agents project at monday.com.
+With reduced motion, no JS, or a screen too short for the sticky stage, it renders as the finished state.
+
+- **Grounds:** paper `#F3F2EE`, stock `#E8E6DF`, ink `#121417`
+- **Ink:** `#16181B`, secondary `#575C64`
+- **Accent:** vermilion `#B5361C` on paper, `#FF7F61` on ink (one hue, two lightnesses)
+- **Type:** Newsreader for display and prose, Geist for labels and figures
+
+The brief, feeling curve and verification notes are in `scrollcraft/builds/or-nuri/BRIEF.md`.
 
 ## 🛠️ Development
 
@@ -76,21 +83,12 @@ npm run dev
 
 ## 📝 Content Management
 
-All website content is centralized in `app/lib/constants.ts`. To update content:
+Homepage copy lives in two files:
 
-1. Edit the constants file
-2. Save and rebuild
-3. Deploy
+- `app/lib/content.ts`: chapter list (titles feed the contents and the folio), career rows, receipts ledger, principles, advisory focus.
+- `app/lib/constants.ts`: `SITE_CONFIG` (contact links), `MEDIA_COVERAGE`, `FAQ_CONTENT`, plus the long-form text used by metadata and JSON-LD.
 
-Key content sections:
-- `SITE_CONFIG` - Site metadata and contact info
-- `HERO_CONTENT` - Hero section content
-- `ABOUT_CONTENT` - About section
-- `EXPERIENCE_TIMELINE` - Career timeline
-- `LEADERSHIP_PILLARS` - Leadership philosophy
-- `EXPERTISE_AREAS` - Technical expertise
-- `SUCCESS_STORIES` - Achievements
-- `ADVISORY_CONTENT` - Advisory work
+Prose in chapters I and V is written directly in `app/page.tsx`. Use real numbers only.
 
 ## 📸 Adding Images
 
@@ -176,39 +174,20 @@ npm run build
 
 ## 🎯 Features
 
-- ✅ Modern, minimalist design
-- ✅ Fully responsive (mobile-first)
-- ✅ Smooth scroll animations (Framer Motion)
-- ✅ Interactive experience timeline
-- ✅ SEO optimized with structured data
-- ✅ Accessibility focused (WCAG AA)
-- ✅ Fast static site generation
-- ✅ Zero runtime JavaScript for content
-- ✅ Optimized images and fonts
+- ✅ Chaptered editorial layout with a margin folio and Contents dialog
+- ✅ Signature scroll interaction with live, in-browser accessibility measurements
+- ✅ Fully responsive, with a phone-specific layout for every chapter
+- ✅ Reduced-motion and no-JS versions that keep all content
+- ✅ SEO and AI discoverability: JSON-LD, FAQ, llms.txt, WebMCP, /for-bots
+- ✅ Lighthouse (mobile): Performance 90, Accessibility, Best Practices and SEO 100
 
 ## 🔧 Customization
 
-### Changing Colors
+Edit the tokens at the top of `app/globals.css` (`--paper`, `--stock`, `--ink`, `--accent`, ...).
+The dark chapter redefines them under `.ground-ink`.
 
-Edit the design tokens in `app/globals.css`:
-
-```css
-@theme {
-  --color-bg-primary: #FFFFFF;
-  --color-accent-primary: #0F172A;
-  /* ... more colors */
-}
-```
-
-### Adding Sections
-
-1. Create a new component in `app/components/sections/`
-2. Import and add to `app/page.tsx`
-3. Update navigation in `app/lib/constants.ts` (NAV_ITEMS)
-
-### Modifying Animations
-
-Edit animation variants in `app/lib/animations.ts`
+To add a chapter: add it to `CHAPTERS` in `app/lib/content.ts`, then render a
+`<section id="..." className="chapter ground-paper" data-ground="paper">` with that id in `app/page.tsx`.
 
 ## 🐛 Troubleshooting
 
@@ -231,13 +210,6 @@ npm install
 npm run build
 ```
 
-### Font Loading Issues
-
-If Inter font doesn't load, check:
-- Internet connection (loads from Google Fonts)
-- Browser console for errors
-- Consider self-hosting fonts for better performance
-
 ## 📄 License
 
 © 2024 Or Nuri. All rights reserved.
@@ -250,4 +222,4 @@ For questions or issues, contact:
 
 ---
 
-Built with ❤️ using Next.js and Tailwind CSS
+Built with Next.js
