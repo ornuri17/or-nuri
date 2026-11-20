@@ -25,6 +25,13 @@ export const HERO_CONTENT = {
     primary: "Let's Connect",
     secondary: 'View Experience',
   },
+  // Real figures only, all from the experience below.
+  stats: [
+    { value: '99.9%', label: 'availability, up from 89%' },
+    { value: '10M+', label: 'daily requests at scale' },
+    { value: '2,000+', label: 'brands served by my startup' },
+    { value: 'Exit', label: 'adjusti.co, acquired 2020' },
+  ],
 };
 
 export const ABOUT_CONTENT = {

@@ -1,23 +1,24 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { metadata as siteMetadata, jsonLd } from "./metadata";
 import WebMCPProvider from "./components/WebMCPProvider";
+import MotionProvider from "./components/MotionProvider";
 
 export const metadata: Metadata = siteMetadata;
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#F6F7F9",
 };
 
-// Self-hosted at build time by next/font: no request to Google at runtime and no layout shift.
-const sans = Geist({
+// Self-hosted at build time by next/font: no render-blocking request to Google Fonts,
+// no layout shift on swap (size-adjusted fallback), Latin subset only.
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -27,11 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={sans.variable}>
+    <html lang="en" className={`scroll-smooth ${inter.variable}`}>
       <head>
-        {/* Marks the document as scripted before first paint, so reveal styles never hide content for no-JS readers or crawlers. */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-
         {/* AI agent discovery hint */}
         <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable profile" />
         <meta name="ai-agent-profile" content="https://or-nuri.com/for-bots" />
@@ -43,9 +41,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body className="antialiased">
         <WebMCPProvider />
-        {children}
+        <MotionProvider>{children}</MotionProvider>
 
         {/* Google Analytics, loaded once the browser is idle so it never competes with first paint or input. */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-V8T8W9TY6N" strategy="lazyOnload" />

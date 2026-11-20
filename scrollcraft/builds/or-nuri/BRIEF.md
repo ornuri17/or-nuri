@@ -122,3 +122,16 @@ impact grid, animated agent pipeline (labelled as an illustration), compact care
 advisory and press cards, collapsed FAQ, contact card. One family (Geist), cobalt accent.
 Length went from ~14 to ~7 screens on desktop. Lighthouse: desktop 100 across the board;
 mobile performance 86–94 across three runs, accessibility, best practices, SEO 100.
+
+## Revision 3 (2026-11-20): back to the live site, polished
+
+Owner on revision 2: "That's a bit better but the current one feels more professional and
+contains more information." Chosen next step: "Polish the current site".
+
+Restored the live site's layout and content in full, then: a key-numbers row in the hero
+(99.9% availability, 10M+ daily requests, 2,000+ brands, the 2020 exit), removed the
+"Scroll to explore" cue, headline and portrait paint without a fade, WebP portrait, Inter
+self-hosted via next/font (no render-blocking Google Fonts request), Google Analytics on idle,
+Framer Motion through LazyMotion with `m` elements, year-long cache for hashed assets.
+Lighthouse: desktop 100 in all four categories; mobile performance 78–85 (live site 82),
+limited by hydrating the client-rendered sections.
