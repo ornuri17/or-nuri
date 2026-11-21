@@ -135,3 +135,18 @@ self-hosted via next/font (no render-blocking Google Fonts request), Google Anal
 Framer Motion through LazyMotion with `m` elements, year-long cache for hashed assets.
 Lighthouse: desktop 100 in all four categories; mobile performance 78–85 (live site 82),
 limited by hydrating the client-rendered sections.
+
+## Revision 4 (2026-11-21): scroll-craft upgrades on the original design
+
+Owner: "You didn't change almost a thing. Did you use /nateherk-design:scroll-craft?" Agreed
+plan (owner: "Yes"): keep the original look, wording and order, and add:
+- Hero depth: orbit ring and glow (back), portrait (mid), two floating proof cards (front),
+  each moving at its own rate with scroll and pointer.
+- Experience: an accent line that fills on scroll, dots that light as it passes, and a key
+  figure per role beside the year.
+- Success stories: a held (pinned) sequence on desktop with a clickable index; plain list on
+  phones and with reduced motion.
+- Signature: a looping agent-run illustration (Scan, Find, Fix, Verify, Ship) inside the
+  accessibility-agents story, labelled as an illustration.
+Lighthouse: desktop 100 in all four categories; mobile 82 performance, 100 accessibility,
+best practices and SEO.

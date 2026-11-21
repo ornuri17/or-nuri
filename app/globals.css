@@ -171,3 +171,118 @@ body {
     display: none !important;
   }
 }
+
+/* ---------- Success stories: held sequence on desktop ----------
+   Phones and reduced motion: a plain two-column / one-column list.
+   Desktop with motion: the section pins while the stories take turns. */
+.stories-stage {
+  display: grid;
+  gap: 1.25rem;
+}
+.stories-index {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .stories-stage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .stories-track {
+    height: 380vh;
+  }
+  .stories-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-block: 5rem 2rem;
+  }
+  .stories-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 4rem;
+    align-items: center;
+  }
+  .stories-head {
+    text-align: left;
+  }
+  .stories-bar {
+    margin-inline: 0;
+  }
+  .stories-index {
+    display: block;
+  }
+  /* All stories share one grid cell, so the stage is as tall as the longest. */
+  .stories-stage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .stories-stage {
+    align-items: center;
+  }
+  /* Each card keeps its own height inside the shared cell. */
+  .stories-item .h-full {
+    height: auto;
+  }
+  .stories-item {
+    grid-area: 1 / 1;
+    transition:
+      opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .stories-item[data-state="past"] {
+    opacity: 0 !important;
+    transform: translateY(-28px) scale(0.98) !important;
+    pointer-events: none;
+  }
+  .stories-item[data-state="next"] {
+    opacity: 0 !important;
+    transform: translateY(28px) scale(0.98) !important;
+    pointer-events: none;
+  }
+  /* Keyboard focus always brings a story into view. */
+  .stories-item:focus-within {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+  }
+}
+
+@keyframes log-in {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+}
+
+/* Hero depth details */
+.hero-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border-radius: 9999px;
+  border: 1px dashed rgba(37, 99, 235, 0.16);
+  animation: hero-spin 80s linear infinite;
+}
+@keyframes hero-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero-float {
+  animation: hero-bob 6s ease-in-out infinite alternate;
+}
+@keyframes hero-bob {
+  to {
+    translate: 0 -6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit::after,
+  .hero-float {
+    animation: none;
+  }
+}
