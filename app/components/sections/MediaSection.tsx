@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { MEDIA_COVERAGE } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer } from '@/app/lib/animations';
 import SectionHeading from '@/app/components/ui/SectionHeading';

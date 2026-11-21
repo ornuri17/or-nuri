@@ -25,6 +25,13 @@ export const HERO_CONTENT = {
     primary: "Let's Connect",
     secondary: 'View Experience',
   },
+  // Real figures only, all from the experience below.
+  stats: [
+    { value: '99.9%', label: 'availability, up from 89%' },
+    { value: '10M+', label: 'daily requests at scale' },
+    { value: '2,000+', label: 'brands served by my startup' },
+    { value: 'Exit', label: 'adjusti.co, acquired 2020' },
+  ],
 };
 
 export const ABOUT_CONTENT = {
@@ -53,6 +60,7 @@ export const EXPERIENCE_TIMELINE = [
     title: 'AI & Tech Leader',
     company: 'monday.com',
     logo: '/logos/monday.jpeg',
+    highlight: { value: '10M+', label: 'daily requests' },
     description: 'Leads strategic AI initiatives across R&D at monday.com: broad, high-impact projects that embed AI into the company\'s processes to improve the product and the company\'s efficiency, including autonomous AI agents that find and fix accessibility issues end to end. Previously tech led the Collaborative Work Management group of ~20 developers, an AI-first organization that embeds AI directly into products to do work for customers and improve collaboration between teams and agents, serving millions of users worldwide.',
     achievements: [
       'Leads strategic AI initiatives across R&D, embedding AI into the company\'s processes to improve the product and the company\'s efficiency',
@@ -76,6 +84,7 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Head of Engineering',
     company: 'Teikametrics',
     logo: '/logos/teikametrics.jpeg',
+    highlight: { value: '3', label: 'cities, one team' },
     description: 'Led engineering post-acquisition, integrating adjusti.co market intelligence platform and team. Created robust system monitoring user behaviors and marketing performance on Amazon, providing unique market data that dramatically improved Teikametrics AI Bidder.',
     achievements: [
       'Successfully integrated acquired ecommerce market intelligence platform',
@@ -91,6 +100,7 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Co-Founder & CTO',
     company: 'adjusti.co',
     logo: '/logos/adjusti.jpeg',
+    highlight: { value: '2,000+', label: 'brands served' },
     description: 'Co-founded with Alon Maltzov (CEO) an ecommerce market intelligence platform providing insights to help customers make better data-driven decisions. Created comprehensive robust datasets for AI algorithms, enabling best results for AI-based bidders. Built product from 0 to 1 and achieved successful acquisition.',
     achievements: [
       'Co-founded with Alon Maltzov (CEO), 100% bootstrap with no external funding',
@@ -109,6 +119,7 @@ export const EXPERIENCE_TIMELINE = [
     title: 'Zell Entrepreneurship Program',
     company: 'Reichman University',
     logo: '/logos/reichman.jpeg',
+    highlight: { value: '<5%', label: 'acceptance rate' },
     description: 'One of Israel\'s most prestigious and selective entrepreneurship programs at Reichman University. An intensive one-year program combining academic excellence with real-world startup development, mentorship from top entrepreneurs and VCs, and access to Israel\'s thriving tech ecosystem.',
     achievements: [
       'Selected from highly competitive pool (acceptance rate <5%)',
@@ -125,6 +136,7 @@ export const EXPERIENCE_TIMELINE = [
     title: 'R&D Manager',
     company: 'iCast Audio Books (Acquired by Storytel)',
     logo: '/logos/icast.svg',
+    highlight: { value: '−50%', label: 'latency' },
     description: 'Led technology infrastructure and product strategy for audio books platform. Made strategic technology decisions aligned with short and long-term venture objectives, managing a team of 4 developers.',
     achievements: [
       'Led overarching technology infrastructure decisions for the platform',

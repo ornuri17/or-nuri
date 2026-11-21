@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { CONTACT_CONTENT, SITE_CONFIG } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer } from '@/app/lib/animations';
 import Icon from '@/app/components/ui/Icon';

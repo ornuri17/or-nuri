@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useSpring } from 'framer-motion';
+import { m as motion, useSpring } from 'framer-motion';
 import { useScrollProgress } from '@/app/hooks/useScrollProgress';
 
 export default function ScrollProgress() {

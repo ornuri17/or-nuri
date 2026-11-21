@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { m as motion, AnimatePresence, useScroll, useSpring, useReducedMotion } from 'framer-motion';
 import { EXPERIENCE_TIMELINE } from '@/app/lib/constants';
 import { timelineItem, staggerContainer } from '@/app/lib/animations';
 import SectionHeading from '@/app/components/ui/SectionHeading';
@@ -31,6 +31,11 @@ function ExperienceCard({ item }: { item: typeof EXPERIENCE_TIMELINE[number] }) 
         <div className="flex-1 min-w-0">
           <div className="md:hidden text-[13px] font-medium text-[var(--color-accent-secondary)] tabular-nums mb-1">
             {item.year}
+            {'highlight' in item && item.highlight && (
+              <span className="block text-[var(--color-text-secondary)]">
+                <strong className="font-semibold text-[var(--color-text-primary)]">{item.highlight.value}</strong> {item.highlight.label}
+              </span>
+            )}
           </div>
           <h3 className="text-lg sm:text-xl font-semibold tracking-[-0.015em] leading-snug text-[var(--color-text-primary)]">
             {item.title}
@@ -96,6 +101,12 @@ function ExperienceCard({ item }: { item: typeof EXPERIENCE_TIMELINE[number] }) 
 }
 
 export default function ExperienceTimeline() {
+  const listRef = useRef<HTMLOListElement>(null);
+  const reduced = useReducedMotion();
+  // The accent line fills as the reader moves down the career, from the first role to the last.
+  const { scrollYProgress } = useScroll({ target: listRef, offset: ['start 70%', 'end 55%'] });
+  const fill = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
+
   return (
     <section
       id="experience"
@@ -110,38 +121,53 @@ export default function ExperienceTimeline() {
         >
           <SectionHeading title="Experience" className="mb-12 md:mb-16" />
 
-          {/* Timeline */}
-          {/* The vertical line is the list's ::before */}
-          <ol className="relative space-y-6 md:space-y-8 before:content-[''] before:absolute before:left-[7px] md:before:left-[167.5px] before:top-8 before:bottom-0 before:w-px before:bg-gradient-to-b before:from-[var(--color-accent-secondary)]/50 before:via-[var(--color-border-strong)] before:to-transparent">
-              {EXPERIENCE_TIMELINE.map((item, index) => (
-                <motion.li
-                  key={item.id}
-                  variants={timelineItem}
-                  className="relative grid grid-cols-[16px_1fr] md:grid-cols-[136px_64px_1fr] items-start gap-x-4 md:gap-x-0"
-                >
-                  {/* Year, desktop only (mobile shows it inside the card) */}
-                  <div className="hidden md:block pt-7 pr-6 text-right text-sm font-medium tabular-nums text-[var(--color-text-muted)]">
-                    {item.year}
-                  </div>
+          {/* Timeline: a quiet base line, with an accent line on top that fills on scroll */}
+          <ol
+            ref={listRef}
+            className="relative space-y-6 md:space-y-8 before:content-[''] before:absolute before:left-[7px] md:before:left-[167.5px] before:top-8 before:bottom-8 before:w-px before:bg-[var(--color-border-strong)]"
+          >
+            <motion.span
+              aria-hidden="true"
+              className="absolute left-[6px] md:left-[166.5px] top-8 bottom-8 w-[3px] rounded-full origin-top bg-gradient-to-b from-[var(--color-accent-secondary)] to-[#60a5fa]"
+              style={{ scaleY: reduced ? 1 : fill }}
+            />
+            {EXPERIENCE_TIMELINE.map((item) => (
+              <motion.li
+                key={item.id}
+                variants={timelineItem}
+                className="relative grid grid-cols-[16px_1fr] md:grid-cols-[136px_64px_1fr] items-start gap-x-4 md:gap-x-0"
+              >
+                {/* Year and key figure, desktop only (mobile shows them inside the card) */}
+                <div className="hidden md:block pt-7 pr-6 text-right">
+                  <div className="text-sm font-medium tabular-nums text-[var(--color-text-muted)]">{item.year}</div>
+                  {'highlight' in item && item.highlight && (
+                    <div className="mt-3">
+                      <div className="text-[1.65rem] font-bold tracking-[-0.04em] leading-none tabular-nums text-[var(--color-text-primary)]">
+                        {item.highlight.value}
+                      </div>
+                      <div className="mt-1 text-xs leading-snug text-[var(--color-text-secondary)]">{item.highlight.label}</div>
+                    </div>
+                  )}
+                </div>
 
-                  {/* Dot */}
-                  <div className="relative flex justify-start md:justify-center pt-7 md:pt-[30px]">
-                    <span
-                      aria-hidden="true"
-                      className={`relative z-10 block w-[15px] h-[15px] rounded-full border-[3px] border-[var(--color-bg-secondary)] ${
-                        index === 0
-                          ? 'bg-[var(--color-accent-secondary)] shadow-[0_0_0_4px_rgba(37,99,235,0.15)]'
-                          : 'bg-[var(--color-border-strong)]'
-                      }`}
-                    />
-                  </div>
+                {/* Dot: lights up as the accent line reaches it */}
+                <div className="relative flex justify-start md:justify-center pt-7 md:pt-[30px]">
+                  <motion.span
+                    aria-hidden="true"
+                    initial={reduced ? false : { backgroundColor: '#cbd5e1', boxShadow: '0 0 0 0px rgba(37,99,235,0)' }}
+                    whileInView={{ backgroundColor: '#2563eb', boxShadow: '0 0 0 4px rgba(37,99,235,0.15)' }}
+                    viewport={{ once: true, margin: '0px 0px -45% 0px' }}
+                    transition={{ duration: 0.4 }}
+                    className="relative z-10 block w-[15px] h-[15px] rounded-full border-[3px] border-[var(--color-bg-secondary)] bg-[var(--color-accent-secondary)]"
+                  />
+                </div>
 
-                  {/* Content */}
-                  <div className="min-w-0">
-                    <ExperienceCard item={item} />
-                  </div>
-                </motion.li>
-              ))}
+                {/* Content */}
+                <div className="min-w-0">
+                  <ExperienceCard item={item} />
+                </div>
+              </motion.li>
+            ))}
           </ol>
         </motion.div>
       </div>

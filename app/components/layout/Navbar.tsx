@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m as motion, AnimatePresence } from "framer-motion";
 import { NAV_ITEMS, SITE_CONFIG, HERO_CONTENT } from "@/app/lib/constants";
 import { cn, scrollToElement } from "@/app/lib/utils";
 import { useIsMobile } from "@/app/hooks/useMediaQuery";

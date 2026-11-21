@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m as motion, AnimatePresence } from 'framer-motion';
 import { FAQ_CONTENT } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer } from '@/app/lib/animations';
 import SectionHeading from '@/app/components/ui/SectionHeading';

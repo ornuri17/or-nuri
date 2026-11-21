@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m as motion, AnimatePresence } from 'framer-motion';
 import { ABOUT_CONTENT } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer } from '@/app/lib/animations';
 import SectionHeading from '@/app/components/ui/SectionHeading';

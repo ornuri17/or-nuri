@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { ADVISORY_CONTENT } from '@/app/lib/constants';
 import { fadeInUp, staggerContainer } from '@/app/lib/animations';
 import Card from '@/app/components/ui/Card';

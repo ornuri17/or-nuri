@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { metadata as siteMetadata, jsonLd } from "./metadata";
 import WebMCPProvider from "./components/WebMCPProvider";
@@ -12,35 +14,22 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+// Self-hosted at build time by next/font: no render-blocking request to Google Fonts,
+// no layout shift on swap (size-adjusted fallback), Latin subset only.
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${inter.variable}`}>
       <head>
-        {/* Preconnect to Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap"
-        />
-
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8T8W9TY6N" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-V8T8W9TY6N');
-            `,
-          }}
-        />
-
         {/* AI agent discovery hint */}
         <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable profile" />
         <meta name="ai-agent-profile" content="https://or-nuri.com/for-bots" />
@@ -55,6 +44,15 @@ export default function RootLayout({
       <body className="antialiased">
         <WebMCPProvider />
         <MotionProvider>{children}</MotionProvider>
+
+        {/* Google Analytics, loaded once the browser is idle so it never competes with first paint or input. */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-V8T8W9TY6N" strategy="lazyOnload" />
+        <Script id="ga" strategy="lazyOnload">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-V8T8W9TY6N');`}
+        </Script>
       </body>
     </html>
   );
