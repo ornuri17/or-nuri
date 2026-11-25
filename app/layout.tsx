@@ -12,6 +12,9 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+// Google Analytics measurement ID, injected at build time (see .env.example).
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,18 +31,22 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap"
         />
 
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8T8W9TY6N" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {/* Google Analytics (enabled only when NEXT_PUBLIC_GA_MEASUREMENT_ID is set) */}
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-V8T8W9TY6N');
+              gtag('config', '${GA_MEASUREMENT_ID}');
             `,
-          }}
-        />
+              }}
+            />
+          </>
+        ) : null}
 
         {/* AI agent discovery hint */}
         <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable profile" />

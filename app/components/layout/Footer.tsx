@@ -1,13 +1,16 @@
 import { SITE_CONFIG } from '@/app/lib/constants';
 
 export default function Footer() {
+  // Computed at build time (this is a server component in a static export).
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-[var(--color-accent-primary)] border-t border-white/10 py-10">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Left side - Copyright */}
           <div className="text-slate-400 text-sm">
-            © <time dateTime="2026-01-01">2026</time> {SITE_CONFIG.name}. All rights reserved.
+            © <time dateTime={`${year}-01-01`}>{year}</time> {SITE_CONFIG.name}. All rights reserved.
           </div>
 
           {/* Right side - Social Links */}

@@ -4,28 +4,32 @@ Modern, minimalist personal website for Or Nuri - Senior Tech Lead at monday.com
 
 ## 🚀 Tech Stack
 
-- **Framework:** Next.js 16 (App Router)
+- **Framework:** Next.js 16 (App Router, static export)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4
 - **Animations:** Framer Motion
-- **Deployment:** Netlify
+- **Deployment:** Netlify (static hosting + edge functions)
 
 ## 📦 Project Structure
 
 ```
-or-nuri.ai/
+or-nuri/
 ├── app/
 │   ├── components/
 │   │   ├── layout/          # Layout components (Navbar, Footer, ScrollProgress)
 │   │   ├── sections/        # Page sections (Hero, About, Experience, etc.)
 │   │   └── ui/              # Reusable UI components (Button, Card, Badge, etc.)
 │   ├── hooks/               # Custom React hooks
-│   ├── lib/                 # Utilities, animations, constants
+│   ├── lib/                 # Utilities, animations, constants (content lives here)
 │   ├── globals.css          # Global styles & design system
 │   ├── layout.tsx           # Root layout with SEO
 │   ├── metadata.ts          # SEO configuration
 │   └── page.tsx             # Main landing page
-├── public/                  # Static assets
+├── public/                  # Static assets, incl. llms.txt (generated) and .well-known/
+├── scripts/                 # Build-time generators
+├── tests/                   # Smoke tests (run against the built site in out/)
+├── netlify/
+│   └── edge-functions/      # Netlify edge functions (markdown content negotiation)
 ├── netlify.toml             # Netlify configuration
 └── next.config.ts           # Next.js configuration
 ```
@@ -44,43 +48,54 @@ or-nuri.ai/
 ## 🛠️ Development
 
 ### Prerequisites
-- Node.js 20+
-- npm or pnpm
+- Node.js 22 (see `.nvmrc`)
+- Yarn (v1)
 
 ### Setup
 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd or-nuri.ai
+cd or-nuri
 ```
 
 2. Install dependencies:
 ```bash
-npm install
+yarn install
 ```
 
-3. Run development server:
+3. Run the development server:
 ```bash
-npm run dev
+yarn dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Environment Variables
+
+Copy `.env.example` to `.env.local` for local development.
+
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` - Google Analytics measurement ID. When set, the gtag snippet is injected at build time; when unset, the site builds without analytics. Set it in Netlify (Site configuration > Environment variables) for production.
+
 ### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production (static export to `/out`)
-- `npm run start` - Start production server (not needed for static export)
-- `npm run lint` - Run ESLint
+- `yarn dev` - Start the development server
+- `yarn build` - Build for production (static export to `out/`); regenerates profile content first via `prebuild`
+- `yarn start` - Serve the static export locally
+- `yarn lint` - Run ESLint
+- `yarn typecheck` - Type-check the app
+- `yarn typecheck:edge` - Type-check the Netlify edge functions (separate tsconfig)
+- `yarn generate` - Regenerate `public/llms.txt` and the edge function's profile markdown from `app/lib/constants.ts`
+- `yarn generate:check` - Fail if the generated files are out of sync (runs in CI)
+- `yarn test` - Run smoke tests against the built site in `out/` (run `yarn build` first)
 
 ## 📝 Content Management
 
 All website content is centralized in `app/lib/constants.ts`. To update content:
 
 1. Edit the constants file
-2. Save and rebuild
-3. Deploy
+2. Run `yarn generate` (also runs automatically before every build)
+3. Commit both the constants and the regenerated files
 
 Key content sections:
 - `SITE_CONFIG` - Site metadata and contact info
@@ -91,6 +106,39 @@ Key content sections:
 - `EXPERTISE_AREAS` - Technical expertise
 - `SUCCESS_STORIES` - Achievements
 - `ADVISORY_CONTENT` - Advisory work
+- `LLMS_TXT` - The text published as `/llms.txt`
+- `PROFILE_MARKDOWN` - The markdown bio served by the edge function
+
+## 🤖 AI & Agent Discoverability
+
+The site ships machine-readable profile files for search engines and AI agents:
+
+- **`/llms.txt` and `/llms-full.txt`** - AI-readable profile summaries, following the llms.txt convention. `llms.txt` is generated from `app/lib/constants.ts` at build time; edit `LLMS_TXT` there, not the file in `public/`.
+- **`/for-bots/`** - A structured, machine-readable profile page for AI agents.
+- **Markdown content negotiation** - A Netlify edge function (`netlify/edge-functions/markdown-agent.ts`) answers requests to `/` that send `Accept: text/markdown` with a markdown bio instead of HTML. Its profile text is generated from `PROFILE_MARKDOWN` in `app/lib/constants.ts`.
+- **`.well-known/` files** - `public/.well-known/` contains agent-facing metadata: `agent-card.json`, `agent-skills/`, `mcp/server-card.json`, `api-catalog`, and the `jwks.json` / OAuth discovery documents referenced by `public/auth.md`.
+- **JSON-LD** - Structured data embedded in every page (see `app/metadata.ts`).
+- **`/sitemap.xml` and `/robots.txt`** - Standard crawler entry points.
+
+## ✅ CI & Tests
+
+GitHub Actions (`.github/workflows/ci.yml`) runs on every pull request:
+
+1. `yarn install --frozen-lockfile`
+2. ESLint
+3. TypeScript checks for the app and the edge functions
+4. Generated-content sync check (`generate:check`)
+5. Production build
+6. Smoke tests (`tests/`) against the built site: build output exists, homepage H1, valid JSON-LD, `llms.txt`/`sitemap.xml` present, key agent files published, and no broken internal links.
+
+## 🔁 Pull Requests & Previews
+
+1. Create a branch and open a pull request against `main`.
+2. CI runs automatically on the PR (see above).
+3. Netlify builds a deploy preview for every PR - use it to review changes on a live URL before merging.
+4. Merging to `main` triggers the production deploy.
+
+Dependabot (`.github/dependabot.yml`) opens weekly PRs for npm and GitHub Actions updates.
 
 ## 📸 Adding Images
 
@@ -108,12 +156,6 @@ For social media previews:
 ```
 Required size: 1200x630px
 
-### CV/Resume
-Place your CV at:
-```
-/public/resume/or-nuri-cv.pdf
-```
-
 ### Company Logos
 Add company logos to:
 ```
@@ -122,57 +164,23 @@ Add company logos to:
 
 ## 🚀 Deployment
 
-### Netlify Deployment
+The site deploys to Netlify:
 
-1. **Connect Repository:**
-   - Log in to Netlify
-   - Click "New site from Git"
-   - Connect your GitHub repository
-
-2. **Configure Build:**
-   - Build command: `npm run build`
-   - Publish directory: `out`
-   - Node version: 20
-
-3. **Custom Domain:**
-   - Add custom domain: `or-nuri.com` (production; `www` redirects to apex)
-   - Configure DNS settings
-   - Enable HTTPS (automatic via Let's Encrypt)
-
-4. **Deploy:**
-   - Push to main branch to trigger automatic deployment
+- **Build command:** `yarn build` (runs the profile-content generator first)
+- **Publish directory:** `out`
+- **Node version:** 22 (set in `netlify.toml` and `.nvmrc`)
+- **Custom domain:** `or-nuri.com` (production; `www` redirects to apex)
+- Push to `main` to trigger a production deploy; pull requests get deploy previews automatically.
 
 ### Manual Deployment
 
 ```bash
 # Build the site
-npm run build
+yarn build
 
 # The static site will be in the /out directory
 # Upload contents to any static hosting provider
 ```
-
-## ✅ Pre-Deployment Checklist
-
-- [ ] Update all content in `app/lib/constants.ts`
-- [ ] Add professional headshot (`/public/images/or-nuri-professional.jpg`)
-- [ ] Add Open Graph image (`/public/images/og-image.png`)
-- [ ] Add CV/Resume PDF (`/public/resume/or-nuri-cv.pdf`)
-- [ ] Update email in `SITE_CONFIG`
-- [ ] Test responsive design (mobile, tablet, desktop)
-- [ ] Test all navigation links
-- [ ] Test contact links (email, LinkedIn, GitHub)
-- [ ] Run `npm run build` successfully
-- [ ] Test accessibility (WCAG AA)
-- [ ] Verify SEO metadata
-
-## 📊 Performance Goals
-
-- Lighthouse Performance: >95
-- First Contentful Paint: <1.5s
-- Largest Contentful Paint: <2.5s
-- Time to Interactive: <3.5s
-- Total Bundle Size: <200KB gzipped
 
 ## 🎯 Features
 
@@ -181,9 +189,9 @@ npm run build
 - ✅ Smooth scroll animations (Framer Motion)
 - ✅ Interactive experience timeline
 - ✅ SEO optimized with structured data
+- ✅ AI-agent discoverability (llms.txt, /for-bots, markdown content negotiation)
 - ✅ Accessibility focused (WCAG AA)
 - ✅ Fast static site generation
-- ✅ Zero runtime JavaScript for content
 - ✅ Optimized images and fonts
 
 ## 🔧 Customization
@@ -223,12 +231,12 @@ rm -rf node_modules .next out
 
 2. Reinstall dependencies:
 ```bash
-npm install
+yarn install
 ```
 
 3. Rebuild:
 ```bash
-npm run build
+yarn build
 ```
 
 ### Font Loading Issues
@@ -240,13 +248,13 @@ If Inter font doesn't load, check:
 
 ## 📄 License
 
-© 2024 Or Nuri. All rights reserved.
+MIT - see [LICENSE](LICENSE).
 
 ## 🤝 Support
 
 For questions or issues, contact:
-- Email: [your-email]
-- LinkedIn: [your-linkedin]
+- Email: ornuri17@gmail.com
+- LinkedIn: [linkedin.com/in/or-nuri](https://www.linkedin.com/in/or-nuri/)
 
 ---
 
