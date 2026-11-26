@@ -1,5 +1,5 @@
 import type { Context } from "@netlify/edge-functions";
-import { PROFILE_MARKDOWN } from "./profile-markdown.ts";
+import { PROFILE_MARKDOWN } from "../edge-lib/profile-markdown.ts";
 
 export default async function handler(
   request: Request,

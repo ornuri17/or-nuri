@@ -365,7 +365,7 @@ export const NAV_ITEMS = [
  * Machine-readable profile content (single source of truth).
  *
  * LLMS_TXT is written to public/llms.txt and PROFILE_MARKDOWN to
- * netlify/edge-functions/profile-markdown.ts by scripts/generate-profile-content.mjs,
+ * netlify/edge-lib/profile-markdown.ts by scripts/generate-profile-content.mjs,
  * which runs automatically before every build (npm run prebuild).
  * Edit the text here, never in the generated files.
  */

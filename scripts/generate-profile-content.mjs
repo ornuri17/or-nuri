@@ -4,7 +4,7 @@
  * truth in app/lib/constants.ts:
  *
  *   - public/llms.txt                            (from LLMS_TXT)
- *   - netlify/edge-functions/profile-markdown.ts (from PROFILE_MARKDOWN)
+ *   - netlify/edge-lib/profile-markdown.ts (from PROFILE_MARKDOWN)
  *
  * Runs automatically before every build via the "prebuild" script.
  *
@@ -68,7 +68,7 @@ function main() {
   const outputs = [
     { path: 'public/llms.txt', content: LLMS_TXT },
     {
-      path: 'netlify/edge-functions/profile-markdown.ts',
+      path: 'netlify/edge-lib/profile-markdown.ts',
       content:
         GENERATED_TS_HEADER +
         'export const PROFILE_MARKDOWN = ' +
