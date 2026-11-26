@@ -4,9 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-profile-content.mjs",
     "build": "next build",
-    "start": "npx serve@latest out",
-    "lint": "eslint"
+    "start": "serve out",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "typecheck:edge": "tsc --noEmit -p netlify/edge-functions/tsconfig.json",
+    "generate": "node scripts/generate-profile-content.mjs",
+    "generate:check": "node scripts/generate-profile-content.mjs --check",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",
@@ -15,12 +21,14 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@netlify/edge-functions": "^4.0.4",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "serve": "14.2.8",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

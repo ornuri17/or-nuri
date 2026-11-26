@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    name: Lint, typecheck, build and test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Typecheck (app)
+        run: yarn typecheck
+
+      - name: Typecheck (Netlify edge functions)
+        run: yarn typecheck:edge
+
+      - name: Check generated profile content is in sync
+        run: yarn generate:check
+
+      - name: Build
+        run: yarn build
+
+      - name: Smoke tests
+        run: yarn test
